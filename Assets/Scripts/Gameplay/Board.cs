@@ -35,6 +35,6 @@ public class Board : MonoBehaviour
 
     public bool CanPlayCardOnTile(CardTileEventData data)
     {
-        return data.tile.card == null;
+        return data.tile.card == null && data.card.tile == null;
     }
 }
