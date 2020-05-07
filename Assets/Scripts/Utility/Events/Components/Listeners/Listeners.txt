@@ -1,0 +1,3 @@
+MonoBehaviours that listen to a SubscribableAsset
+and then invoke a callback (inherited from UnityEvent)
+when that SubscribableAsset notifies it

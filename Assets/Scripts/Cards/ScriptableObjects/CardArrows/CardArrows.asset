@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9986fe61719964ca7b62eeb921f467, type: 3}
+  m_Name: CardArrows
+  m_EditorClassIdentifier: 
+  topLeft: {fileID: 11400000, guid: 49ff8cd3df1d2834a95ac2b5df5c7ae3, type: 2}
+  top: {fileID: 11400000, guid: cd65b3312851cad44b5ba1278b0cae50, type: 2}
+  topRight: {fileID: 11400000, guid: d376dcbd130488949974e2e512514ceb, type: 2}
+  left: {fileID: 11400000, guid: 7446214d96a850c4ca63b3d4d7fb359f, type: 2}
+  right: {fileID: 11400000, guid: f235c5c8c8f206448a3a0d22038de144, type: 2}
+  bottomLeft: {fileID: 11400000, guid: 07846144cded66440a627a4f4835ef45, type: 2}
+  bottom: {fileID: 11400000, guid: 211b7bbff135d2e4299b28a357bac7a9, type: 2}
+  bottomRight: {fileID: 11400000, guid: f4a2d76b2afac5d4aadd1ace2099ad2f, type: 2}

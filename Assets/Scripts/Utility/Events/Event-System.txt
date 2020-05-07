@@ -1,0 +1,11 @@
+The event system is based on the idea of:
+
+Listeners and Subscribables
+
+Listeners listen to Subscribables
+
+Subscribables are the Properties and Game Events that alert their listeners when the
+value of the property is changed or the GameEvent is raised
+
+Listeners are specifically typed except for GenericRaiser,
+which needs to be explicitely called

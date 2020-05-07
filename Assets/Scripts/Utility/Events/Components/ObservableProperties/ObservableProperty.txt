@@ -1,0 +1,5 @@
+ObservableProperty
+
+When the value is changed, the GameEvent tied to it is called.
+Additionally, IListener's may subscribe to the property directly.
+They their OnRaise method will be called when the property is changed.
