@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35de1684500c0ac468eeeddc71926cdf, type: 3}
-  m_Name: PlayCardEvent
+  m_Script: {fileID: 11500000, guid: a66aa832f7c217d44b540ba099889560, type: 3}
+  m_Name: PlayCardFailedEvent
   m_EditorClassIdentifier: 

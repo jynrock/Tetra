@@ -203,6 +203,8 @@ GameObject:
   - component: {fileID: 7664338715614469364}
   - component: {fileID: 7664338715614469322}
   - component: {fileID: 7664338715614469365}
+  - component: {fileID: 9006968922249793917}
+  - component: {fileID: 5112004405954408004}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -247,6 +249,8 @@ MonoBehaviour:
   cardFront: {fileID: 7664338714933555255}
   cardBack: {fileID: 7664338715386858526}
   arrows: {fileID: 11400000, guid: a1f0b512e36460341ac0d6f2c8f01852, type: 2}
+  tile: {fileID: 0}
+  tryPlayCardEvent: {fileID: 11400000, guid: a3878b8ee8a2d87478106252435aa2a6, type: 2}
 --- !u!65 &7664338715614469365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -260,3 +264,59 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.4, z: 0.01}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &9006968922249793917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664338715614469367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de77c5128085024399374ec92d0e777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 2a137197003a2224295d2b4fe742df05, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7664338715614469322}
+        m_TargetAssemblyTypeName: Card, Assembly-CSharp
+        m_MethodName: OnTryPlayCardFailed
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5112004405954408004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664338715614469367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de77c5128085024399374ec92d0e777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 51a3a3d58d9e38246a064dfe332cd209, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7664338715614469322}
+        m_TargetAssemblyTypeName: Card, Assembly-CSharp
+        m_MethodName: OnTryPlayCardSucceeded
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

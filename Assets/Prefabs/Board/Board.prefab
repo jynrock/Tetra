@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6941622304777261928}
   - component: {fileID: 8954920155672430031}
-  - component: {fileID: 5098154011859137125}
+  - component: {fileID: 8189594125343355026}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -70,7 +70,9 @@ MonoBehaviour:
   - {fileID: 7406995710905315347}
   - {fileID: 2513384114367003432}
   - {fileID: 3193880008132245708}
---- !u!114 &5098154011859137125
+  playCardSucceededEvent: {fileID: 11400000, guid: 51a3a3d58d9e38246a064dfe332cd209, type: 2}
+  playCardFailedEvent: {fileID: 11400000, guid: 2a137197003a2224295d2b4fe742df05, type: 2}
+--- !u!114 &8189594125343355026
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,16 +81,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3196496844530049433}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b99aff77a0fe27e469d07271c85baf94, type: 3}
+  m_Script: {fileID: 11500000, guid: 6de77c5128085024399374ec92d0e777, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 11400000, guid: a3878b8ee8a2d87478106252435aa2a6, type: 2}
   callback:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8954920155672430031}
         m_TargetAssemblyTypeName: Board, Assembly-CSharp
-        m_MethodName: OnPlayCard
+        m_MethodName: OnTryPlayCard
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

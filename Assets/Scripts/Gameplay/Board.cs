@@ -5,6 +5,10 @@ using UnityEngine;
 public class Board : MonoBehaviour
 {
     public List<Tile> tiles;
+
+    [SerializeField] CardTileEvent playCardSucceededEvent;
+    [SerializeField] CardTileEvent playCardFailedEvent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +21,20 @@ public class Board : MonoBehaviour
         
     }
 
-    public void OnPlayCard(Card card)
+    public void OnTryPlayCard(CardTileEventData data)
     {
-        Debug.Log("You played the card: " + card.Name);
+        if (CanPlayCardOnTile(data))
+        {
+            playCardSucceededEvent.Raise(data);
+        }
+        else
+        {
+            playCardFailedEvent.Raise(data);
+        }
+    }
+
+    public bool CanPlayCardOnTile(CardTileEventData data)
+    {
+        return data.tile.card == null;
     }
 }

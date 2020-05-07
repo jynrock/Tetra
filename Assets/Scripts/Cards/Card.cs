@@ -13,10 +13,13 @@ public class Card : MonoBehaviour
     public MeshRenderer cardFront;
     public MeshRenderer cardBack;
     public CardArrows arrows;
+    public Tile tile;
 
     private Vector3 offset;
     private Vector3 screenPoint;
-    private Vector3 originPoint;
+    private bool waitingForTryPlayResult;
+    [SerializeField]
+    CardTileEvent tryPlayCardEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -53,22 +56,58 @@ public class Card : MonoBehaviour
             Tile targetTile = hit.collider.gameObject.GetComponent<Tile>();
             if (targetTile != null)
             {
-                targetTile.PlayCard(this);
+                tryPlayCardEvent.Raise(new CardTileEventData(this, targetTile));
+                waitingForTryPlayResult = true;
             }
+            else
+            {
+                ResetPosition();
+            }
+        }
+        else
+        {
+            ResetPosition();
         }
     }
 
     void OnMouseEnter()
     {
-        if(true)
+        if(tile == null)
         {
             Vector3 newPos = transform.position;
             newPos.z -= 0.1f;
-            transform.localPosition = new Vector3(0, 0, 0);
+            transform.position = newPos;
         }
     }
 
     void OnMouseExit()
+    {
+        ResetPosition();
+    }
+
+    public void OnTryPlayCardSucceeded(CardTileEventData data)
+    {
+        if(data.card == this)
+        {
+            if (tile != null)
+            {
+                tile.card = null;
+            }
+            waitingForTryPlayResult = false;
+            tile = data.tile;
+        }
+    }
+
+    public void OnTryPlayCardFailed(CardTileEventData data)
+    {
+        if(data.card == this)
+        {
+            waitingForTryPlayResult = false;
+            ResetPosition();
+        }
+    }
+
+    private void ResetPosition()
     {
         transform.localPosition = new Vector3(0, 0, 0);
     }

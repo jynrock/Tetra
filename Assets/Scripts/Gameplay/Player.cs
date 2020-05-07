@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
 
     public List<Card> hand;
+
+    public List<Card> playedCards;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,9 @@ public class Player : MonoBehaviour
         
     }
 
-    public void OnPlayCard(Card card)
+    public void OnPlayCard(CardTileEventData data)
     {
-        hand.Remove(card);
+        hand.Remove(data.card);
+        playedCards.Add(data.card);
     }
 }

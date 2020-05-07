@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    [SerializeField]
-    private CardEvent playCardEvent;
-
+    public Card card;
+    
     [SerializeField]
     private GameObject cardHolder;
     // Start is called before the first frame update
@@ -21,10 +20,13 @@ public class Tile : MonoBehaviour
         
     }
 
-    public void PlayCard(Card cardToPlay)
+    public void OnTryPlayCardSucceeded(CardTileEventData data)
     {
-        playCardEvent.Raise(cardToPlay);
-        cardToPlay.transform.SetParent(cardHolder.transform);
-        cardToPlay.transform.position = cardHolder.transform.position;
+        if(data.tile == this)
+        {
+            card = data.card;
+            card.transform.SetParent(cardHolder.transform);
+            card.transform.localPosition = new Vector3(0, 0, 0);
+        }
     }
 }
