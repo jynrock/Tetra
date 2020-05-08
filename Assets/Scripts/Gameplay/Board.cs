@@ -6,13 +6,18 @@ public class Board : MonoBehaviour
 {
     public List<Tile> tiles;
 
-    [SerializeField] CardTileEvent playCardSucceededEvent;
-    [SerializeField] CardTileEvent playCardFailedEvent;
+    [SerializeField]
+    CardTileEvent playCardSucceededEvent;
+    [SerializeField]
+    CardTileEvent playCardFailedEvent;
+
+    [SerializeField]
+    BoardEvent calloutBoard;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        calloutBoard.Raise(this);
     }
 
     // Update is called once per frame

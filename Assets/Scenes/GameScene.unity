@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8954920155672430031, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
+      propertyPath: calloutBoard
+      value: 
+      objectReference: {fileID: 11400000, guid: 6b80fd1e4b1e493468ee579b06ee80bf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
 --- !u!114 &165125642 stripped
@@ -706,6 +710,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 987480038299940197, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462697641446438252, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3410890247063636577, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3678480849049549536, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3855766740604763569, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3895802240289231623, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442299468668584138, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903894174937051990, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5178057828899370609, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5293569227560782939, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506411967495251388, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5516689827765823164, guid: 592e77f481673914897421a4a0f279a6, type: 3}
       propertyPath: m_Name
       value: LeftHand
@@ -753,6 +801,42 @@ PrefabInstance:
     - target: {fileID: 5516689827765823165, guid: 592e77f481673914897421a4a0f279a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762479513919081226, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779183538049766717, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6026111907581311883, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365659442402591703, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594770023284492016, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7417411554192149586, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8160766193013621903, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273703544663009849, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8747262757419547124, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 592e77f481673914897421a4a0f279a6, type: 3}

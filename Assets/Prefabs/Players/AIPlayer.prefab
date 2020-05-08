@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4897942957657253958}
   - component: {fileID: 4897942957657253959}
+  - component: {fileID: -7525619371125145438}
   - component: {fileID: 3476477003916737458}
+  - component: {fileID: 8968744181260600045}
   m_Layer: 0
   m_Name: AIPlayer
   m_TagString: Untagged
@@ -48,6 +50,21 @@ MonoBehaviour:
   - {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
   playedCards: []
   endTurnEvent: {fileID: 11400000, guid: c64b48128ca1b4b4195e4276f0753683, type: 2}
+  aI: {fileID: -7525619371125145438}
+--- !u!114 &-7525619371125145438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4897942957657253953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82eba421765866f468f4439ad51bf4fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  board: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &3476477003916737458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +84,34 @@ MonoBehaviour:
       - m_Target: {fileID: 4897942957657253959}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnStartPlayerTurn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8968744181260600045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4897942957657253953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bef48f2c9a17a574c835385536c5920a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 6b80fd1e4b1e493468ee579b06ee80bf, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -7525619371125145438}
+        m_TargetAssemblyTypeName: AIBase, Assembly-CSharp
+        m_MethodName: SetBoard
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

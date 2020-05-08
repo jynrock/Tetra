@@ -4,16 +4,28 @@ using UnityEngine;
 
 public class AIPlayer : Player
 {
+    [SerializeField]
+    private AIBase aI;
+
+    void Start()
+    {
+        aI.SetPlayer(this);
+    }
+
     protected override IEnumerator TakeTurn()
     {
         while(true)
         {
             yield return null;
-            Debug.Log("Waiting....");
 
-            yield return new WaitForSeconds(10.5f);
-
-            break;
+            if(aI.TakeTurn())
+            {
+                break;
+            }
+            else
+            {
+                yield return null;
+            }
         }
 
         EndTurn();
