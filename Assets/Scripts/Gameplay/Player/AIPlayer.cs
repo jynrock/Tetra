@@ -6,28 +6,46 @@ public class AIPlayer : Player
 {
     [SerializeField]
     private AIBase aI;
+    private bool awaitingTurn;
+    private bool hasMoved;
+    [SerializeField]
+    private GameObject superSecretBox;
 
     void Start()
     {
         aI.SetPlayer(this);
+        for(int i = 0; i < hand.Count; i++)
+        {
+            Card c = hand[i];
+            hand[i] = Instantiate(c);
+            hand[i].transform.position = superSecretBox.transform.position;
+        }
     }
 
     protected override IEnumerator TakeTurn()
     {
+        yield return null;
+        hasMoved = false;
         while(true)
         {
-            yield return null;
-
-            if(aI.TakeTurn())
+            if(!hasMoved)
             {
-                break;
+                hasMoved = true;
+                aI.TakeTurn();
             }
-            else
-            {
-                yield return null;
-            }
+            yield return new WaitForSeconds(1.0f);
+            break;
         }
 
         EndTurn();
+    }
+
+    public override void OnPlayCard(CardTilePlayerEventData data)
+    {
+        if(data.player == this)
+        {
+            hand.Remove(data.card);
+            playedCards.Add(data.card);
+        }
     }
 }

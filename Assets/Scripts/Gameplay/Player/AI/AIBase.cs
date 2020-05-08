@@ -8,6 +8,8 @@ public abstract class AIBase : MonoBehaviour
     protected Board board;
     [SerializeField]
     protected Player player;
+    [SerializeField]
+    protected CardTileEvent tryPlayCardEvent;
 
     public void SetPlayer(Player p)
     {
@@ -19,5 +21,5 @@ public abstract class AIBase : MonoBehaviour
         board = b;
     }
 
-    public abstract bool TakeTurn();
+    public abstract void TakeTurn();
 }

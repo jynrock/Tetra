@@ -9,7 +9,7 @@ public abstract class Player : MonoBehaviour
     public List<Card> playedCards;
 
     [SerializeField]
-    private PlayerEvent endTurnEvent;
+    protected PlayerEvent endTurnEvent;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,19 +30,12 @@ public abstract class Player : MonoBehaviour
         }
     }
 
-    public void OnPlayCard(CardTileEventData data)
-    {
-        hand.Remove(data.card);
-        playedCards.Add(data.card);
-
-        endTurnEvent.Raise(this);
-    }
+    public abstract void OnPlayCard(CardTilePlayerEventData data);
 
     public void OnStartPlayerTurn(Player player)
     {
         if(player == this)
         {
-            Debug.Log("Starting player turn...");
             StartCoroutine(TakeTurn());
         }
     }

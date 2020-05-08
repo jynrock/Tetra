@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class HumanPlayer : Player
 {
+    public override void OnPlayCard(CardTilePlayerEventData data)
+    {
+        if(data.player == this)
+        {
+            hand.Remove(data.card);
+            playedCards.Add(data.card);
+
+            endTurnEvent.Raise(this);
+        }
+    }
+
     protected override IEnumerator TakeTurn()
     {
         yield return null;

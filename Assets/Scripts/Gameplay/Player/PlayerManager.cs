@@ -10,6 +10,11 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     private PlayerEvent startPlayerTurnEvent;
 
+    [SerializeField]
+    CardTilePlayerEvent playCardSucceededEvent;
+    [SerializeField]
+    CardTilePlayerEvent playCardFailedEvent;
+
     void Start()
     {
         foreach(Player p in players)
@@ -29,5 +34,24 @@ public class PlayerManager : MonoBehaviour
     {
         currentPlayerTurn = players[0];
         startPlayerTurnEvent.Raise(currentPlayerTurn);
+    }
+
+    public void OnTryPlayCard(CardTileEventData data)
+    {
+        CardTilePlayerEventData newData = new CardTilePlayerEventData(data.card, data.tile, currentPlayerTurn);
+        if (CanPlayCardOnTile(data))
+        {
+            playCardSucceededEvent.Raise(newData);
+        }
+        else
+        {
+            playCardFailedEvent.Raise(newData);
+        }
+    }
+
+    public bool CanPlayCardOnTile(CardTileEventData data)
+    {
+        return data.tile.card == null 
+                && data.card.tile == null;
     }
 }

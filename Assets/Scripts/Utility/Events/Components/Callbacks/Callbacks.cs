@@ -15,6 +15,10 @@ public class CardTileCallback : UnityEvent<CardTileEventData>
 {}
 
 [Serializable]
+public class CardTilePlayerCallback : UnityEvent<CardTilePlayerEventData>
+{}
+
+[Serializable]
 public class PlayerCallback : UnityEvent<Player>
 {}
 

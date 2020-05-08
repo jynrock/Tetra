@@ -93,7 +93,7 @@ public class Card : MonoBehaviour
     }
 
     // PLAYING CARD FUNCTIONS
-    public void OnTryPlayCardSucceeded(CardTileEventData data)
+    public void OnTryPlayCardSucceeded(CardTilePlayerEventData data)
     {
         if(data.card == this)
         {
@@ -106,7 +106,7 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void OnTryPlayCardFailed(CardTileEventData data)
+    public void OnTryPlayCardFailed(CardTilePlayerEventData data)
     {
         if(data.card == this)
         {

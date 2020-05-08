@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BottomLeftArrow
   m_EditorClassIdentifier: 
   GameEvent: {fileID: 0}
-  value: 0
+  value: 1
