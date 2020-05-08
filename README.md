@@ -16,7 +16,7 @@ It's a small enough project that it ought to only take a few weeks to finish and
 
 Created in Unity 2020.2 Alpha because I like some of the new editor features.
 Art assets were purchased from a Humble Bundle sale so long ago that it might as well be the Dark Ages.
-Trello board: https://trello.com/b/2tkby5qn/tetra-master
+See what's upcoming on the project's [Trello board](https://trello.com/b/2tkby5qn/tetra-master)
 
 ## Where's it going to live when it's done?
 
