@@ -9,8 +9,9 @@ public class AIPlayer : Player
         while(true)
         {
             yield return null;
+            Debug.Log("Waiting....");
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(10.5f);
 
             break;
         }

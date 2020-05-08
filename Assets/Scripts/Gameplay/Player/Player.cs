@@ -4,7 +4,6 @@ using UnityEngine;
 
 public abstract class Player : MonoBehaviour
 {
-
     public List<Card> hand;
 
     public List<Card> playedCards;
@@ -23,15 +22,29 @@ public abstract class Player : MonoBehaviour
         
     }
 
+    public void SetupHand()
+    {
+        foreach(Card c in hand)
+        {
+            c.SetOriginalOwner(this);
+        }
+    }
+
     public void OnPlayCard(CardTileEventData data)
     {
         hand.Remove(data.card);
         playedCards.Add(data.card);
+
+        endTurnEvent.Raise(this);
     }
 
     public void OnStartPlayerTurn(Player player)
     {
-        StartCoroutine(TakeTurn());
+        if(player == this)
+        {
+            Debug.Log("Starting player turn...");
+            StartCoroutine(TakeTurn());
+        }
     }
 
     protected void EndTurn()

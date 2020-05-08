@@ -21,6 +21,7 @@ public class Card : MonoBehaviour
     private Vector3 offset;
     private Vector3 screenPoint;
     private bool waitingForTryPlayResult;
+    private bool controlsDisabled;
     [SerializeField]
     CardTileEvent tryPlayCardEvent;
 
@@ -33,7 +34,7 @@ public class Card : MonoBehaviour
     // MOUSE CONTROLS
     void OnMouseDown()
     {
-        if(tile == null)
+        if(!controlsDisabled && tile == null)
         {
             screenPoint = Camera.main.WorldToScreenPoint(transform.position);
             offset =  transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,screenPoint.z));
@@ -42,7 +43,7 @@ public class Card : MonoBehaviour
 
     void OnMouseDrag()
     {
-        if (tile == null)
+        if (!controlsDisabled && tile == null)
         {
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
@@ -52,24 +53,27 @@ public class Card : MonoBehaviour
 
     void OnMouseUp()
     {
-        RaycastHit hit;
-        Physics.Raycast(transform.position, transform.forward, out hit, 250);
-        if(hit.collider != null)
+        if (!controlsDisabled && tile == null)
         {
-            Tile targetTile = hit.collider.gameObject.GetComponent<Tile>();
-            if (targetTile != null)
+            RaycastHit hit;
+            Physics.Raycast(transform.position, transform.forward, out hit, 250);
+            if(hit.collider != null)
             {
-                tryPlayCardEvent.Raise(new CardTileEventData(this, targetTile));
-                waitingForTryPlayResult = true;
+                Tile targetTile = hit.collider.gameObject.GetComponent<Tile>();
+                if (targetTile != null)
+                {
+                    tryPlayCardEvent.Raise(new CardTileEventData(this, targetTile));
+                    waitingForTryPlayResult = true;
+                }
+                else
+                {
+                    ResetPosition();
+                }
             }
             else
             {
                 ResetPosition();
             }
-        }
-        else
-        {
-            ResetPosition();
         }
     }
 
@@ -108,6 +112,22 @@ public class Card : MonoBehaviour
         {
             waitingForTryPlayResult = false;
             ResetPosition();
+        }
+    }
+
+    public void OnPlayerTurnEnded(Player _player)
+    {
+        if (currentOwner == _player)
+        {
+            controlsDisabled = true;
+        }
+    }
+
+        public void OnPlayerTurnStarted(Player _player)
+    {
+        if (currentOwner == _player)
+        {
+            controlsDisabled = false;
         }
     }
 
