@@ -279,8 +279,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1223308212}
-  - component: {fileID: 1223308211}
   - component: {fileID: 1223308213}
+  - component: {fileID: 1223308211}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1223308210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a08fdc06f0c79b49bb56b65825db6d7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e643fa4f279be84db329d7c8957eaee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hand:
@@ -306,6 +306,8 @@ MonoBehaviour:
   - {fileID: 1131921863}
   - {fileID: 1414679295}
   - {fileID: 165125642}
+  playedCards: []
+  endTurnEvent: {fileID: 11400000, guid: c64b48128ca1b4b4195e4276f0753683, type: 2}
 --- !u!4 &1223308212
 Transform:
   m_ObjectHideFlags: 0

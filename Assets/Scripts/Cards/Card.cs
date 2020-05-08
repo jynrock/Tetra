@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Card : MonoBehaviour
 {
-    public StringProperty Name;
-    public StringProperty Description;
-    public IntProperty Health;
-    public int Type;
-    public IntProperty Attack;
-    public IntProperty Defense;
+    public string cardName;
+    public string cardDesc;
+    public int health;
+    public int type;
+    public int attack;
+    public int defense;
+    public MeshRenderer cardArt;
     public MeshRenderer cardFront;
     public MeshRenderer cardBack;
     public CardArrows arrows;
     public Tile tile;
+    public Player currentOwner;
+    public Player originalOwner;
 
     private Vector3 offset;
     private Vector3 screenPoint;
@@ -21,17 +24,11 @@ public class Card : MonoBehaviour
     [SerializeField]
     CardTileEvent tryPlayCardEvent;
 
-    // Start is called before the first frame update
-    void Start()
+    public void SetOriginalOwner(Player player)
     {
+        originalOwner = player;
+        currentOwner = player;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     // MOUSE CONTROLS
     void OnMouseDown()
@@ -91,6 +88,7 @@ public class Card : MonoBehaviour
         ResetPosition();
     }
 
+    // PLAYING CARD FUNCTIONS
     public void OnTryPlayCardSucceeded(CardTileEventData data)
     {
         if(data.card == this)
@@ -113,6 +111,7 @@ public class Card : MonoBehaviour
         }
     }
 
+    // PRIVATE FUNCTIONS
     private void ResetPosition()
     {
         transform.localPosition = new Vector3(0, 0, 0);

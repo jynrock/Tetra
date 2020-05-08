@@ -13,3 +13,7 @@ public class CardCallback : UnityEvent<Card>
 [Serializable]
 public class CardTileCallback : UnityEvent<CardTileEventData>
 {}
+
+[Serializable]
+public class PlayerCallback : UnityEvent<Player>
+{}
