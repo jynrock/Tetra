@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40bf36a62cb0c8408ce873886c8765d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiles:
+  tilesList:
   - {fileID: 6914822523630465006}
   - {fileID: 2682877376930698245}
   - {fileID: 6994305800517508926}
@@ -69,7 +69,9 @@ MonoBehaviour:
   - {fileID: 7406995710905315347}
   - {fileID: 2513384114367003432}
   - {fileID: 3193880008132245708}
-  calloutBoard: {fileID: 0}
+  rows: 4
+  columns: 4
+  calloutBoard: {fileID: 11400000, guid: 6b80fd1e4b1e493468ee579b06ee80bf, type: 2}
 --- !u!1001 &1953773466611192623
 PrefabInstance:
   m_ObjectHideFlags: 0

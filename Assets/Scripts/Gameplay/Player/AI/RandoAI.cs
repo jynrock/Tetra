@@ -8,8 +8,6 @@ public class RandoAI : AIBase
     {
         Tile t = GetRandomTile();
         Card c = GetRandomCardFromHand();
-        Debug.Log(t);
-        Debug.Log(c);
         if(t != null && c != null)
         {
             tryPlayCardEvent.Raise(new CardTileEventData(c, t));
@@ -26,12 +24,12 @@ public class RandoAI : AIBase
             int i = 0;
             do
             {
-                i = Random.Range(0, board.tiles.Count);
+                i = Random.Range(0, board.tilesList.Count);
             }
             while (tilesTried.Contains(i));
 
             tilesTried.Add(i);
-            result = board.tiles[i];
+            result = board.tilesList[i];
         }
         while (result.card != null || result.blocker != null);
 

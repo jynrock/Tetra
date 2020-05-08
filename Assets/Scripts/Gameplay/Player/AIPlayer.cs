@@ -7,7 +7,6 @@ public class AIPlayer : Player
     [SerializeField]
     private AIBase aI;
     private bool awaitingTurn;
-    private bool hasMoved;
     [SerializeField]
     private GameObject superSecretBox;
 
@@ -25,19 +24,11 @@ public class AIPlayer : Player
     protected override IEnumerator TakeTurn()
     {
         yield return null;
-        hasMoved = false;
-        while(true)
+        aI.TakeTurn();
+        while(!hasMoved)
         {
-            if(!hasMoved)
-            {
-                hasMoved = true;
-                aI.TakeTurn();
-            }
             yield return new WaitForSeconds(1.0f);
-            break;
         }
-
-        EndTurn();
     }
 
     public override void OnPlayCard(CardTilePlayerEventData data)
@@ -46,6 +37,8 @@ public class AIPlayer : Player
         {
             hand.Remove(data.card);
             playedCards.Add(data.card);
+            
+            StartCoroutine(HandleCombatPhase());
         }
     }
 }

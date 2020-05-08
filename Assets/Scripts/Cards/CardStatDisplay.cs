@@ -56,4 +56,9 @@ public class CardStatDisplay : MonoBehaviour
     {
         
     }
+
+    public void UpdateStats()
+    {
+        healthText.text = card.health.ToString();
+    }
 }

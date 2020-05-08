@@ -6,13 +6,15 @@ public class Tile : MonoBehaviour
 {
     public Card card;
     public Blocker blocker;
+    public int row;
+    public int column;
+    public TileNeighbors neighbors;
     
     [SerializeField]
     private GameObject cardHolder;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -29,5 +31,10 @@ public class Tile : MonoBehaviour
             card.transform.SetParent(cardHolder.transform);
             card.transform.localPosition = new Vector3(0, 0, 0);
         }
+    }
+
+    public void OnCallOutBoard(Board board)
+    {
+        neighbors = board.GetTileNeighbors(this);
     }
 }

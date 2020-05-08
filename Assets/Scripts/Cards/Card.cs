@@ -23,6 +23,8 @@ public class Card : MonoBehaviour
     private bool waitingForTryPlayResult;
     private bool controlsDisabled;
     [SerializeField]
+    private CardStatDisplay statDisplay;
+    [SerializeField]
     CardTileEvent tryPlayCardEvent;
 
     public void SetOriginalOwner(Player player)
@@ -123,12 +125,23 @@ public class Card : MonoBehaviour
         }
     }
 
-        public void OnPlayerTurnStarted(Player _player)
+    public void OnPlayerTurnStarted(Player _player)
     {
         if (currentOwner == _player)
         {
             controlsDisabled = false;
         }
+    }
+
+    //TODO: We may want to make this event driven
+    public void TakeDamage(int dmg)
+    {
+        if (dmg < 1)
+        {
+            dmg = 1;
+        }
+        health -= dmg;
+        statDisplay.UpdateStats();
     }
 
     // PRIVATE FUNCTIONS

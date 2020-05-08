@@ -134,18 +134,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board
       objectReference: {fileID: 0}
-    - target: {fileID: 4891795190427712077, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
-      propertyPath: m_Convex
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4891795190427712077, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5098154011859137125, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 11400000, guid: fff92a4a4c3f1a440b23877e01bae54f, type: 2}
     - target: {fileID: 6941622304777261928, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -230,26 +218,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 8504930195487688854, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
-      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Tile, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8504930195487688854, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
-      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnTryPlayCardSucceeded
-      objectReference: {fileID: 0}
-    - target: {fileID: 8504930195487688854, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
-      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8504930195487688854, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
-      propertyPath: callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8954920155672430031, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
-      propertyPath: calloutBoard
-      value: 
-      objectReference: {fileID: 11400000, guid: 6b80fd1e4b1e493468ee579b06ee80bf, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63f311d37c34fd34eb7b446554aa8cfa, type: 3}
 --- !u!114 &165125642 stripped
@@ -358,50 +326,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214722422}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1093097746 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6335565313581276893, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
-  m_PrefabInstance: {fileID: 6335565312065097446}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1093097747 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6335565313581276891, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
   m_PrefabInstance: {fileID: 6335565312065097446}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093097746}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 283ec2834e15e144f865c5b60c369974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1093097752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1093097746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6de77c5128085024399374ec92d0e777, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 11400000, guid: 51a3a3d58d9e38246a064dfe332cd209, type: 2}
-  callback:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1093097747}
-        m_TargetAssemblyTypeName: AIPlayer, Assembly-CSharp
-        m_MethodName: OnPlayCard
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1131921863 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5700990053102203160, guid: 592e77f481673914897421a4a0f279a6, type: 3}
@@ -765,7 +700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1998747646
 AudioSource:
   m_ObjectHideFlags: 0

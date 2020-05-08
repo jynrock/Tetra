@@ -11,7 +11,7 @@ public class HumanPlayer : Player
             hand.Remove(data.card);
             playedCards.Add(data.card);
 
-            endTurnEvent.Raise(this);
+            StartCoroutine(HandleCombatPhase());
         }
     }
 
