@@ -10,9 +10,12 @@ public class HumanPlayer : Player
         {
             hand.Remove(data.card);
             playedCards.Add(data.card);
-
-            StartCoroutine(HandleCombatPhase());
         }
+    }
+
+    public void OnEndTurnButtonPressed()
+    {
+        StartCoroutine(HandleCombatPhase());
     }
 
     protected override IEnumerator TakeTurn()

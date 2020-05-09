@@ -105,6 +105,12 @@ public class Board : MonoBehaviour
 
     public void HandleCardCombat(CardListDirectionEventData data)
     {
-        Debug.Log("MORTAL COMBAT");
+        foreach(KeyValuePair<Card,CardDirection> pair in data.cardList)
+        {
+            int attack = data.card.attack;
+            int defense = pair.Key.defense;
+
+            pair.Key.TakeDamage(attack - defense);
+        }
     }
 }

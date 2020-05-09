@@ -7,6 +7,7 @@ public abstract class Player : MonoBehaviour
     public List<Card> hand;
 
     public List<Card> playedCards;
+    public Color playerColor;
 
     [SerializeField]
     protected PlayerEvent endTurnEvent;

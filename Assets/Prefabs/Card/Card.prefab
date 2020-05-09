@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1051142545233265434}
   - component: {fileID: 7570765398179869311}
   - component: {fileID: 2430610738360922536}
+  - component: {fileID: -657029038830070183}
   m_Layer: 0
   m_Name: CardDefenseDisplay
   m_TagString: Untagged
@@ -186,6 +187,14 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 7570765398179869311}
   m_maskType: 0
+--- !u!33 &-657029038830070183
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221356187041901908}
+  m_Mesh: {fileID: 0}
 --- !u!1 &1586059949849830281
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +350,7 @@ GameObject:
   - component: {fileID: 399486788233694951}
   - component: {fileID: 8228115861007608251}
   - component: {fileID: 2689095744870314670}
+  - component: {fileID: -3170513424168752803}
   m_Layer: 0
   m_Name: CardNameDisplay
   m_TagString: Untagged
@@ -516,6 +526,14 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 8228115861007608251}
   m_maskType: 0
+--- !u!33 &-3170513424168752803
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151830854570998043}
+  m_Mesh: {fileID: 0}
 --- !u!1 &2276031597425853164
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,6 +861,7 @@ GameObject:
   - component: {fileID: 8293914319315152039}
   - component: {fileID: 4446759201267181901}
   - component: {fileID: 4406251771985141427}
+  - component: {fileID: 1207703710189965411}
   m_Layer: 0
   m_Name: CardAttackDisplay
   m_TagString: Untagged
@@ -1018,6 +1037,14 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 4446759201267181901}
   m_maskType: 0
+--- !u!33 &1207703710189965411
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4842445797691390277}
+  m_Mesh: {fileID: 0}
 --- !u!1 &4910149108758495448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1756,7 +1783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Test Name
   cardDesc: Test Desc
-  health: 10
+  health: 3
   type: 0
   attack: 3
   defense: 2
@@ -1937,6 +1964,7 @@ GameObject:
   - component: {fileID: 4269980007275102510}
   - component: {fileID: 181190905217403576}
   - component: {fileID: 4416667588753817395}
+  - component: {fileID: -1533264714697234728}
   m_Layer: 0
   m_Name: CardHealthDisplay
   m_TagString: Untagged
@@ -2112,6 +2140,14 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 181190905217403576}
   m_maskType: 0
+--- !u!33 &-1533264714697234728
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8106826337842744869}
+  m_Mesh: {fileID: 0}
 --- !u!1 &8148742155058263352
 GameObject:
   m_ObjectHideFlags: 0
