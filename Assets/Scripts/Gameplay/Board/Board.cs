@@ -102,4 +102,9 @@ public class Board : MonoBehaviour
             t.column = column;
         }
     }
+
+    public void HandleCardCombat(CardListDirectionEventData data)
+    {
+        Debug.Log("MORTAL COMBAT");
+    }
 }

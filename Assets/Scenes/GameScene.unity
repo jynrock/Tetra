@@ -975,10 +975,6 @@ PrefabInstance:
       propertyPath: hand.Array.data[4]
       value: 
       objectReference: {fileID: 165125642}
-    - target: {fileID: 6335565313414799676, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
-      propertyPath: startPlayerTurnEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 054ef85a74c45a2409cee19d625c2fdb, type: 2}
     - target: {fileID: 6335565313414799678, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
       propertyPath: m_Name
       value: Players

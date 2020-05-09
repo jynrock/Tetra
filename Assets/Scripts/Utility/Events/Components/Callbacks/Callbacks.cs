@@ -25,3 +25,7 @@ public class PlayerCallback : UnityEvent<Player>
 [Serializable]
 public class BoardCallback : UnityEvent<Board>
 {}
+
+[Serializable]
+public class CardListDirectionCallBack : UnityEvent<CardListDirectionEventData>
+{}

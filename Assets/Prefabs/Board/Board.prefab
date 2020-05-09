@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6941622304777261928}
   - component: {fileID: 8954920155672430031}
+  - component: {fileID: 9124504406790133102}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -72,6 +73,34 @@ MonoBehaviour:
   rows: 4
   columns: 4
   calloutBoard: {fileID: 11400000, guid: 6b80fd1e4b1e493468ee579b06ee80bf, type: 2}
+--- !u!114 &9124504406790133102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3196496844530049433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0666f8d41d9acc41836e6999e5ba95b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: ac1b9348d87dcaf4183f0cb52596ae87, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8954920155672430031}
+        m_TargetAssemblyTypeName: Board, Assembly-CSharp
+        m_MethodName: HandleCardCombat
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1953773466611192623
 PrefabInstance:
   m_ObjectHideFlags: 0

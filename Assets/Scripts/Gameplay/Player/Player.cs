@@ -10,6 +10,8 @@ public abstract class Player : MonoBehaviour
 
     [SerializeField]
     protected PlayerEvent endTurnEvent;
+    [SerializeField]
+    protected CardListDirectionEvent cardAttackEvent;
 
     protected bool hasMoved;
     // Start is called before the first frame update
@@ -37,17 +39,15 @@ public abstract class Player : MonoBehaviour
     protected IEnumerator HandleCombatPhase()
     {
         yield return null;
-        Debug.Log(this);
         for(int i = playedCards.Count - 1; i >= 0; i--)
         {
             Card card = playedCards[i];
-            Debug.Log("New" + card);
             if(card.currentOwner == this)
             {
                 Dictionary<Card, CardDirection> cardsToAttack = GetCardsToAttack(card);
-                foreach(KeyValuePair<Card,CardDirection> pair in cardsToAttack)
+                if(cardsToAttack.Count > 0)
                 {
-                    Debug.Log(pair.Key + " " + pair.Value);
+                    cardAttackEvent.Raise(new CardListDirectionEventData(card, cardsToAttack));
                 }
             }
         }
