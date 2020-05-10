@@ -25,7 +25,7 @@ public class AIPlayer : Player
     {
         yield return null;
         aI.TakeTurn();
-        while(!hasMoved)
+        while(!hasPlayedCard && !hasUsedAbility)
         {
             yield return new WaitForSeconds(1.0f);
         }
@@ -37,8 +37,8 @@ public class AIPlayer : Player
         {
             hand.Remove(data.card);
             playedCards.Add(data.card);
-            
-            StartCoroutine(HandleCombatPhase());
+
+            hasPlayedCard = true;
         }
     }
 }

@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e643fa4f279be84db329d7c8957eaee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Human
   hand:
   - {fileID: 0}
   - {fileID: 0}
@@ -53,6 +54,8 @@ MonoBehaviour:
   - {fileID: 0}
   playedCards: []
   playerColor: {r: 0.01234436, g: 0, b: 1, a: 1}
+  hasPlayedCard: 0
+  hasUsedAbility: 0
   endTurnEvent: {fileID: 11400000, guid: c64b48128ca1b4b4195e4276f0753683, type: 2}
   cardAttackEvent: {fileID: 11400000, guid: ac1b9348d87dcaf4183f0cb52596ae87, type: 2}
 --- !u!114 &8427749435755472226

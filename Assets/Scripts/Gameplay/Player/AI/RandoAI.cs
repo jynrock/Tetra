@@ -10,12 +10,14 @@ public class RandoAI : AIBase
         Card c = GetRandomCardFromHand();
         if(t != null && c != null)
         {
-            tryPlayCardEvent.Raise(new CardTileEventData(c, t));
+            int fiftyFifty = Random.Range(0, 2);
+            if(fiftyFifty == 1)
+            {
+                tryPlayCardEvent.Raise(new CardTileEventData(c, t));
+            }
         }
-        else
-        {
-            StartCoroutine(player.HandleCombatPhase());
-        }
+
+        EndTurn();
     }
 
     private Tile GetRandomTile()
@@ -51,5 +53,10 @@ public class RandoAI : AIBase
         }
 
         return result;
+    }
+
+    private void EndTurn()
+    {
+        StartCoroutine(player.HandleCombatPhase());
     }
 }

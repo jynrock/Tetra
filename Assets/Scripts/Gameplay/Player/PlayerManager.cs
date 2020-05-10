@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
@@ -27,7 +28,16 @@ public class PlayerManager : MonoBehaviour
     public void OnEndPlayerTurn(Player player)
     {
         currentPlayerTurn = players[(players.IndexOf(player) + 1) % players.Count];
-        startPlayerTurnEvent.Raise(currentPlayerTurn);
+
+        if (players.Where(p => !(p.hand.Count == 0)).ToList().Any())
+        {
+            startPlayerTurnEvent.Raise(currentPlayerTurn);
+        }
+        else
+        {
+            Debug.Log("Game Over");
+        }
+
     }
 
     public void OnStartGame()

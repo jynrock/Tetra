@@ -116,37 +116,12 @@ public class Board : MonoBehaviour
 
             int attack = attackingCard.attack;
 
-            if(HasDefensiveArrow(defendingCard, attackDirection))
+            if(CardUtility.HasOpposingArrow(defendingCard, attackDirection))
             {
                 attack = Mathf.RoundToInt((attack * 0.75f) + 0.5f);
             }
 
             defendingCard.TakeDamage(attack, attackingCard.currentOwner);
-        }
-    }
-
-    public bool HasDefensiveArrow(Card card, CardDirection attackDirection)
-    {
-        switch(attackDirection)
-        {
-            case CardDirection.topLeft:
-                return card.arrows.bottomRight.Value;
-            case CardDirection.top:
-                return card.arrows.bottom.Value;
-            case CardDirection.topRight:
-                return card.arrows.bottomLeft.Value;
-            case CardDirection.right:
-                return card.arrows.left.Value;
-            case CardDirection.bottomRight:
-                return card.arrows.topLeft.Value;
-            case CardDirection.bottom:
-                return card.arrows.top.Value;
-            case CardDirection.bottomLeft:
-                return card.arrows.topRight.Value;
-            case CardDirection.left:
-                return card.arrows.right.Value;
-            default:
-                return false;
         }
     }
 

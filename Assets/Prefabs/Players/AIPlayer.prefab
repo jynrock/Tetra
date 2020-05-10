@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 283ec2834e15e144f865c5b60c369974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Test AI
   hand:
   - {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
   - {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
@@ -55,6 +56,8 @@ MonoBehaviour:
   - {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
   playedCards: []
   playerColor: {r: 1, g: 0, b: 0, a: 1}
+  hasPlayedCard: 0
+  hasUsedAbility: 0
   endTurnEvent: {fileID: 11400000, guid: c64b48128ca1b4b4195e4276f0753683, type: 2}
   cardAttackEvent: {fileID: 11400000, guid: ac1b9348d87dcaf4183f0cb52596ae87, type: 2}
   aI: {fileID: -7525619371125145438}

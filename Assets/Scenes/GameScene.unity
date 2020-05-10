@@ -1279,6 +1279,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6918424163139351265, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5604392053709607, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 987480038299940197, guid: 592e77f481673914897421a4a0f279a6, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1383,6 +1391,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6363571718757435982, guid: 592e77f481673914897421a4a0f279a6, type: 3}
+      propertyPath: owner
+      value: 
+      objectReference: {fileID: 638096113}
     - target: {fileID: 6365659442402591703, guid: 592e77f481673914897421a4a0f279a6, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -1497,10 +1509,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6918424163139351265, guid: ee17ee49336df3b4aa4d1462b63967b1, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2748212150668958424, guid: ee17ee49336df3b4aa4d1462b63967b1, type: 3}
       propertyPath: owner
       value: 
       objectReference: {fileID: 1093097747}
+    - target: {fileID: 7556927589130705346, guid: ee17ee49336df3b4aa4d1462b63967b1, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556927589130705346, guid: ee17ee49336df3b4aa4d1462b63967b1, type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556927589130705346, guid: ee17ee49336df3b4aa4d1462b63967b1, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556927589130705346, guid: ee17ee49336df3b4aa4d1462b63967b1, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7556927589130705346, guid: ee17ee49336df3b4aa4d1462b63967b1, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8300987015578934474, guid: ee17ee49336df3b4aa4d1462b63967b1, type: 3}
       propertyPath: m_Name
       value: RightHand

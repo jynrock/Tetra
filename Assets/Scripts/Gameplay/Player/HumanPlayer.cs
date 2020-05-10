@@ -10,6 +10,8 @@ public class HumanPlayer : Player
         {
             hand.Remove(data.card);
             playedCards.Add(data.card);
+
+            hasPlayedCard = true;
         }
     }
 

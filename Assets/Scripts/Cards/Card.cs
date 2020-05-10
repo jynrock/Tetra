@@ -51,7 +51,7 @@ public class Card : MonoBehaviour
 
     void OnMouseDrag()
     {
-        if (!controlsDisabled && tile == null)
+        if (!controlsDisabled && !currentOwner.hasPlayedCard && tile == null)
         {
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
@@ -68,7 +68,7 @@ public class Card : MonoBehaviour
             if(hit.collider != null)
             {
                 Tile targetTile = hit.collider.gameObject.GetComponent<Tile>();
-                if (targetTile != null)
+                if (targetTile != null && !currentOwner.hasPlayedCard)
                 {
                     tryPlayCardEvent.Raise(new CardTileEventData(this, targetTile));
                     waitingForTryPlayResult = true;
@@ -97,10 +97,7 @@ public class Card : MonoBehaviour
 
     void OnMouseExit()
     {
-        if(!Input.GetMouseButtonDown(0))
-        {
-            ResetPosition();
-        }
+        ResetPosition();
     }
 
     // PLAYING CARD FUNCTIONS
