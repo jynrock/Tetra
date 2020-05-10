@@ -10,8 +10,6 @@ public class Card : MonoBehaviour
     public int type;
     public int attack;
     public MeshRenderer cardArt;
-    public MeshRenderer cardFront;
-    public MeshRenderer cardBack;
     public CardArrows arrows;
     public Tile tile;
     public Player currentOwner;
@@ -22,7 +20,7 @@ public class Card : MonoBehaviour
     private bool waitingForTryPlayResult;
     private bool controlsDisabled;
     [SerializeField]
-    private CardStatDisplay statDisplay;
+    private CardDisplay statDisplay;
     [SerializeField]
     CardTileEvent tryPlayCardEvent;
 

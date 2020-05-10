@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class CardStatDisplay : MonoBehaviour
+public class CardDisplay : MonoBehaviour
 {
     [SerializeField]
     private Card card;
@@ -15,7 +15,7 @@ public class CardStatDisplay : MonoBehaviour
     [SerializeField]
     private TextMeshPro attackText;
     [SerializeField]
-    private SpriteRenderer playerColor;
+    private MeshRenderer frame;
     [SerializeField]
     private GameObject topLeftArrow;
     [SerializeField]
@@ -58,12 +58,12 @@ public class CardStatDisplay : MonoBehaviour
 
     public void SetPlayerColor()
     {
-        playerColor.color = card.currentOwner.playerColor;
+        frame.material.color = card.currentOwner.playerColor;
     }
 
     public void UpdateStats()
     {
         healthText.text = card.health.ToString();
-        playerColor.material.color = card.currentOwner.playerColor;
+        frame.material.color = card.currentOwner.playerColor;
     }
 }
