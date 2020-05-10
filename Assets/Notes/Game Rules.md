@@ -7,12 +7,13 @@ on 1-6 of the tiles randomly. Cards cannot be played on those tiles.
 
 Players start with 5 cards in their hand.
 The game ends when both players have 0 cards left in their hand.
-The winner is decided by who has more cards left when the game ends.
+The winner is decided by who has more cards left under their control when
+the game ends.
 
 ### Gameplay Loop:
 
 Each player can play 0-1 cards on their turn. The cards can be played on any
-open tile. Players do not have to play a card on their turn.
+open tile. Players do not HAVE to play a card on their turn.
 
 Some cards have special abilities which can be activated through the course
 of the game. Each card's ability may only be activated once, and only one
@@ -22,12 +23,12 @@ After each player has concluded playing cards and abilities, the combat phase
 commences. During the combat phase, all of the cards on the board that are
 currently owned by the player whose turn it is will take turns attacking.
 
-The order of attacks is always in reverse chronological order (IE - the most 
-recently played card's attack happens first, the first played card's attack 
-happens last).
+The order of attacks is always in reverse chronological order (the most 
+recently played card's attack happens first, the very first played card's
+attack happens last).
 
-Cards will damage enemy cards in adjacent tiles only if the card has an arrow
-pointing at the tile.
+Cards will damage enemy cards in adjacent tiles only if the attacking card 
+has an arrow pointing at the tile.
 
 When a card is damaged such that its health reaches 0, control of the card
 passes to the attacker. Its health is reset to 1.
@@ -38,11 +39,12 @@ number of cards for deciding who wins/loses.
 
 In the event that a player places their last remaining card, they are no
 longer allowed to take their turn - including using any special abilities. The
-player's cards will continue to attack on their own.
+player's cards will continue to attack on their own when their turn would have
+happened.
 
 The opponent may continue taking turns until they have played their final card.
 
-### Damage Calculation
+### Damage Calculation:
 
 If the defending card does NOT have an arrow pointing back at the attacking card,
 the defending card takes normal damage.
@@ -61,11 +63,11 @@ card takes normal damage.
 
 These values DO stack: For example, if a defending card's type is strong against
 the attacking card's type AND the defending card has an arrow pointing back at the
-attacking card, the defending card takes 56% damage.
+attacking card, the defending card takes 56% (75% of 75%) damage.
 
 A defending card will always take at least 1 damage per turn.
 
-## Stretch Goals to be Decided Later:
+## Stretch Goals and Stuff to be Decided Later:
 
 What will the special abilities look like?
 

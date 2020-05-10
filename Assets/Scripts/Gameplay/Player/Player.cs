@@ -37,7 +37,7 @@ public abstract class Player : MonoBehaviour
 
     public abstract void OnPlayCard(CardTilePlayerEventData data);
 
-    protected IEnumerator HandleCombatPhase()
+    public IEnumerator HandleCombatPhase()
     {
         yield return null;
         for(int i = playedCards.Count - 1; i >= 0; i--)

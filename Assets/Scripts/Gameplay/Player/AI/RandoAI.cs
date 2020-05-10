@@ -12,6 +12,10 @@ public class RandoAI : AIBase
         {
             tryPlayCardEvent.Raise(new CardTileEventData(c, t));
         }
+        else
+        {
+            StartCoroutine(player.HandleCombatPhase());
+        }
     }
 
     private Tile GetRandomTile()

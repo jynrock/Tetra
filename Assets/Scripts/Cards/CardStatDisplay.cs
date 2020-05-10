@@ -15,7 +15,7 @@ public class CardStatDisplay : MonoBehaviour
     [SerializeField]
     private TextMeshPro attackText;
     [SerializeField]
-    private TextMeshPro defenseText;
+    private SpriteRenderer playerColor;
     [SerializeField]
     private GameObject topLeftArrow;
     [SerializeField]
@@ -39,7 +39,6 @@ public class CardStatDisplay : MonoBehaviour
         healthText.text = card.health.ToString();
         nameText.text = card.cardName;
         attackText.text = card.attack.ToString();
-        defenseText.text = card.defense.ToString();
 
         topArrow.SetActive(card.arrows.top.Value);
         topRightArrow.SetActive(card.arrows.topRight.Value);
@@ -57,8 +56,14 @@ public class CardStatDisplay : MonoBehaviour
         
     }
 
+    public void SetPlayerColor()
+    {
+        playerColor.color = card.currentOwner.playerColor;
+    }
+
     public void UpdateStats()
     {
         healthText.text = card.health.ToString();
+        playerColor.material.color = card.currentOwner.playerColor;
     }
 }

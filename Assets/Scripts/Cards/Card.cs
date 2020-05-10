@@ -9,7 +9,6 @@ public class Card : MonoBehaviour
     public int health;
     public int type;
     public int attack;
-    public int defense;
     public MeshRenderer cardArt;
     public MeshRenderer cardFront;
     public MeshRenderer cardBack;
@@ -31,6 +30,13 @@ public class Card : MonoBehaviour
     {
         originalOwner = player;
         currentOwner = player;
+        statDisplay.UpdateStats();
+    }
+
+    public void SetCurrentOwner(Player player)
+    {
+        currentOwner = player;
+        statDisplay.UpdateStats();
     }
 
     // MOUSE CONTROLS
@@ -91,7 +97,10 @@ public class Card : MonoBehaviour
 
     void OnMouseExit()
     {
-        ResetPosition();
+        if(!Input.GetMouseButtonDown(0))
+        {
+            ResetPosition();
+        }
     }
 
     // PLAYING CARD FUNCTIONS
@@ -134,13 +143,18 @@ public class Card : MonoBehaviour
     }
 
     //TODO: We may want to make this event driven
-    public void TakeDamage(int dmg)
+    public void TakeDamage(int dmg, Player _currentOwner)
     {
         if (dmg < 1)
         {
             dmg = 1;
         }
         health -= dmg;
+        if (health <= 0)
+        {
+            SetCurrentOwner(_currentOwner);
+            health = 1;
+        }
         statDisplay.UpdateStats();
     }
 

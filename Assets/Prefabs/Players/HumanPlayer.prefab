@@ -52,6 +52,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   playedCards: []
+  playerColor: {r: 0.01234436, g: 0, b: 1, a: 1}
   endTurnEvent: {fileID: 11400000, guid: c64b48128ca1b4b4195e4276f0753683, type: 2}
   cardAttackEvent: {fileID: 11400000, guid: ac1b9348d87dcaf4183f0cb52596ae87, type: 2}
 --- !u!114 &8427749435755472226
