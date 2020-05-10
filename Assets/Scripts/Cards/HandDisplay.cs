@@ -16,6 +16,7 @@ public class HandDisplay : MonoBehaviour
     void Start()
     {
         nameText.text = owner.playerName;
+        nameText.color = owner.playerColor;
     }
 
     // Update is called once per frame

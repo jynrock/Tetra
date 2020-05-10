@@ -61,7 +61,7 @@ Transform:
   m_GameObject: {fileID: 8283100739702869634}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.11, y: 0.10000001, z: 0.15}
+  m_LocalScale: {x: 0.12, y: 0.10000001, z: 0.16}
   m_Children:
   - {fileID: 6594341518389354060}
   m_Father: {fileID: 0}
@@ -146,7 +146,6 @@ MonoBehaviour:
   blocker: {fileID: 0}
   row: 0
   column: 0
-  neighbors: {fileID: 0}
   cardHolder: {fileID: 4599676807625403491}
 --- !u!114 &37703478752716499
 MonoBehaviour:
