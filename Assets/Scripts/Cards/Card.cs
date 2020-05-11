@@ -30,7 +30,11 @@ public class Card : MonoBehaviour
     [SerializeField]
     private CardDisplay statDisplay;
     [SerializeField]
-    CardTileEvent tryPlayCardEvent;
+    private CardTileEvent tryPlayCardEvent;
+    [SerializeField]
+    private CardEvent showPreviewEvent;
+    [SerializeField]
+    private CardEvent hidePreviewEvent;
 
     public void SetOriginalOwner(Player player)
     {
@@ -53,6 +57,7 @@ public class Card : MonoBehaviour
             screenPoint = Camera.main.WorldToScreenPoint(transform.position);
             offset =  transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,screenPoint.z));
         }
+        showPreviewEvent.Raise(this);
     }
 
     void OnMouseDrag()
@@ -62,7 +67,8 @@ public class Card : MonoBehaviour
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
             transform.position = curPosition;
-        }
+        }  
+        hidePreviewEvent.Raise(this);
     }
 
     void OnMouseUp()
