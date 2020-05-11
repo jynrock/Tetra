@@ -15,6 +15,8 @@ public class PlayerManager : MonoBehaviour
     CardTilePlayerEvent playCardSucceededEvent;
     [SerializeField]
     CardTilePlayerEvent playCardFailedEvent;
+    [SerializeField]
+    PlayerIntEvent onStartGameOverEvent;
 
     void Start()
     {
@@ -35,7 +37,8 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Game Over");
+            Dictionary<Player, int> winners = PlayerUtility.GetWinningPlayer(players);
+            onStartGameOverEvent.Raise(winners);
         }
 
     }
@@ -61,7 +64,8 @@ public class PlayerManager : MonoBehaviour
 
     public bool CanPlayCardOnTile(CardTileEventData data)
     {
-        return data.tile.card == null 
+        return data.tile.card == null
+                && data.tile.blocker == null
                 && data.card.tile == null;
     }
 }

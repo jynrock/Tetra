@@ -12,6 +12,8 @@ public class Tile : MonoBehaviour
     
     [SerializeField]
     private GameObject cardHolder;
+    [SerializeField]
+    private Blocker blockerPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,5 +38,12 @@ public class Tile : MonoBehaviour
     public void OnCallOutBoard(Board board)
     {
         neighbors = board.GetTileNeighbors(this);
+    }
+
+    public void AddBlocker()
+    {
+        blocker = Instantiate(blockerPrefab);
+        blocker.transform.SetParent(this.transform);
+        blocker.transform.localPosition = new Vector3(0, 0, 0);
     }
 }

@@ -16,13 +16,7 @@ public abstract class Player : MonoBehaviour
     [SerializeField]
     protected CardListDirectionEvent cardAttackEvent;
 
-    public void SetupHand()
-    {
-        foreach(Card c in hand)
-        {
-            c.SetOriginalOwner(this);
-        }
-    }
+    public abstract void SetupHand();
 
     public abstract void OnPlayCard(CardTilePlayerEventData data);
 

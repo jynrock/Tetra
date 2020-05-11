@@ -104,6 +104,22 @@ public class Board : MonoBehaviour
             t.row = row;
             t.column = column;
         }
+
+        int numTilesToBlock = Random.Range(0, 7);
+        int numTilesBlocked = 0;
+        while (numTilesBlocked != numTilesToBlock)
+        {
+            //get random tile
+            Tile t = null;
+            do
+            {
+                t = tilesList[Random.Range(0, tilesList.Count - 1)];
+            }
+            while (t.blocker != null);
+            t.AddBlocker();
+            numTilesBlocked++;
+        }
+
     }
 
     public void HandleCardCombat(CardListDirectionEventData data)

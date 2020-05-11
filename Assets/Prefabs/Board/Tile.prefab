@@ -147,6 +147,7 @@ MonoBehaviour:
   row: 0
   column: 0
   cardHolder: {fileID: 4599676807625403491}
+  blockerPrefab: {fileID: 7412921161882576060, guid: 63a7158e18112be4d9ac95c52483d072, type: 3}
 --- !u!114 &37703478752716499
 MonoBehaviour:
   m_ObjectHideFlags: 0

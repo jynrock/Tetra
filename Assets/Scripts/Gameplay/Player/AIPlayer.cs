@@ -13,11 +13,16 @@ public class AIPlayer : Player
     void Start()
     {
         aI.SetPlayer(this);
+    }
+
+    public override void SetupHand()
+    {
         for(int i = 0; i < hand.Count; i++)
         {
             Card c = hand[i];
             hand[i] = Instantiate(c);
             hand[i].transform.position = superSecretBox.transform.position;
+            hand[i].SetOriginalOwner(this);
         }
     }
 
@@ -27,7 +32,7 @@ public class AIPlayer : Player
         aI.TakeTurn();
         while(!hasPlayedCard && !hasUsedAbility)
         {
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(2.0f);
         }
     }
 

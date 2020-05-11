@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -20,6 +21,10 @@ public class CardTilePlayerCallback : UnityEvent<CardTilePlayerEventData>
 
 [Serializable]
 public class PlayerCallback : UnityEvent<Player>
+{}
+
+[Serializable]
+public class PlayerIntCallback : UnityEvent<Dictionary<Player, int>>
 {}
 
 [Serializable]

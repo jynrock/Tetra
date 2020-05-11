@@ -10,13 +10,13 @@ public class RandoAI : AIBase
         Card c = GetRandomCardFromHand();
         if(t != null && c != null)
         {
-            int fiftyFifty = Random.Range(0, 2);
+            //int fiftyFifty = Random.Range(0, 2);
+            int fiftyFifty = 1;
             if(fiftyFifty == 1)
             {
                 tryPlayCardEvent.Raise(new CardTileEventData(c, t));
             }
         }
-
         EndTurn();
     }
 

@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class HumanPlayer : Player
 {
+    public override void SetupHand()
+    {
+        foreach(Card c in hand)
+        {
+            c.SetOriginalOwner(this);
+        }
+    }
     public override void OnPlayCard(CardTilePlayerEventData data)
     {
         if(data.player == this)
