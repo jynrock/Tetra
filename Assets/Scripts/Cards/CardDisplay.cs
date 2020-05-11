@@ -40,14 +40,14 @@ public class CardDisplay : MonoBehaviour
         nameText.text = card.cardName;
         attackText.text = card.attack.ToString();
 
-        topArrow.SetActive(card.arrows.top.Value);
-        topRightArrow.SetActive(card.arrows.topRight.Value);
-        topLeftArrow.SetActive(card.arrows.topLeft.Value);
-        leftArrow.SetActive(card.arrows.left.Value);
-        rightArrow.SetActive(card.arrows.right.Value);
-        bottomLeftArrow.SetActive(card.arrows.bottomLeft.Value);
-        bottomRightArrow.SetActive(card.arrows.bottomRight.Value);
-        bottomArrow.SetActive(card.arrows.bottom.Value);
+        topArrow.SetActive(card.top);
+        topRightArrow.SetActive(card.topRight);
+        topLeftArrow.SetActive(card.topLeft);
+        leftArrow.SetActive(card.left);
+        rightArrow.SetActive(card.right);
+        bottomLeftArrow.SetActive(card.bottomLeft);
+        bottomRightArrow.SetActive(card.bottomRight);
+        bottomArrow.SetActive(card.bottom);
     }
 
     // Update is called once per frame

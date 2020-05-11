@@ -10,10 +10,18 @@ public class Card : MonoBehaviour
     public int type;
     public int attack;
     public MeshRenderer cardArt;
-    public CardArrows arrows;
     public Tile tile;
     public Player currentOwner;
     public Player originalOwner;
+
+    public bool topLeft;
+    public bool top;
+    public bool topRight;
+    public bool left;
+    public bool right;
+    public bool bottomLeft;
+    public bool bottom;
+    public bool bottomRight;
 
     private Vector3 offset;
     private Vector3 screenPoint;

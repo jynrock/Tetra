@@ -9,35 +9,35 @@ public static class CardUtility
     {
         Dictionary<Card, CardDirection> result = new Dictionary<Card, CardDirection>();
 
-        if (card.arrows.topLeft.Value && card.tile.neighbors.topLeft != null && card.tile.neighbors.topLeft.card != null && card.tile.neighbors.topLeft.card.currentOwner != attackingPlayer)
+        if (card.topLeft && card.tile.neighbors.topLeft != null && card.tile.neighbors.topLeft.card != null && card.tile.neighbors.topLeft.card.currentOwner != attackingPlayer)
         {
             result.Add(card.tile.neighbors.topLeft.card, CardDirection.topLeft);
         }
-        if (card.arrows.top.Value && card.tile.neighbors.top != null && card.tile.neighbors.top.card != null && card.tile.neighbors.top.card.currentOwner != attackingPlayer)
+        if (card.top && card.tile.neighbors.top != null && card.tile.neighbors.top.card != null && card.tile.neighbors.top.card.currentOwner != attackingPlayer)
         {
             result.Add(card.tile.neighbors.top.card, CardDirection.top);
         }
-        if (card.arrows.topRight.Value && card.tile.neighbors.topRight != null && card.tile.neighbors.topRight.card != null && card.tile.neighbors.topRight.card.currentOwner != attackingPlayer)
+        if (card.topRight && card.tile.neighbors.topRight != null && card.tile.neighbors.topRight.card != null && card.tile.neighbors.topRight.card.currentOwner != attackingPlayer)
         {
             result.Add(card.tile.neighbors.topRight.card, CardDirection.topRight);
         }
-        if (card.arrows.right.Value && card.tile.neighbors.right != null && card.tile.neighbors.right.card != null && card.tile.neighbors.right.card.currentOwner != attackingPlayer)
+        if (card.right && card.tile.neighbors.right != null && card.tile.neighbors.right.card != null && card.tile.neighbors.right.card.currentOwner != attackingPlayer)
         {
             result.Add(card.tile.neighbors.right.card, CardDirection.right);
         }
-        if (card.arrows.bottomRight.Value && card.tile.neighbors.bottomRight != null && card.tile.neighbors.bottomRight.card != null && card.tile.neighbors.bottomRight.card.currentOwner != attackingPlayer)
+        if (card.bottomRight && card.tile.neighbors.bottomRight != null && card.tile.neighbors.bottomRight.card != null && card.tile.neighbors.bottomRight.card.currentOwner != attackingPlayer)
         {
             result.Add(card.tile.neighbors.bottomRight.card, CardDirection.bottomRight);
         }
-        if (card.arrows.bottom.Value && card.tile.neighbors.bottom != null && card.tile.neighbors.bottom.card != null && card.tile.neighbors.bottom.card.currentOwner != attackingPlayer)
+        if (card.bottom && card.tile.neighbors.bottom != null && card.tile.neighbors.bottom.card != null && card.tile.neighbors.bottom.card.currentOwner != attackingPlayer)
         {
             result.Add(card.tile.neighbors.bottom.card, CardDirection.bottom);
         }
-        if (card.arrows.bottomLeft.Value && card.tile.neighbors.bottomLeft != null && card.tile.neighbors.bottomLeft.card != null && card.tile.neighbors.bottomLeft.card.currentOwner != attackingPlayer)
+        if (card.bottomLeft && card.tile.neighbors.bottomLeft != null && card.tile.neighbors.bottomLeft.card != null && card.tile.neighbors.bottomLeft.card.currentOwner != attackingPlayer)
         {
             result.Add(card.tile.neighbors.bottomLeft.card, CardDirection.bottomLeft);
         }
-        if (card.arrows.left.Value && card.tile.neighbors.left != null && card.tile.neighbors.left.card != null && card.tile.neighbors.left.card.currentOwner != attackingPlayer)
+        if (card.left && card.tile.neighbors.left != null && card.tile.neighbors.left.card != null && card.tile.neighbors.left.card.currentOwner != attackingPlayer)
         {
             result.Add(card.tile.neighbors.left.card, CardDirection.left);
         }
@@ -50,21 +50,21 @@ public static class CardUtility
         switch(attackDirection)
         {
             case CardDirection.topLeft:
-                return card.arrows.bottomRight.Value;
+                return card.bottomRight;
             case CardDirection.top:
-                return card.arrows.bottom.Value;
+                return card.bottom;
             case CardDirection.topRight:
-                return card.arrows.bottomLeft.Value;
+                return card.bottomLeft;
             case CardDirection.right:
-                return card.arrows.left.Value;
+                return card.left;
             case CardDirection.bottomRight:
-                return card.arrows.topLeft.Value;
+                return card.topLeft;
             case CardDirection.bottom:
-                return card.arrows.top.Value;
+                return card.top;
             case CardDirection.bottomLeft:
-                return card.arrows.topRight.Value;
+                return card.topRight;
             case CardDirection.left:
-                return card.arrows.right.Value;
+                return card.right;
             default:
                 return false;
         }
