@@ -47,6 +47,14 @@ PrefabInstance:
       propertyPath: bottomRight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: cardName
+      value: Timrek
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: cardArt
+      value: 
+      objectReference: {fileID: 2100000, guid: 73eaf9eb545ed6d4aaed17d61af6be25, type: 2}
     - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -93,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7664338715614469367, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: m_Name
-      value: Card Variant
+      value: Timrek
       objectReference: {fileID: 0}
     - target: {fileID: 8383777987192179773, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: m_Mesh

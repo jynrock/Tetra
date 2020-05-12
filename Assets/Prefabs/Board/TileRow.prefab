@@ -8,7 +8,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1563568835264149251}
+  - component: {fileID: 5539670312522723921}
   m_Layer: 0
   m_Name: TileRow
   m_TagString: Untagged
@@ -16,15 +16,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1563568835264149251
-RectTransform:
+--- !u!4 &5539670312522723921
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2897981675276626043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2264230136106841065}
@@ -34,17 +34,12 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1680486713813485185
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1563568835264149251}
+    m_TransformParent: {fileID: 5539670312522723921}
     m_Modifications:
     - target: {fileID: 8283100739702869634, guid: 1c79a62e5b712a9469abaa8e2cd9ca28, type: 3}
       propertyPath: m_Name
@@ -106,7 +101,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1563568835264149251}
+    m_TransformParent: {fileID: 5539670312522723921}
     m_Modifications:
     - target: {fileID: 8283100739702869634, guid: 1c79a62e5b712a9469abaa8e2cd9ca28, type: 3}
       propertyPath: m_Name
@@ -168,7 +163,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1563568835264149251}
+    m_TransformParent: {fileID: 5539670312522723921}
     m_Modifications:
     - target: {fileID: 8283100739702869634, guid: 1c79a62e5b712a9469abaa8e2cd9ca28, type: 3}
       propertyPath: m_Name
@@ -230,7 +225,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1563568835264149251}
+    m_TransformParent: {fileID: 5539670312522723921}
     m_Modifications:
     - target: {fileID: 8283100739702869634, guid: 1c79a62e5b712a9469abaa8e2cd9ca28, type: 3}
       propertyPath: m_Name

@@ -43,6 +43,14 @@ PrefabInstance:
       propertyPath: attack
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: cardName
+      value: Boblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: cardArt
+      value: 
+      objectReference: {fileID: 2100000, guid: 51f831db3cb1da545a9dbfef1bcd4e4d, type: 2}
     - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

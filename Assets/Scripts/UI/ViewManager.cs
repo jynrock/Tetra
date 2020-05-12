@@ -14,6 +14,15 @@ public class ViewManager : MonoBehaviour
     private ScoreRow scoreRow;
     [SerializeField]
     private GameObject gameOverPanel;
+    [SerializeField]
+    private GameObject previewPane;
+    [SerializeField]
+    private CardDisplay cardPreview;
+
+    void OnMouseDown()
+    {
+        Debug.Log("test");
+    }
 
     public void OnStartGameOver(Dictionary<Player, int> data)
     {
@@ -57,5 +66,16 @@ public class ViewManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void OnShowPreviewPane(Card card)
+    {
+        cardPreview.SetCard(card);
+        previewPane.SetActive(true);
+    }
+
+    public void OnHidePreviewPane(Card card)
+    {
+        previewPane.SetActive(false);
     }
 }

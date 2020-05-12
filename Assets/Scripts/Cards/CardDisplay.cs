@@ -17,6 +17,8 @@ public class CardDisplay : MonoBehaviour
     [SerializeField]
     private MeshRenderer frame;
     [SerializeField]
+    private MeshRenderer cardArt;
+    [SerializeField]
     private GameObject topLeftArrow;
     [SerializeField]
     private GameObject topArrow;
@@ -32,13 +34,38 @@ public class CardDisplay : MonoBehaviour
     private GameObject bottomRightArrow;
     [SerializeField]
     private GameObject bottomArrow;
+    [SerializeField]
+    private TextMeshPro specialAbilityText;
 
     // Start is called before the first frame update
     void Start()
     {
+        if(card != null)
+        {
+            SetAll();
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void SetCard(Card c)
+    {
+        card = c;
+
+        SetAll();
+        SetPlayerColor();
+    }
+
+    public void SetAll()
+    {
         healthText.text = card.health.ToString();
         nameText.text = card.cardName;
         attackText.text = card.attack.ToString();
+        cardArt.material = card.cardArt;
 
         topArrow.SetActive(card.top);
         topRightArrow.SetActive(card.topRight);
@@ -48,12 +75,11 @@ public class CardDisplay : MonoBehaviour
         bottomLeftArrow.SetActive(card.bottomLeft);
         bottomRightArrow.SetActive(card.bottomRight);
         bottomArrow.SetActive(card.bottom);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(specialAbilityText != null)
+        {
+            specialAbilityText.text = "Whelp";
+        }
     }
 
     public void SetPlayerColor()

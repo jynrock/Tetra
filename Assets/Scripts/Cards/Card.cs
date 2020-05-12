@@ -9,7 +9,7 @@ public class Card : MonoBehaviour
     public int health;
     public int type;
     public int attack;
-    public MeshRenderer cardArt;
+    public Material cardArt;
     public Tile tile;
     public Player currentOwner;
     public Player originalOwner;
@@ -25,6 +25,7 @@ public class Card : MonoBehaviour
 
     private Vector3 offset;
     private Vector3 screenPoint;
+    private Vector3 originPoint;
     private bool waitingForTryPlayResult;
     private bool controlsDisabled;
     [SerializeField]
@@ -54,6 +55,7 @@ public class Card : MonoBehaviour
     {
         if(!controlsDisabled && tile == null)
         {
+            originPoint = transform.position;
             screenPoint = Camera.main.WorldToScreenPoint(transform.position);
             offset =  transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,screenPoint.z));
         }
@@ -67,8 +69,11 @@ public class Card : MonoBehaviour
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
             transform.position = curPosition;
+            if ((curPosition - originPoint).sqrMagnitude >= 0.1f)
+            {
+                hidePreviewEvent.Raise(this);
+            }
         }  
-        hidePreviewEvent.Raise(this);
     }
 
     void OnMouseUp()
@@ -82,6 +87,7 @@ public class Card : MonoBehaviour
                 Tile targetTile = hit.collider.gameObject.GetComponent<Tile>();
                 if (targetTile != null && !currentOwner.hasPlayedCard)
                 {
+                    hidePreviewEvent.Raise(this);
                     tryPlayCardEvent.Raise(new CardTileEventData(this, targetTile));
                     waitingForTryPlayResult = true;
                 }

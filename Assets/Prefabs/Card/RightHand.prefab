@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4557850554211502490}
   - component: {fileID: 2963613914786625776}
   - component: {fileID: 7556927589130705346}
+  - component: {fileID: -6918424163139351265}
   m_Layer: 0
   m_Name: Player Name
   m_TagString: Untagged
@@ -186,6 +187,14 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2963613914786625776}
   m_maskType: 0
+--- !u!33 &-6918424163139351265
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2816779641141029720}
+  m_Mesh: {fileID: 0}
 --- !u!1 &8300987014359825797
 GameObject:
   m_ObjectHideFlags: 0
@@ -589,14 +598,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf875b6a7a8c78746aad266c25fda175, type: 3}
---- !u!1 &9068193374878815821 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2425711767782240354, guid: bf875b6a7a8c78746aad266c25fda175, type: 3}
-  m_PrefabInstance: {fileID: 6661226083139380783}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9068193374878815826 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2425711767782240381, guid: bf875b6a7a8c78746aad266c25fda175, type: 3}
+  m_PrefabInstance: {fileID: 6661226083139380783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9068193374878815821 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2425711767782240354, guid: bf875b6a7a8c78746aad266c25fda175, type: 3}
   m_PrefabInstance: {fileID: 6661226083139380783}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7814939498636172319

@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 6804787037670527005}
   - component: {fileID: 4891610240823595098}
   - component: {fileID: 8795731387382929535}
+  - component: {fileID: -6918424163139351265}
   m_Layer: 0
   m_Name: Player Name
   m_TagString: Untagged
@@ -387,3 +388,11 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 4891610240823595098}
   m_maskType: 0
+--- !u!33 &-6918424163139351265
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6417165359663572817}
+  m_Mesh: {fileID: 0}
