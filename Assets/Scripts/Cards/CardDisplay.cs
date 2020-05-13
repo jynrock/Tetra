@@ -5,8 +5,7 @@ using TMPro;
 
 public class CardDisplay : MonoBehaviour
 {
-    [SerializeField]
-    private Card card;
+    public Card card;
 
     [SerializeField]
     private TextMeshPro healthText;
@@ -36,6 +35,8 @@ public class CardDisplay : MonoBehaviour
     private GameObject bottomArrow;
     [SerializeField]
     private TextMeshPro specialAbilityText;
+    [SerializeField]
+    private GameObject abilityPreviewPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -76,9 +77,17 @@ public class CardDisplay : MonoBehaviour
         bottomRightArrow.SetActive(card.bottomRight);
         bottomArrow.SetActive(card.bottom);
 
-        if(specialAbilityText != null)
+        if(abilityPreviewPanel != null)
         {
-            specialAbilityText.text = "Whelp";
+            if(card.cardAbility != null)
+            {
+                abilityPreviewPanel.SetActive(true);
+                specialAbilityText.text = card.cardAbility.abilityName + "\n" + card.cardAbility.abilityDescription;
+            }
+            else
+            {
+                abilityPreviewPanel.SetActive(false);
+            }
         }
     }
 

@@ -195,6 +195,8 @@ MonoBehaviour:
   bottomLeftArrow: {fileID: 8370460553679344325}
   bottomRightArrow: {fileID: 3238336100561433268}
   bottomArrow: {fileID: 2790569627786861816}
+  specialAbilityText: {fileID: 0}
+  abilityPreviewPanel: {fileID: 0}
 --- !u!1 &1827263254279395072
 GameObject:
   m_ObjectHideFlags: 0
@@ -902,6 +904,7 @@ GameObject:
   - component: {fileID: 8215092862671346965}
   - component: {fileID: 6376514489409387544}
   - component: {fileID: 3055396669623350457}
+  - component: {fileID: -2873178019609632573}
   m_Layer: 0
   m_Name: Card Attack
   m_TagString: Untagged
@@ -1077,6 +1080,14 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 6376514489409387544}
   m_maskType: 0
+--- !u!33 &-2873178019609632573
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445932713541108473}
+  m_Mesh: {fileID: 0}
 --- !u!1 &3659724293395711598
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1181,7 @@ GameObject:
   - component: {fileID: 6825110185279394523}
   - component: {fileID: 7389880331537605688}
   - component: {fileID: 9109055584612873366}
+  - component: {fileID: 8383777987192179773}
   m_Layer: 0
   m_Name: Card Name
   m_TagString: Untagged
@@ -1345,6 +1357,14 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 7389880331537605688}
   m_maskType: 0
+--- !u!33 &8383777987192179773
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4632661726908247478}
+  m_Mesh: {fileID: 0}
 --- !u!1 &5874324231920919792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1452,6 +1472,7 @@ GameObject:
   - component: {fileID: 828790394980755594}
   - component: {fileID: 30456162558672527}
   - component: {fileID: 7398425290126920189}
+  - component: {fileID: -262284330380600628}
   m_Layer: 0
   m_Name: Card Health
   m_TagString: Untagged
@@ -1627,6 +1648,14 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 30456162558672527}
   m_maskType: 0
+--- !u!33 &-262284330380600628
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6312146450881061117}
+  m_Mesh: {fileID: 0}
 --- !u!1 &6886103501423057711
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,6 +2040,7 @@ GameObject:
   - component: {fileID: 5112004405954408004}
   - component: {fileID: 6956462654121086624}
   - component: {fileID: 8785467839904895194}
+  - component: {fileID: 7195663008428260158}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -2055,6 +2085,8 @@ MonoBehaviour:
   tile: {fileID: 0}
   currentOwner: {fileID: 0}
   originalOwner: {fileID: 0}
+  cardAbility: {fileID: 0}
+  cardAbilityUsed: 0
   topLeft: 0
   top: 0
   topRight: 0
@@ -2067,6 +2099,8 @@ MonoBehaviour:
   tryPlayCardEvent: {fileID: 11400000, guid: a3878b8ee8a2d87478106252435aa2a6, type: 2}
   showPreviewEvent: {fileID: 11400000, guid: bb2a4e8facf5f8141b375a6d8394e42d, type: 2}
   hidePreviewEvent: {fileID: 11400000, guid: 0fe57fe07a33382499ec22a5874930b0, type: 2}
+  selectCardEvent: {fileID: 11400000, guid: 6a15d4994af1e5d419e3f13856f19080, type: 2}
+  cardAbilityExecutedEvent: {fileID: 11400000, guid: bdfa34436cfeccc46873c3274456c67e, type: 2}
 --- !u!65 &7664338715614469365
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2183,6 +2217,34 @@ MonoBehaviour:
       - m_Target: {fileID: 7664338715614469322}
         m_TargetAssemblyTypeName: Card, Assembly-CSharp
         m_MethodName: OnPlayerTurnEnded
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7195663008428260158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664338715614469367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8fe7ed53b7ce9488816440ee0b0a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 98efb08aec1f7604390a21dc08fb0314, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7664338715614469322}
+        m_TargetAssemblyTypeName: Card, Assembly-CSharp
+        m_MethodName: UseCardAbilityFinal
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

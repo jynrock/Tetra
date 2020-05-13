@@ -3313,57 +3313,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1658199288916686897, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.38
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288916686897, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288916686897, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.y
+    - target: {fileID: 1109519893106771541, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
+      propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288916686899, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_NormalizedViewPortRect.width
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288916686899, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_NormalizedViewPortRect.x
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288916686899, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288931142344, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288931142344, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288931142344, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288931142344, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288931142344, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288931142344, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288931142344, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1658199288931142344, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
       propertyPath: m_RootOrder
@@ -3389,6 +3341,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1662094747264737326, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5702525418846804938, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -3408,18 +3364,6 @@ PrefabInstance:
     - target: {fileID: 7736962872064451013, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9033701898891536381, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9033701898891536381, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9033701898891536381, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}

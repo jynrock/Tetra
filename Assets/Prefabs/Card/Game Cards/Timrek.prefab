@@ -55,6 +55,10 @@ PrefabInstance:
       propertyPath: cardArt
       value: 
       objectReference: {fileID: 2100000, guid: 73eaf9eb545ed6d4aaed17d61af6be25, type: 2}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: cardAbility
+      value: 
+      objectReference: {fileID: 11400000, guid: fc4dacccbca859f4ba00fc6d46e569a3, type: 2}
     - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

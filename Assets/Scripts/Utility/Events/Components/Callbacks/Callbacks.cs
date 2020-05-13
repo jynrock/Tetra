@@ -34,3 +34,7 @@ public class BoardCallback : UnityEvent<Board>
 [Serializable]
 public class CardListDirectionCallBack : UnityEvent<CardListDirectionEventData>
 {}
+
+[Serializable]
+public class CardAbilityEventCallBack : UnityEvent<CardAbilityEventData>
+{}

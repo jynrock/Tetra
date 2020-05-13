@@ -13,6 +13,8 @@ public class Card : MonoBehaviour
     public Tile tile;
     public Player currentOwner;
     public Player originalOwner;
+    public CardAbility cardAbility;
+    public bool cardAbilityUsed;
 
     public bool topLeft;
     public bool top;
@@ -36,6 +38,12 @@ public class Card : MonoBehaviour
     private CardEvent showPreviewEvent;
     [SerializeField]
     private CardEvent hidePreviewEvent;
+    [SerializeField]
+    private CardEvent selectCardEvent;
+
+    void Start()
+    {
+    }
 
     public void SetOriginalOwner(Player player)
     {
@@ -58,6 +66,14 @@ public class Card : MonoBehaviour
             originPoint = transform.position;
             screenPoint = Camera.main.WorldToScreenPoint(transform.position);
             offset =  transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,screenPoint.z));
+        }
+        else if(!controlsDisabled) 
+        {
+            selectCardEvent.Raise(this);
+            if(cardAbility != null)
+            {
+                cardAbility.Deactivate();
+            }
         }
         showPreviewEvent.Raise(this);
     }
@@ -171,6 +187,31 @@ public class Card : MonoBehaviour
             health = 1;
         }
         statDisplay.UpdateStats();
+    }
+
+    public void UseCardAbility()
+    {
+        //This isn't going to work. We need to add a check for whether the player CAN use the ability first
+        //It's going to need to function like CanPlayCard and PlayCardSucceeded
+        if(!cardAbilityUsed)
+        {
+            if(tile != null)
+            {
+                cardAbility.Activate(this);
+            }
+        }
+    }
+
+    public void UseCardAbilityFinal(CardAbilityEventData data)
+    {
+        if(data.sourceCard == this)
+        {
+            if(!cardAbilityUsed)
+            {
+                cardAbilityUsed = true;
+                cardAbility.HandleAbility(data);
+            }
+        }
     }
 
     // PRIVATE FUNCTIONS

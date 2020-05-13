@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e2ffa62b44a924cb580f54b4886347, type: 3}
+  m_Name: Card Swap Ability
+  m_EditorClassIdentifier: 
+  abilityName: Card Swap
+  abilityDescription: Swap the positions of two cards.
+  used: 0
+  abilityListenerHandler: {fileID: 4874114189029703259, guid: 96a594ea551b04d419855716aec5d087, type: 3}
