@@ -17,6 +17,10 @@ public class PlayerManager : MonoBehaviour
     CardTilePlayerEvent playCardFailedEvent;
     [SerializeField]
     PlayerIntEvent onStartGameOverEvent;
+    [SerializeField]
+    CardAbilityEvent onTryUseAbilitySucceededEvent;
+    [SerializeField]
+    CardAbilityEvent onTryUseAbilityFailedEvent;
 
     void Start()
     {
@@ -67,5 +71,35 @@ public class PlayerManager : MonoBehaviour
         return data.tile.card == null
                 && data.tile.blocker == null
                 && data.card.tile == null;
+    }
+
+    public void OnTryUseCardAbility(CardAbilityEventData data)
+    {
+        if (data.sourceCard != null 
+            && !data.sourceCard.cardAbilityUsed
+            && data.sourceCard.tile != null
+            && data.sourceCard.currentOwner == currentPlayerTurn
+            && data.target != null 
+            && data.target.tile != null)
+        {
+            if (data.type == AbilityType.ONE_TARGET)
+            {
+                Debug.Log("Succeeded");
+                onTryUseAbilitySucceededEvent.Raise(data);
+                return;
+            }
+            if (data.type == AbilityType.TWO_TARGET)
+            {
+                if (data.secondTarget != null
+                    && data.secondTarget.tile != null)
+                {
+                    Debug.Log("Succeeded");
+                    onTryUseAbilitySucceededEvent.Raise(data);
+                    return;
+                }
+            }
+        }
+        Debug.Log("Failed");
+        onTryUseAbilityFailedEvent.Raise(data);
     }
 }

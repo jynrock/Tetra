@@ -20,6 +20,9 @@ public class AbilityActivator : MonoBehaviour
 
     void OnMouseDown()
     {
-        display.card.UseCardAbility();
+        if(!display.card.cardAbilityUsed)
+        {
+            display.card.BeginUseAbility();
+        }
     }
 }

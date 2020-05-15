@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Card Swap
   abilityDescription: Swap the positions of two cards.
-  used: 0
-  abilityListenerHandler: {fileID: 4874114189029703259, guid: 96a594ea551b04d419855716aec5d087, type: 3}
+  type: 1
+  targetListeningEvent: {fileID: 11400000, guid: 1b602e4b1c253e747b4c93a50470d86c, type: 2}
+  tryUseAbilityEvent: {fileID: 11400000, guid: 98efb08aec1f7604390a21dc08fb0314, type: 2}

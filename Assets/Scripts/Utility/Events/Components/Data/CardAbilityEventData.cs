@@ -5,17 +5,12 @@ using UnityEngine;
 public class CardAbilityEventData
 {
 	public Card sourceCard;
+	public AbilityType type;
 	public Card target;
 	public Card secondTarget;
-
-	public CardAbilityEventData(
-		Card _source,
-		Card _target,
-		Card _secondTarget = null
-		)
-	{
-		sourceCard = _source;
-		target = _target;
-		secondTarget = _secondTarget;
-	}
+}
+public enum AbilityType
+{
+	ONE_TARGET,
+	TWO_TARGET
 }

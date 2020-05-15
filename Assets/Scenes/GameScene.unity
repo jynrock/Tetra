@@ -4207,6 +4207,14 @@ PrefabInstance:
       propertyPath: hand.Array.data[4]
       value: 
       objectReference: {fileID: 1542336649}
+    - target: {fileID: 6335565313414799676, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
+      propertyPath: onTryUseAbilitySucceededEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 5bb55122d643b48449150eb88dedd530, type: 2}
+    - target: {fileID: 6335565313414799676, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
+      propertyPath: onTryUseAbilityFailedEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 1464b0cc39ebea44795a5ae6f91a8a1e, type: 2}
     - target: {fileID: 6335565313414799678, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
       propertyPath: m_Name
       value: Players
@@ -4257,6 +4265,50 @@ PrefabInstance:
       objectReference: {fileID: 1940719199895826186, guid: cb174ba076aec5944b13bf864830992e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
+--- !u!1 &6335565312065097447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6335565313414799678, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
+  m_PrefabInstance: {fileID: 6335565312065097446}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6335565312065097448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6335565313414799676, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
+  m_PrefabInstance: {fileID: 6335565312065097446}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335565312065097447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4082e43205eb814ea5f837a3825f983, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6335565312065097449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6335565312065097447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8fe7ed53b7ce9488816440ee0b0a25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 98efb08aec1f7604390a21dc08fb0314, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6335565312065097448}
+        m_TargetAssemblyTypeName: PlayerManager, Assembly-CSharp
+        m_MethodName: OnTryUseCardAbility
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &8300987016332146926
 PrefabInstance:
   m_ObjectHideFlags: 0

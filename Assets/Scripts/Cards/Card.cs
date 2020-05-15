@@ -30,6 +30,8 @@ public class Card : MonoBehaviour
     private Vector3 originPoint;
     private bool waitingForTryPlayResult;
     private bool controlsDisabled;
+    private bool targetListening;
+    private bool abilityActive;
     [SerializeField]
     private CardDisplay statDisplay;
     [SerializeField]
@@ -69,10 +71,9 @@ public class Card : MonoBehaviour
         }
         else if(!controlsDisabled) 
         {
-            selectCardEvent.Raise(this);
-            if(cardAbility != null)
+            if(targetListening)
             {
-                cardAbility.Deactivate();
+                selectCardEvent.Raise(this);
             }
         }
         showPreviewEvent.Raise(this);
@@ -189,28 +190,40 @@ public class Card : MonoBehaviour
         statDisplay.UpdateStats();
     }
 
-    public void UseCardAbility()
+    public void OnTargetListeningEvent(bool shouldListen)
     {
-        //This isn't going to work. We need to add a check for whether the player CAN use the ability first
-        //It's going to need to function like CanPlayCard and PlayCardSucceeded
-        if(!cardAbilityUsed)
-        {
-            if(tile != null)
-            {
-                cardAbility.Activate(this);
-            }
-        }
+        targetListening = shouldListen;
     }
 
-    public void UseCardAbilityFinal(CardAbilityEventData data)
+    public void BeginUseAbility()
+    {
+        abilityActive = true;
+        cardAbility.Activate(this);
+    }
+
+    public void OnTryUseAbilitySucceeded(CardAbilityEventData data)
     {
         if(data.sourceCard == this)
         {
-            if(!cardAbilityUsed)
-            {
-                cardAbilityUsed = true;
-                cardAbility.HandleAbility(data);
-            }
+            cardAbilityUsed = true;
+            abilityActive = false;
+            cardAbility.HandleAbility(data);
+        }
+    }
+
+    public void OnTryUseAbilityFailed(CardAbilityEventData data)
+    {
+        if(data.sourceCard == this)
+        {
+            abilityActive = false;
+            cardAbility.Deactivate();
+        }
+    }
+    public void OnTargetSelected(Card card)
+    {
+        if(abilityActive == true)
+        {
+            cardAbility.OnTargetSelected(card);
         }
     }
 

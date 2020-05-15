@@ -5,12 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Card Ability/Card Swap Ability")]
 public class CardSwapAbility : CardAbility
 {
-    public override void SetupListener(Card _sourceCard)
-    {
-        instantiatedAbilityListener.abilityType = AbilityType.TWO_TARGET;
-        instantiatedAbilityListener.sourceCard = _sourceCard;
-    }
-
     public override void HandleAbility(CardAbilityEventData data)
     {
         Tile firstTile = data.target.tile;

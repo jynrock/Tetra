@@ -5,27 +5,61 @@ public abstract class CardAbility : ScriptableObject
 {
     public string abilityName = "New Ability";
     public string abilityDescription = "New Ability Description";
-    [SerializeField]
-    private CardAbilityListenerHandler abilityListenerHandler;
+    public AbilityType type;
 
     [SerializeField]
-    protected CardAbilityListenerHandler instantiatedAbilityListener;
+    private BoolGameEvent targetListeningEvent;
+    [SerializeField]
+    private CardAbilityEvent tryUseAbilityEvent;
+
+    private Card sourceCard;
+
+    private Card firstTarget;
+    private Card secondTarget;
 
     public void Activate(Card _sourceCard)
     {
-        instantiatedAbilityListener = Instantiate(abilityListenerHandler).GetComponent<CardAbilityListenerHandler>();
-        SetupListener(_sourceCard);
+        sourceCard = _sourceCard;
+        targetListeningEvent.Raise(true);
     }
 
     public void Deactivate()
     {
-        if(instantiatedAbilityListener != null)
+        targetListeningEvent.Raise(false);
+        ResetAbility();
+    }
+
+    public void OnTargetSelected(Card card)
+    {
+        if(firstTarget == null)
         {
-            Destroy(instantiatedAbilityListener.gameObject);
-            instantiatedAbilityListener = null;
+            firstTarget = card;
+            if (type == AbilityType.ONE_TARGET)
+            {
+                tryUseAbilityEvent.Raise(new CardAbilityEventData() {sourceCard = sourceCard, type = type, target = firstTarget});
+                ResetAbility();
+            }
+        }
+        else
+        {
+            if(card != firstTarget)
+            {
+                secondTarget = card;
+                if(type == AbilityType.TWO_TARGET)
+                {
+                    tryUseAbilityEvent.Raise(new CardAbilityEventData() {sourceCard = sourceCard, type = type, target = firstTarget, secondTarget = secondTarget});
+                    ResetAbility();
+                }
+            }
         }
     }
 
-    public abstract void SetupListener(Card card);
+    public void ResetAbility()
+    {
+        sourceCard = null;
+        firstTarget = null;
+        secondTarget = null;
+    }
+
     public abstract void HandleAbility(CardAbilityEventData data);
 }
