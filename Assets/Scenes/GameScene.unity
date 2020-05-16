@@ -587,7 +587,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 371913933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5c849a929e33a4c8f2b1589e6748fe, type: 3}
+  m_Script: {fileID: 11500000, guid: ca8d30b3325da8c4088c7f69c12f425f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &371913936
@@ -634,7 +634,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 371913935}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: LevelLoaderButton, Assembly-CSharp
         m_MethodName: LoadLevel
         m_Mode: 5
         m_Arguments:
@@ -3016,7 +3016,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 29.7
+  m_fontSize: 21.5
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
