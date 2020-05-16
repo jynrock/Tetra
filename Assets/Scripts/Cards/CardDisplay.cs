@@ -103,6 +103,7 @@ public class CardDisplay : MonoBehaviour
 
     public void UpdateStats()
     {
+        attackText.text = card.attack.ToString();
         healthText.text = card.health.ToString();
         frame.material.color = card.currentOwner.playerColor;
     }

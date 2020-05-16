@@ -7,6 +7,7 @@ public class Card : MonoBehaviour
     public string cardName;
     public string cardDesc;
     public int health;
+    public int maxHealth;
     public int type;
     public int attack;
     public Material cardArt;
@@ -191,6 +192,19 @@ public class Card : MonoBehaviour
         statDisplay.UpdateStats();
     }
 
+    public void Heal(int toHeal)
+    {
+        if (health + toHeal >= maxHealth)
+        {
+            health = maxHealth;
+        }
+        else
+        {
+            health += toHeal;
+        }
+        statDisplay.UpdateStats();
+    }
+
     public void OnTargetListeningEvent(bool shouldListen)
     {
         targetListening = shouldListen;
@@ -229,6 +243,19 @@ public class Card : MonoBehaviour
         {
             cardAbility.OnTargetSelected(card);
         }
+    }
+
+    public void BoostAttack(int amt)
+    {
+        this.attack += amt;
+        statDisplay.UpdateStats();
+    }
+
+    public void BoostHealth(int amt)
+    {
+        this.maxHealth += amt;
+        this.health += amt;
+        statDisplay.UpdateStats();
     }
 
     // PRIVATE FUNCTIONS

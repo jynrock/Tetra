@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: cardArt
       value: 
       objectReference: {fileID: 2100000, guid: 3154c6d98778b1c43a55eadb838764ab, type: 2}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

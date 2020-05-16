@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5e2ffa62b44a924cb580f54b4886347, type: 3}
-  m_Name: Card Swap Ability
+  m_Script: {fileID: 11500000, guid: bd2db78de3985c94cb90b5497901b712, type: 3}
+  m_Name: Boost Attack
   m_EditorClassIdentifier: 
-  abilityName: Card Swap
-  abilityDescription: Swap the positions of two cards.
-  type: 1
+  abilityName: Boost Attack
+  abilityDescription: Boost another card's attack power by this card's attack power.
+  type: 0
   targetListeningEvent: {fileID: 11400000, guid: 1b602e4b1c253e747b4c93a50470d86c, type: 2}
   tryUseAbilityEvent: {fileID: 11400000, guid: 98efb08aec1f7604390a21dc08fb0314, type: 2}
+  boostType: 1

@@ -21,11 +21,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 391ae9b93482c63489e5188156f23f98, type: 2}
     - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: health
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: attack
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: top
@@ -51,6 +51,14 @@ PrefabInstance:
       propertyPath: cardArt
       value: 
       objectReference: {fileID: 2100000, guid: 391ae9b93482c63489e5188156f23f98, type: 2}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: maxHealth
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: cardAbility
+      value: 
+      objectReference: {fileID: 11400000, guid: 076f5a979a6b6c04385f621476a61b26, type: 2}
     - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

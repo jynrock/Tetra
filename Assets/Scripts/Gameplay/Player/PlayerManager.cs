@@ -79,13 +79,14 @@ public class PlayerManager : MonoBehaviour
             && !data.sourceCard.cardAbilityUsed
             && data.sourceCard.tile != null
             && data.sourceCard.currentOwner == currentPlayerTurn
+            && !data.sourceCard.currentOwner.hasUsedAbility
             && data.target != null 
             && data.target.tile != null)
         {
             if (data.type == AbilityType.ONE_TARGET)
             {
-                Debug.Log("Succeeded");
                 onTryUseAbilitySucceededEvent.Raise(data);
+                data.sourceCard.currentOwner.hasUsedAbility = true;
                 return;
             }
             if (data.type == AbilityType.TWO_TARGET)
@@ -93,13 +94,11 @@ public class PlayerManager : MonoBehaviour
                 if (data.secondTarget != null
                     && data.secondTarget.tile != null)
                 {
-                    Debug.Log("Succeeded");
                     onTryUseAbilitySucceededEvent.Raise(data);
                     return;
                 }
             }
         }
-        Debug.Log("Failed");
         onTryUseAbilityFailedEvent.Raise(data);
     }
 }
