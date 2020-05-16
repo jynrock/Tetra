@@ -73,6 +73,7 @@ public class Card : MonoBehaviour
         {
             if(targetListening)
             {
+                statDisplay.ToggleOutline(true);
                 selectCardEvent.Raise(this);
             }
         }
@@ -208,7 +209,9 @@ public class Card : MonoBehaviour
             cardAbilityUsed = true;
             abilityActive = false;
             cardAbility.HandleAbility(data);
+            cardAbility.Deactivate();
         }
+        statDisplay.ToggleOutline(false);
     }
 
     public void OnTryUseAbilityFailed(CardAbilityEventData data)
@@ -218,6 +221,7 @@ public class Card : MonoBehaviour
             abilityActive = false;
             cardAbility.Deactivate();
         }
+        statDisplay.ToggleOutline(false);
     }
     public void OnTargetSelected(Card card)
     {

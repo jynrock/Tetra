@@ -34,9 +34,13 @@ public class CardDisplay : MonoBehaviour
     [SerializeField]
     private GameObject bottomArrow;
     [SerializeField]
-    private TextMeshPro specialAbilityText;
+    private TextMeshPro specialAbilityTitleText;
+    [SerializeField]
+    private TextMeshPro specialAbilityDescriptionText;
     [SerializeField]
     private GameObject abilityPreviewPanel;
+    [SerializeField]
+    private GameObject outline;
 
     // Start is called before the first frame update
     void Start()
@@ -82,7 +86,8 @@ public class CardDisplay : MonoBehaviour
             if(card.cardAbility != null)
             {
                 abilityPreviewPanel.SetActive(true);
-                specialAbilityText.text = card.cardAbility.abilityName + "\n" + card.cardAbility.abilityDescription;
+                specialAbilityTitleText.text = card.cardAbility.abilityName;
+                specialAbilityDescriptionText.text = card.cardAbility.abilityDescription;
             }
             else
             {
@@ -100,5 +105,10 @@ public class CardDisplay : MonoBehaviour
     {
         healthText.text = card.health.ToString();
         frame.material.color = card.currentOwner.playerColor;
+    }
+
+    public void ToggleOutline(bool shouldShowOutline)
+    {
+        outline.SetActive(shouldShowOutline);
     }
 }
