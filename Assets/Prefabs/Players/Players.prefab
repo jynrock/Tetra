@@ -55,6 +55,8 @@ MonoBehaviour:
   playCardSucceededEvent: {fileID: 11400000, guid: 51a3a3d58d9e38246a064dfe332cd209, type: 2}
   playCardFailedEvent: {fileID: 11400000, guid: 2a137197003a2224295d2b4fe742df05, type: 2}
   onStartGameOverEvent: {fileID: 11400000, guid: 4d0846a2c295a2f45b60dd63f020f46d, type: 2}
+  onTryUseAbilitySucceededEvent: {fileID: 11400000, guid: 5bb55122d643b48449150eb88dedd530, type: 2}
+  onTryUseAbilityFailedEvent: {fileID: 11400000, guid: 1464b0cc39ebea44795a5ae6f91a8a1e, type: 2}
 --- !u!114 &8141838135644880792
 MonoBehaviour:
   m_ObjectHideFlags: 0

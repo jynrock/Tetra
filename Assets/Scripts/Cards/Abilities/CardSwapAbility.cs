@@ -2,10 +2,10 @@
 using UnityEngine;
 
 [Serializable]
-[CreateAssetMenu(menuName = "Card Ability/Card Swap Ability")]
+[CreateAssetMenu(menuName = "Card/Card Ability/Card Swap Ability")]
 public class CardSwapAbility : CardAbility
 {
-    public override void HandleAbility(CardAbilityEventData data)
+    public override void HandleAbility(BattlecardAbilityEventData data)
     {
         Tile firstTile = data.target.tile;
         Tile secondTile = data.secondTarget.tile;

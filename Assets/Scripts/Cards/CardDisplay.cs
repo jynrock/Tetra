@@ -5,7 +5,7 @@ using TMPro;
 
 public class CardDisplay : MonoBehaviour
 {
-    public Card card;
+    public BattleCard card;
 
     [SerializeField]
     private TextMeshPro healthText;
@@ -57,7 +57,7 @@ public class CardDisplay : MonoBehaviour
         
     }
 
-    public void SetCard(Card c)
+    public void SetCard(BattleCard c)
     {
         card = c;
 
@@ -67,27 +67,27 @@ public class CardDisplay : MonoBehaviour
 
     public void SetAll()
     {
-        healthText.text = card.health.ToString();
-        nameText.text = card.cardName;
-        attackText.text = card.attack.ToString();
-        cardArt.material = card.cardArt;
+        healthText.text = card.card.health.ToString();
+        nameText.text = card.card.cardName;
+        attackText.text = card.card.attack.ToString();
+        cardArt.material = card.card.cardArt;
 
-        topArrow.SetActive(card.top);
-        topRightArrow.SetActive(card.topRight);
-        topLeftArrow.SetActive(card.topLeft);
-        leftArrow.SetActive(card.left);
-        rightArrow.SetActive(card.right);
-        bottomLeftArrow.SetActive(card.bottomLeft);
-        bottomRightArrow.SetActive(card.bottomRight);
-        bottomArrow.SetActive(card.bottom);
+        topArrow.SetActive(card.card.top);
+        topRightArrow.SetActive(card.card.topRight);
+        topLeftArrow.SetActive(card.card.topLeft);
+        leftArrow.SetActive(card.card.left);
+        rightArrow.SetActive(card.card.right);
+        bottomLeftArrow.SetActive(card.card.bottomLeft);
+        bottomRightArrow.SetActive(card.card.bottomRight);
+        bottomArrow.SetActive(card.card.bottom);
 
         if(abilityPreviewPanel != null)
         {
-            if(card.cardAbility != null)
+            if(card.card.cardAbility != null)
             {
                 abilityPreviewPanel.SetActive(true);
-                specialAbilityTitleText.text = card.cardAbility.abilityName;
-                specialAbilityDescriptionText.text = card.cardAbility.abilityDescription;
+                specialAbilityTitleText.text = card.card.cardAbility.abilityName;
+                specialAbilityDescriptionText.text = card.card.cardAbility.abilityDescription;
             }
             else
             {
@@ -103,8 +103,8 @@ public class CardDisplay : MonoBehaviour
 
     public void UpdateStats()
     {
-        attackText.text = card.attack.ToString();
-        healthText.text = card.health.ToString();
+        attackText.text = card.card.attack.ToString();
+        healthText.text = card.card.health.ToString();
         frame.material.color = card.currentOwner.playerColor;
     }
 

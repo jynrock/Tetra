@@ -68,13 +68,13 @@ public class ViewManager : MonoBehaviour
         return false;
     }
 
-    public void OnShowPreviewPane(Card card)
+    public void OnShowPreviewPane(BattleCard card)
     {
         cardPreview.SetCard(card);
         previewPane.SetActive(true);
     }
 
-    public void OnHidePreviewPane(Card card)
+    public void OnHidePreviewPane(BattleCard card)
     {
         previewPane.SetActive(false);
     }

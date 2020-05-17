@@ -12,15 +12,15 @@ public class PlayerManager : MonoBehaviour
     private PlayerEvent startPlayerTurnEvent;
 
     [SerializeField]
-    CardTilePlayerEvent playCardSucceededEvent;
+    BattlecardTilePlayerEvent playCardSucceededEvent;
     [SerializeField]
-    CardTilePlayerEvent playCardFailedEvent;
+    BattlecardTilePlayerEvent playCardFailedEvent;
     [SerializeField]
     PlayerIntEvent onStartGameOverEvent;
     [SerializeField]
-    CardAbilityEvent onTryUseAbilitySucceededEvent;
+    BattlecardAbilityEvent onTryUseAbilitySucceededEvent;
     [SerializeField]
-    CardAbilityEvent onTryUseAbilityFailedEvent;
+    BattlecardAbilityEvent onTryUseAbilityFailedEvent;
 
     void Start()
     {
@@ -53,9 +53,9 @@ public class PlayerManager : MonoBehaviour
         startPlayerTurnEvent.Raise(currentPlayerTurn);
     }
 
-    public void OnTryPlayCard(CardTileEventData data)
+    public void OnTryPlayCard(BattlecardTileEventData data)
     {
-        CardTilePlayerEventData newData = new CardTilePlayerEventData(data.card, data.tile, currentPlayerTurn);
+        BattlecardTilePlayerEventData newData = new BattlecardTilePlayerEventData(data.card, data.tile, currentPlayerTurn);
         if (CanPlayCardOnTile(data))
         {
             playCardSucceededEvent.Raise(newData);
@@ -66,14 +66,14 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public bool CanPlayCardOnTile(CardTileEventData data)
+    public bool CanPlayCardOnTile(BattlecardTileEventData data)
     {
         return data.tile.card == null
                 && data.tile.blocker == null
                 && data.card.tile == null;
     }
 
-    public void OnTryUseCardAbility(CardAbilityEventData data)
+    public void OnTryUseCardAbility(BattlecardAbilityEventData data)
     {
         if (data.sourceCard != null 
             && !data.sourceCard.cardAbilityUsed

@@ -7,14 +7,14 @@ public class RandoAI : AIBase
     public override void TakeTurn()
     {
         Tile t = GetRandomTile();
-        Card c = GetRandomCardFromHand();
+        BattleCard c = GetRandomCardFromHand();
         if(t != null && c != null)
         {
             //int fiftyFifty = Random.Range(0, 2);
             int fiftyFifty = 1;
             if(fiftyFifty == 1)
             {
-                tryPlayCardEvent.Raise(new CardTileEventData(c, t));
+                tryPlayCardEvent.Raise(new BattlecardTileEventData(c, t));
             }
         }
         EndTurn();
@@ -42,9 +42,9 @@ public class RandoAI : AIBase
         return result;
     }
 
-    private Card GetRandomCardFromHand()
+    private BattleCard GetRandomCardFromHand()
     {
-        Card result = null;
+        BattleCard result = null;
 
         if(player.hand.Count > 0)
         {

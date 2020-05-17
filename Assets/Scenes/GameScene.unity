@@ -3016,7 +3016,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 21.5
+  m_fontSize: 27.15
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3340,6 +3340,10 @@ PrefabInstance:
     - target: {fileID: 1658199288916686899, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
       propertyPath: orthographic size
       value: 0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658199288916686899, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
+      propertyPath: m_ClearFlags
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1658199288931142344, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
       propertyPath: m_RootOrder
@@ -4283,14 +4287,6 @@ PrefabInstance:
       propertyPath: hand.Array.data[4]
       value: 
       objectReference: {fileID: 1542336649}
-    - target: {fileID: 6335565313414799676, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
-      propertyPath: onTryUseAbilitySucceededEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 5bb55122d643b48449150eb88dedd530, type: 2}
-    - target: {fileID: 6335565313414799676, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
-      propertyPath: onTryUseAbilityFailedEvent
-      value: 
-      objectReference: {fileID: 11400000, guid: 1464b0cc39ebea44795a5ae6f91a8a1e, type: 2}
     - target: {fileID: 6335565313414799678, guid: e0ea7138e2cde274da5b3b51b530a8ee, type: 3}
       propertyPath: m_Name
       value: Players

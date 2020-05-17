@@ -12,13 +12,13 @@ public class Board : MonoBehaviour
     [SerializeField]
     BoardEvent calloutBoard;
 
-    public List<Card> cardsInPlay;
+    public List<BattleCard> cardsInPlay;
 
     // Start is called before the first frame update
     void Start()
     {
         SetUpTiles();
-        cardsInPlay = new List<Card>();
+        cardsInPlay = new List<BattleCard>();
         calloutBoard.Raise(this);
     }
 
@@ -122,15 +122,15 @@ public class Board : MonoBehaviour
 
     }
 
-    public void HandleCardCombat(CardListDirectionEventData data)
+    public void HandleCardCombat(BattlecardListDirectionEventData data)
     {
-        Card attackingCard = data.card;
-        foreach(KeyValuePair<Card,CardDirection> pair in data.cardList)
+        BattleCard attackingCard = data.card;
+        foreach(KeyValuePair<BattleCard,CardDirection> pair in data.cardList)
         {
-            Card defendingCard = pair.Key;
+            BattleCard defendingCard = pair.Key;
             CardDirection attackDirection = pair.Value;
 
-            int attack = attackingCard.attack;
+            int attack = attackingCard.card.attack;
 
             if(CardUtility.HasOpposingArrow(defendingCard, attackDirection))
             {
@@ -141,7 +141,7 @@ public class Board : MonoBehaviour
         }
     }
 
-    public void OnPlayCardSucceeded(CardTilePlayerEventData data)
+    public void OnPlayCardSucceeded(BattlecardTilePlayerEventData data)
     {
         cardsInPlay.Add(data.card);
     }

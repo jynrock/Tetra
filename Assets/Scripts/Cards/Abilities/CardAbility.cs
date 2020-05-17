@@ -10,14 +10,14 @@ public abstract class CardAbility : ScriptableObject
     [SerializeField]
     private BoolGameEvent targetListeningEvent;
     [SerializeField]
-    private CardAbilityEvent tryUseAbilityEvent;
+    private BattlecardAbilityEvent tryUseAbilityEvent;
 
-    private Card sourceCard;
+    private BattleCard sourceCard;
 
-    private Card firstTarget;
-    private Card secondTarget;
+    private BattleCard firstTarget;
+    private BattleCard secondTarget;
 
-    public void Activate(Card _sourceCard)
+    public void Activate(BattleCard _sourceCard)
     {
         sourceCard = _sourceCard;
         targetListeningEvent.Raise(true);
@@ -29,14 +29,14 @@ public abstract class CardAbility : ScriptableObject
         ResetAbility();
     }
 
-    public void OnTargetSelected(Card card)
+    public void OnTargetSelected(BattleCard card)
     {
         if(firstTarget == null)
         {
             firstTarget = card;
             if (type == AbilityType.ONE_TARGET)
             {
-                tryUseAbilityEvent.Raise(new CardAbilityEventData() {sourceCard = sourceCard, type = type, target = firstTarget});
+                tryUseAbilityEvent.Raise(new BattlecardAbilityEventData() {sourceCard = sourceCard, type = type, target = firstTarget});
                 ResetAbility();
             }
         }
@@ -47,7 +47,7 @@ public abstract class CardAbility : ScriptableObject
                 secondTarget = card;
                 if(type == AbilityType.TWO_TARGET)
                 {
-                    tryUseAbilityEvent.Raise(new CardAbilityEventData() {sourceCard = sourceCard, type = type, target = firstTarget, secondTarget = secondTarget});
+                    tryUseAbilityEvent.Raise(new BattlecardAbilityEventData() {sourceCard = sourceCard, type = type, target = firstTarget, secondTarget = secondTarget});
                     ResetAbility();
                 }
             }
@@ -61,5 +61,5 @@ public abstract class CardAbility : ScriptableObject
         secondTarget = null;
     }
 
-    public abstract void HandleAbility(CardAbilityEventData data);
+    public abstract void HandleAbility(BattlecardAbilityEventData data);
 }

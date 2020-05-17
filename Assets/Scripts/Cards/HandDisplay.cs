@@ -25,7 +25,7 @@ public class HandDisplay : MonoBehaviour
         
     }
 
-    public void OnPlayCard(CardTilePlayerEventData data)
+    public void OnPlayCard(BattlecardTilePlayerEventData data)
     {
         if( data.player == owner)
         {

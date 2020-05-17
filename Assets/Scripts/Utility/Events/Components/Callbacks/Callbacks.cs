@@ -8,15 +8,15 @@ public class MonoBehaviourCallback : UnityEvent<MonoBehaviour>
 {}
 
 [Serializable]
-public class CardCallback : UnityEvent<Card>
+public class BattleCardCallback : UnityEvent<BattleCard>
 {}
 
 [Serializable]
-public class CardTileCallback : UnityEvent<CardTileEventData>
+public class BattlecardTileCallback : UnityEvent<BattlecardTileEventData>
 {}
 
 [Serializable]
-public class CardTilePlayerCallback : UnityEvent<CardTilePlayerEventData>
+public class BattlecardTilePlayerCallback : UnityEvent<BattlecardTilePlayerEventData>
 {}
 
 [Serializable]
@@ -32,9 +32,9 @@ public class BoardCallback : UnityEvent<Board>
 {}
 
 [Serializable]
-public class CardListDirectionCallBack : UnityEvent<CardListDirectionEventData>
+public class BattlecardListDirectionCallBack : UnityEvent<BattlecardListDirectionEventData>
 {}
 
 [Serializable]
-public class CardAbilityEventCallBack : UnityEvent<CardAbilityEventData>
+public class BattlecardAbilityEventCallBack : UnityEvent<BattlecardAbilityEventData>
 {}

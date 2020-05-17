@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4644779059970225113
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -2873178019609632573, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: -262284330380600628, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465413458963454261, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 73eaf9eb545ed6d4aaed17d61af6be25, type: 2}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: health
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: attack
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: topLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: topRight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: bottomLeft
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: bottom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: bottomRight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: cardName
+      value: Timrek
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: cardArt
+      value: 
+      objectReference: {fileID: 2100000, guid: 73eaf9eb545ed6d4aaed17d61af6be25, type: 2}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: cardAbility
+      value: 
+      objectReference: {fileID: 11400000, guid: fc4dacccbca859f4ba00fc6d46e569a3, type: 2}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: maxHealth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: e22a475dad42b6a4da53316da080d13d, type: 2}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664338715614469367, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_Name
+      value: Timrek
+      objectReference: {fileID: 0}
+    - target: {fileID: 8383777987192179773, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}

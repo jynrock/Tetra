@@ -19,7 +19,7 @@ public class AIPlayer : Player
     {
         for(int i = 0; i < hand.Count; i++)
         {
-            Card c = hand[i];
+            BattleCard c = hand[i];
             hand[i] = Instantiate(c);
             hand[i].transform.position = superSecretBox.transform.position;
             hand[i].SetOriginalOwner(this);
@@ -36,7 +36,7 @@ public class AIPlayer : Player
         }
     }
 
-    public override void OnPlayCard(CardTilePlayerEventData data)
+    public override void OnPlayCard(BattlecardTilePlayerEventData data)
     {
         if(data.player == this)
         {

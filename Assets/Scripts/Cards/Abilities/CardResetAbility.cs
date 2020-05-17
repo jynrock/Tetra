@@ -2,10 +2,10 @@
 using UnityEngine;
 
 [Serializable]
-[CreateAssetMenu(menuName = "Card Ability/Card Reset Ability")]
+[CreateAssetMenu(menuName = "Card/Card Ability/Card Reset Ability")]
 public class CardResetAbility : CardAbility
 {
-    public override void HandleAbility(CardAbilityEventData data)
+    public override void HandleAbility(BattlecardAbilityEventData data)
     {
         data.target.cardAbilityUsed = false;
     }

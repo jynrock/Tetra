@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class PlayerUtility
 {
-    public static Player GetWinningPlayer(List<Player> players, List<Card> cardsInPlay)
+    public static Player GetWinningPlayer(List<Player> players, List<BattleCard> cardsInPlay)
     {
         Dictionary<Player, int> results = new Dictionary<Player, int>();
 
@@ -25,7 +25,7 @@ public static class PlayerUtility
 
         foreach(Player p in players)
         {
-            foreach(Card c in p.playedCards)
+            foreach(BattleCard c in p.playedCards)
             {
                 if(results.Keys.Contains(c.currentOwner))
                 {

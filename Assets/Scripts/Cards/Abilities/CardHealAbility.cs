@@ -2,11 +2,11 @@
 using UnityEngine;
 
 [Serializable]
-[CreateAssetMenu(menuName = "Card Ability/Card Heal Ability")]
+[CreateAssetMenu(menuName = "Card/Card Ability/Card Heal Ability")]
 public class CardHealAbility : CardAbility
 {
-    public override void HandleAbility(CardAbilityEventData data)
+    public override void HandleAbility(BattlecardAbilityEventData data)
     {
-        data.target.Heal(data.sourceCard.maxHealth);
+        data.target.Heal(data.sourceCard.card.maxHealth);
     }
 }

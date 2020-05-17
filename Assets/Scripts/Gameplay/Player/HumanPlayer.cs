@@ -6,12 +6,12 @@ public class HumanPlayer : Player
 {
     public override void SetupHand()
     {
-        foreach(Card c in hand)
+        foreach(BattleCard c in hand)
         {
             c.SetOriginalOwner(this);
         }
     }
-    public override void OnPlayCard(CardTilePlayerEventData data)
+    public override void OnPlayCard(BattlecardTilePlayerEventData data)
     {
         if(data.player == this)
         {

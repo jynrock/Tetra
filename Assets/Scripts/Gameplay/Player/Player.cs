@@ -5,8 +5,8 @@ using UnityEngine;
 public abstract class Player : MonoBehaviour
 {
     public string playerName;
-    public List<Card> hand;
-    public List<Card> playedCards;
+    public List<BattleCard> hand;
+    public List<BattleCard> playedCards;
     public Color playerColor;
     public bool hasPlayedCard;
     public bool hasUsedAbility;
@@ -14,24 +14,24 @@ public abstract class Player : MonoBehaviour
     [SerializeField]
     protected PlayerEvent endTurnEvent;
     [SerializeField]
-    protected CardListDirectionEvent cardAttackEvent;
+    protected BattlecardListDirectionEvent cardAttackEvent;
 
     public abstract void SetupHand();
 
-    public abstract void OnPlayCard(CardTilePlayerEventData data);
+    public abstract void OnPlayCard(BattlecardTilePlayerEventData data);
 
     public IEnumerator HandleCombatPhase()
     {
         yield return null;
         for(int i = playedCards.Count - 1; i >= 0; i--)
         {
-            Card card = playedCards[i];
+            BattleCard card = playedCards[i];
             if(card.currentOwner == this)
             {
-                Dictionary<Card, CardDirection> cardsToAttack = CardUtility.GetCardsToAttack(card, this);
+                Dictionary<BattleCard, CardDirection> cardsToAttack = CardUtility.GetCardsToAttack(card, this);
                 if(cardsToAttack.Count > 0)
                 {
-                    cardAttackEvent.Raise(new CardListDirectionEventData(card, cardsToAttack));
+                    cardAttackEvent.Raise(new BattlecardListDirectionEventData(card, cardsToAttack));
                 }
             }
         }

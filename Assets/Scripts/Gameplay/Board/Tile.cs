@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    public Card card;
+    public BattleCard card;
     public Blocker blocker;
     public int row;
     public int column;
@@ -25,7 +25,7 @@ public class Tile : MonoBehaviour
         
     }
 
-    public void OnTryPlayCardSucceeded(CardTilePlayerEventData data)
+    public void OnTryPlayCardSucceeded(BattlecardTilePlayerEventData data)
     {
         if(data.tile == this)
         {
@@ -45,7 +45,7 @@ public class Tile : MonoBehaviour
         blocker.transform.localPosition = new Vector3(0, 0, 0);
     }
 
-    public void SetCard(Card _card)
+    public void SetCard(BattleCard _card)
     {
         card = _card;
         card.transform.SetParent(cardHolder.transform);

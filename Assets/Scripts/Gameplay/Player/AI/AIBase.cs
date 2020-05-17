@@ -9,7 +9,7 @@ public abstract class AIBase : MonoBehaviour
     [SerializeField]
     protected Player player;
     [SerializeField]
-    protected CardTileEvent tryPlayCardEvent;
+    protected BattlecardTileEvent tryPlayCardEvent;
 
     public void SetPlayer(Player p)
     {
