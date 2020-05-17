@@ -207,7 +207,7 @@ public class BattleCard : MonoBehaviour
         {
             cardAbilityUsed = true;
             abilityActive = false;
-            card.cardAbility.HandleAbility(data);
+            StartCoroutine(card.cardAbility.HandleAbility(data));
             card.cardAbility.Deactivate();
         }
         statDisplay.ToggleOutline(false);

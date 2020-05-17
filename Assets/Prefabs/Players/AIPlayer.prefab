@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3476477003916737458}
   - component: {fileID: 8968744181260600045}
   - component: {fileID: -701036728278716483}
+  - component: {fileID: 6988706024532764625}
   m_Layer: 0
   m_Name: AIPlayer
   m_TagString: Untagged
@@ -152,6 +153,34 @@ MonoBehaviour:
       - m_Target: {fileID: 4897942957657253959}
         m_TargetAssemblyTypeName: AIPlayer, Assembly-CSharp
         m_MethodName: OnPlayCard
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6988706024532764625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4897942957657253953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f15957fa6b25645bb59f6e9f6ead15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: c56e2176a887d6a43a6a8aea599d6407, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4897942957657253959}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnEndAwaitAnimations
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

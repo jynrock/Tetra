@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 [Serializable]
@@ -7,8 +8,9 @@ public class CardBoostAbility : CardAbility
 {
     [SerializeField]
     private BoostType boostType;
-    public override void HandleAbility(BattlecardAbilityEventData data)
+    public override IEnumerator HandleAbility(BattlecardAbilityEventData data)
     {
+        yield return null;
         switch(boostType)
         {
             case BoostType.Health:

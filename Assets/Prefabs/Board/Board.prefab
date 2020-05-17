@@ -69,7 +69,59 @@ MonoBehaviour:
   rows: 4
   columns: 4
   calloutBoard: {fileID: 11400000, guid: 6b80fd1e4b1e493468ee579b06ee80bf, type: 2}
+  attackCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.44337642
+      value: 0.18886435
+      inSlope: 1.2324748
+      outSlope: 1.2324748
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.17964976
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.62506586
+      value: 1.000281
+      inSlope: 6.8012815
+      outSlope: 6.8012815
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.050017994
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.67504424
+      value: 0.9998636
+      inSlope: -3.8770628
+      outSlope: -3.8770628
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.4246783
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9999954
+      value: 0.003926664
+      inSlope: -0.9853178
+      outSlope: -0.9853178
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.41366225
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   cardsInPlay: []
+  endAwaitAnimationsEvent: {fileID: 11400000, guid: c56e2176a887d6a43a6a8aea599d6407, type: 2}
 --- !u!114 &9124504406790133102
 MonoBehaviour:
   m_ObjectHideFlags: 0

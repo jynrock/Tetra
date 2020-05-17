@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8427749435755472228}
   - component: {fileID: 8427749435755472226}
   - component: {fileID: 4063623012331858240}
+  - component: {fileID: 3264655597465737270}
   m_Layer: 0
   m_Name: HumanPlayer
   m_TagString: Untagged
@@ -105,6 +106,34 @@ MonoBehaviour:
       - m_Target: {fileID: 8427749435755472228}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: OnStartPlayerTurn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3264655597465737270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427749435755472229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4f15957fa6b25645bb59f6e9f6ead15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: c56e2176a887d6a43a6a8aea599d6407, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8427749435755472228}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: OnEndAwaitAnimations
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

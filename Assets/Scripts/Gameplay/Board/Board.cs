@@ -12,7 +12,13 @@ public class Board : MonoBehaviour
     [SerializeField]
     BoardEvent calloutBoard;
 
+    [SerializeField]
+    AnimationCurve attackCurve;
+
     public List<BattleCard> cardsInPlay;
+
+    [SerializeField]
+    private PlayerEvent endAwaitAnimationsEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -124,9 +130,15 @@ public class Board : MonoBehaviour
 
     public void HandleCardCombat(BattlecardListDirectionEventData data)
     {
+        StartCoroutine(HandleCardCombatAsync(data));
+    }
+
+    public IEnumerator HandleCardCombatAsync(BattlecardListDirectionEventData data)
+    {
         BattleCard attackingCard = data.card;
         foreach(KeyValuePair<BattleCard,CardDirection> pair in data.cardList)
         {
+            yield return null;
             BattleCard defendingCard = pair.Key;
             CardDirection attackDirection = pair.Value;
 
@@ -137,8 +149,31 @@ public class Board : MonoBehaviour
                 attack = Mathf.RoundToInt((attack * 0.75f) + 0.5f);
             }
 
+            Vector3 origin = attackingCard.transform.position;
+
+            float journey = 0f;
+            float duration = 0.15f;
+            while(journey <= duration)
+            {
+                journey = journey + Time.deltaTime;
+                float percent = Mathf.Clamp01(journey / duration);
+                float curvePercent = attackCurve.Evaluate(percent);
+                attackingCard.transform.position = Vector3.LerpUnclamped(attackingCard.transform.position, defendingCard.transform.position, curvePercent);
+                yield return null;
+            }
+            journey = 0f;
+            duration = 0.15f;
+            while(journey <= duration)
+            {
+                journey = journey + Time.deltaTime;
+                float percent = Mathf.Clamp01(journey / duration);
+                attackingCard.transform.position = Vector3.Lerp(defendingCard.transform.position, origin, percent);
+                yield return null;
+            }
+
             defendingCard.TakeDamage(attack, attackingCard.currentOwner);
         }
+        endAwaitAnimationsEvent.Raise(data.card.currentOwner);
     }
 
     public void OnPlayCardSucceeded(BattlecardTilePlayerEventData data)

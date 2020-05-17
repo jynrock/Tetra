@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public abstract class CardAbility : ScriptableObject
@@ -61,5 +62,5 @@ public abstract class CardAbility : ScriptableObject
         secondTarget = null;
     }
 
-    public abstract void HandleAbility(BattlecardAbilityEventData data);
+    public abstract IEnumerator HandleAbility(BattlecardAbilityEventData data);
 }

@@ -20,8 +20,11 @@ public abstract class Player : MonoBehaviour
 
     public abstract void OnPlayCard(BattlecardTilePlayerEventData data);
 
+    private bool awaitingAnimations;
+
     public IEnumerator HandleCombatPhase()
     {
+        bool attacked = false;
         yield return null;
         for(int i = playedCards.Count - 1; i >= 0; i--)
         {
@@ -32,8 +35,20 @@ public abstract class Player : MonoBehaviour
                 if(cardsToAttack.Count > 0)
                 {
                     cardAttackEvent.Raise(new BattlecardListDirectionEventData(card, cardsToAttack));
+                    yield return new WaitForSeconds(0.25f * cardsToAttack.Count);
+                    attacked = true;
                 }
             }
+        }
+
+        if (attacked)
+        {
+            awaitingAnimations = true;
+        }
+
+        while(awaitingAnimations)
+        {
+            yield return null;
         }
 
         endTurnEvent.Raise(this);
@@ -53,6 +68,14 @@ public abstract class Player : MonoBehaviour
             {
                 StartCoroutine(HandleCombatPhase());
             }
+        }
+    }
+
+    public void OnEndAwaitAnimations(Player player)
+    {
+        if (player == this)
+        {
+            awaitingAnimations = false;
         }
     }
 
