@@ -72,7 +72,7 @@ public class BattleCard : MonoBehaviour
         {
             Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
-            transform.position = curPosition;
+            transform.position = new Vector3(curPosition.x, 5.2f, curPosition.z);
             if ((curPosition - originPoint).sqrMagnitude >= 0.1f)
             {
                 hidePreviewEvent.Raise(this);
