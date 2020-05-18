@@ -112,7 +112,7 @@ public class BattleCard : MonoBehaviour
         if(tile == null)
         {
             Vector3 newPos = transform.position;
-            newPos.z -= 0.1f;
+            newPos.y += 0.15f;
             transform.position = newPos;
         }
     }
