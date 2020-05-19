@@ -6,6 +6,43 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Card/Card Ability/Card Swap Ability")]
 public class CardSwapAbility : CardAbility
 {
+    public override void OnTargetSelected(BattleCard card)
+    {
+        if(firstTarget == null)
+        {
+            if(card.tile != null 
+                && card.currentOwner == sourceCard.currentOwner)
+            {
+                firstTarget = card;
+            }
+            else
+            {
+                Deactivate();
+            }
+        }
+        else
+        {
+            if(card != firstTarget
+                &&card.tile != null
+                && card.currentOwner == sourceCard.currentOwner)
+            {
+                secondTarget = card;
+                tryUseAbilityEvent.Raise(new BattlecardAbilityEventData() 
+                {
+                    sourceCard = sourceCard, 
+                    abilityBeingUsed = this, 
+                    type = type, 
+                    target = firstTarget, 
+                    secondTarget = secondTarget
+                });
+            }
+            else
+            {
+                Deactivate();
+            }
+        }
+    }
+
     public override IEnumerator HandleAbility(BattlecardAbilityEventData data)
     {
         yield return null;

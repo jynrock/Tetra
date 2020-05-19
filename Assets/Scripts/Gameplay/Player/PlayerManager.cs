@@ -80,8 +80,7 @@ public class PlayerManager : MonoBehaviour
             && data.sourceCard.tile != null
             && data.sourceCard.currentOwner == currentPlayerTurn
             && !data.sourceCard.currentOwner.hasUsedAbility
-            && data.target != null 
-            && data.target.tile != null)
+            && data.target != null)
         {
             if (data.type == AbilityType.ONE_TARGET)
             {

@@ -8,6 +8,20 @@ public class CardBoostAbility : CardAbility
 {
     [SerializeField]
     private BoostType boostType;
+
+    public override void OnTargetSelected(BattleCard card)
+    {
+        if(card.tile != null)
+        {
+            firstTarget = card;
+            tryUseAbilityEvent.Raise(new BattlecardAbilityEventData() {sourceCard = sourceCard, abilityBeingUsed = this, type = type, target = firstTarget});
+        }
+        else
+        {
+            Deactivate();
+        }
+    }
+
     public override IEnumerator HandleAbility(BattlecardAbilityEventData data)
     {
         yield return null;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BattlecardAbilityEventData
 {
 	public BattleCard sourceCard;
+	public CardAbility abilityBeingUsed;
 	public AbilityType type;
 	public BattleCard target;
 	public BattleCard secondTarget;

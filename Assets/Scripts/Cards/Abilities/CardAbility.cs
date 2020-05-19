@@ -9,14 +9,14 @@ public abstract class CardAbility : ScriptableObject
     public AbilityType type;
 
     [SerializeField]
-    private BoolGameEvent targetListeningEvent;
+    protected BoolGameEvent targetListeningEvent;
     [SerializeField]
-    private BattlecardAbilityEvent tryUseAbilityEvent;
+    protected BattlecardAbilityEvent tryUseAbilityEvent;
 
-    private BattleCard sourceCard;
+    protected BattleCard sourceCard;
 
-    private BattleCard firstTarget;
-    private BattleCard secondTarget;
+    protected BattleCard firstTarget;
+    protected BattleCard secondTarget;
 
     public void Activate(BattleCard _sourceCard)
     {
@@ -30,32 +30,9 @@ public abstract class CardAbility : ScriptableObject
         ResetAbility();
     }
 
-    public void OnTargetSelected(BattleCard card)
-    {
-        if(firstTarget == null)
-        {
-            firstTarget = card;
-            if (type == AbilityType.ONE_TARGET)
-            {
-                tryUseAbilityEvent.Raise(new BattlecardAbilityEventData() {sourceCard = sourceCard, type = type, target = firstTarget});
-                ResetAbility();
-            }
-        }
-        else
-        {
-            if(card != firstTarget)
-            {
-                secondTarget = card;
-                if(type == AbilityType.TWO_TARGET)
-                {
-                    tryUseAbilityEvent.Raise(new BattlecardAbilityEventData() {sourceCard = sourceCard, type = type, target = firstTarget, secondTarget = secondTarget});
-                    ResetAbility();
-                }
-            }
-        }
-    }
+    public abstract void OnTargetSelected(BattleCard card);
 
-    public void ResetAbility()
+    private void ResetAbility()
     {
         sourceCard = null;
         firstTarget = null;
