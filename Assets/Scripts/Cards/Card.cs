@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Card/Card")]
 public class Card : ScriptableObject
 {
+    public int cardNumber;
     public string cardName;
     public string cardDesc;
     public int health;

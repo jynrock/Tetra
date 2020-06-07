@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdbc46e32e65e741872e01a9b8b25ae, type: 3}
   m_Name: Elfin Sentinel
   m_EditorClassIdentifier: 
+  cardNumber: 1
   cardName: Elfin Sentinel
   cardDesc: Test desc
   health: 2
