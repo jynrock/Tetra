@@ -2,21 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class SettingsPanel : MonoBehaviour
 {
     [SerializeField]
-    private TMP_InputField nameValue;
+    private Slider musicVolumeSlider;
     [SerializeField]
-    private Image avatarHolder;
+    private Slider effectVolumeSlider;
     [SerializeField]
-    private Image colorHolder;
-
-    public void UpdateSettings()
+    private Slider dialogueVolumeSlider;
+    
+    public void PopulatePanel()
     {
-        nameValue.text = PlayerProfile.Instance.playerName;
-        //avatarHolder.sprite = PlayerProfile.Instance.playerAvatar;
-        colorHolder.color = PlayerProfile.Instance.playerColor != null ? PlayerProfile.Instance.playerColor : Color.white;
+        musicVolumeSlider.value = SettingsManager.Instance.GetMusicVolume();
+        effectVolumeSlider.value = SettingsManager.Instance.GetEffectVolume();
+        dialogueVolumeSlider.value = SettingsManager.Instance.GetDialogueVolume();
+    }
+
+    public void SetMusicVolume()
+    {
+        SettingsManager.Instance.SetMusicVolume(musicVolumeSlider.value);
+    }
+
+    public void SetEffectVolume()
+    {
+        SettingsManager.Instance.SetEffectVolume(effectVolumeSlider.value);
+    }
+
+    public void SetDialogueVolume()
+    {
+        SettingsManager.Instance.SetDialogueVolume(dialogueVolumeSlider.value);
     }
 }
