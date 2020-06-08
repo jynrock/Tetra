@@ -8,4 +8,9 @@ public class LevelLoaderButton : MonoBehaviour
     {
         LevelManager.Instance.LoadLevel(toLoad);
     }
+
+    public void LoadBattleLevel()
+    {
+        LevelManager.Instance.LoadBattleLevel();
+    }
 }

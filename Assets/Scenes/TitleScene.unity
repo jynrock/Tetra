@@ -474,6 +474,7 @@ GameObject:
   - component: {fileID: 109497543}
   - component: {fileID: 109497540}
   - component: {fileID: 109497544}
+  - component: {fileID: 109497542}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -511,6 +512,34 @@ Transform:
   m_Father: {fileID: 1891568502}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &109497542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109497539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46836fc849b0f469e83f1ad5611a5b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 296ecf6f7ffea0149a75d6b6e3f8e01a, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 109497543}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: OnBattleSceneLoaded
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &109497543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -625,7 +654,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 246.9
+  m_fontSize: 233.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1027,7 +1056,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
+  m_fontSize: 16.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1288,7 +1317,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 85.1
+  m_fontSize: 80.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1510,7 +1539,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.65
+  m_fontSize: 37.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1680,7 +1709,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.35
+  m_fontSize: 21.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2290,7 +2319,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.05
+  m_fontSize: 64.3
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2340,6 +2369,95 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098601420}
   m_CullTransparentMesh: 0
+--- !u!1 &1557831559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1557831560}
+  - component: {fileID: 1557831564}
+  - component: {fileID: 1557831563}
+  - component: {fileID: 1557831562}
+  - component: {fileID: 1557831561}
+  m_Layer: 0
+  m_Name: Databases
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1557831560
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557831559}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1891568502}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1557831561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557831559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752ebf5e25882d34bad10ede7ec46667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  themePrefabs:
+  - {fileID: 6210301067760569687, guid: 07cf3ef818f7ced43bb564e527aa4692, type: 3}
+--- !u!114 &1557831562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557831559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 971b8b0b73560c14f836a090262c0ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cards:
+  - {fileID: 11400000, guid: 017b2dc039fa2e4479d657690dd643af, type: 2}
+--- !u!114 &1557831563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557831559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87511582b28a5fc488b918e079a9dc41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1557831564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557831559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8491a7985f1ee4db378f8018aedb47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Card: {fileID: 1557831562}
+  Theme: {fileID: 1557831561}
+  AI: {fileID: 1557831563}
 --- !u!1 &1627632470
 GameObject:
   m_ObjectHideFlags: 0
@@ -2515,6 +2633,7 @@ Transform:
   - {fileID: 109497541}
   - {fileID: 68370559}
   - {fileID: 1664115939}
+  - {fileID: 1557831560}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
