@@ -7,7 +7,7 @@ using TMPro;
 public class GamePanel : MonoBehaviour
 {
     [SerializeField]
-    public TMP_Dropdown difficultySelector;
+    public TMP_Dropdown opponentSelector;
     [SerializeField]
     public TMP_Dropdown themeSelector;
 
@@ -17,9 +17,10 @@ public class GamePanel : MonoBehaviour
     {
         if(!optionsSet)
         {
-            foreach(Difficulty diff in Enum.GetValues(typeof(Difficulty)))
+            opponentSelector.options.Add(new TMP_Dropdown.OptionData("Select"));
+            foreach(AIData aiData in Database.Instance.AI.GetAll())
             {
-                difficultySelector.options.Add(new TMP_Dropdown.OptionData(diff.ToString()));
+                opponentSelector.options.Add(new TMP_Dropdown.OptionData(aiData.aIName));
             }
 
             foreach(Theme theme in Enum.GetValues(typeof(Theme)))
@@ -30,9 +31,16 @@ public class GamePanel : MonoBehaviour
         }
     }
 
-    public void SetDifficulty()
+    public void SetOpponent()
     {
-        LevelManager.Instance.SetDifficulty((Difficulty)difficultySelector.value);
+        if(opponentSelector.value > 0)
+        {
+            LevelManager.Instance.SetOpponent(Database.Instance.AI.GetAI(opponentSelector.value - 1));
+        }
+        else
+        {
+            LevelManager.Instance.SetOpponent(null);
+        }
     }
 
     public void SetTheme()
@@ -43,8 +51,8 @@ public class GamePanel : MonoBehaviour
     public void ResetOptions()
     {
         themeSelector.value = 0;
-        difficultySelector.value = 0;
-        LevelManager.Instance.SetDifficulty(Difficulty.Select);
+        opponentSelector.value = 0;
+        LevelManager.Instance.SetOpponent(null);
         LevelManager.Instance.SetTheme(Theme.Select);
     }
 }

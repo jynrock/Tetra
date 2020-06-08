@@ -21,5 +21,10 @@ public abstract class AIBase : MonoBehaviour
         board = b;
     }
 
+    public void SetPlayCardEvent(BattlecardTileEvent _event)
+    {
+        tryPlayCardEvent = _event;
+    }
+
     public abstract void TakeTurn();
 }

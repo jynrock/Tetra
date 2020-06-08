@@ -3,7 +3,10 @@ guid: 7dc1ce3f8bfec984b877676157426421
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - board: {instanceID: 0}
+  - player: {instanceID: 0}
+  - tryPlayCardEvent: {fileID: 11400000, guid: a3878b8ee8a2d87478106252435aa2a6, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

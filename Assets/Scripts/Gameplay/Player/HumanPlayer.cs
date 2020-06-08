@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class HumanPlayer : Player
 {
-    void Awake()
-    {
-        this.playerName = PlayerProfile.Instance.playerName;
-        this.playerColor = PlayerProfile.Instance.playerColor;
-    }
 
     public override void SetupHand()
     {

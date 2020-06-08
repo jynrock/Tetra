@@ -552,6 +552,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5c849a929e33a4c8f2b1589e6748fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theme: 0
+  difficulty: 0
   animator: {fileID: 68370560}
   cardAnimator: {fileID: 953687924}
   loadBar: {fileID: 650716767}
@@ -2443,6 +2445,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87511582b28a5fc488b918e079a9dc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  aI:
+  - {fileID: 11400000, guid: 6e1cfef5176574f4fb4ba57e8e6e3084, type: 2}
 --- !u!114 &1557831564
 MonoBehaviour:
   m_ObjectHideFlags: 0

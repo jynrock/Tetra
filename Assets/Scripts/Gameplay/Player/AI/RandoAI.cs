@@ -57,6 +57,6 @@ public class RandoAI : AIBase
 
     private void EndTurn()
     {
-        StartCoroutine(player.HandleCombatPhase());
+        player.StartCombatPhase();
     }
 }

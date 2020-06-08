@@ -12,8 +12,8 @@ public class LevelManager : MonoBehaviour
         get { return _instance; }
     }
 
-    public Theme theme;
-    public Difficulty difficulty;
+    private Theme theme;
+    private AIData opponent;
 
     [SerializeField]
     private Animator animator;
@@ -38,7 +38,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadBattleLevel()
     {
-        if(theme == Theme.Select || difficulty == Difficulty.Select) {return;}
+        if(theme == Theme.Select || opponent == null) {return;}
         StartCoroutine(LoadBattleLevelAsync());
     }
 
@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour
         {
             battleSceneLoaded = true;
             theme = Theme.Select;
-            difficulty = Difficulty.Select;
+            opponent = null;
         }
     }
 
@@ -57,9 +57,19 @@ public class LevelManager : MonoBehaviour
         theme = _theme;
     }
 
-    public void SetDifficulty(Difficulty _difficulty)
+    public Theme GetCurrentTheme()
     {
-        difficulty = _difficulty;
+        return theme;
+    }
+
+    public void SetOpponent(AIData _aiData)
+    {
+        opponent = _aiData;
+    }
+
+    public AIData GetOpponent()
+    {
+        return opponent;
     }
 
     private IEnumerator LoadLevelAsync(string levelName)

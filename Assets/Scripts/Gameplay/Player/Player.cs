@@ -22,6 +22,18 @@ public abstract class Player : MonoBehaviour
 
     private bool awaitingAnimations;
 
+    public void SetData(string name, Color color)
+    {
+        this.playerName = name;
+        this.playerColor = color;
+        //eventually hand
+    }
+
+    public void StartCombatPhase()
+    {
+        StartCoroutine(HandleCombatPhase());
+    }
+
     public IEnumerator HandleCombatPhase()
     {
         bool attacked = false;

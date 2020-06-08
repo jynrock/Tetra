@@ -10,9 +10,16 @@ public class AIPlayer : Player
     [SerializeField]
     private GameObject superSecretBox;
 
-    void Start()
+    public void SetAIBase(AIBase aIBase, BattlecardTileEvent _event)
     {
+        aI = aIBase;
         aI.SetPlayer(this);
+        aI.SetPlayCardEvent(_event);
+    }
+
+    public void SetAIBoard(Board board)
+    {
+        aI.SetBoard(board);
     }
 
     public override void SetupHand()

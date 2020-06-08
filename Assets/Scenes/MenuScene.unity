@@ -1579,7 +1579,7 @@ GameObject:
   m_Component:
   - component: {fileID: 333794179}
   m_Layer: 5
-  m_Name: Difficulty
+  m_Name: Opponent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4482,7 +4482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ddb5d8d3eb8bc4eac562d9d0ac7707, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficultySelector: {fileID: 1190372824}
+  opponentSelector: {fileID: 1190372824}
   themeSelector: {fileID: 78003955}
 --- !u!114 &933405878
 MonoBehaviour:
@@ -6210,7 +6210,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 933405877}
         m_TargetAssemblyTypeName: GamePanel, Assembly-CSharp
-        m_MethodName: SetDifficulty
+        m_MethodName: SetOpponent
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
