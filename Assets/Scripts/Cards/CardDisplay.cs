@@ -68,9 +68,9 @@ public class CardDisplay : MonoBehaviour
     public void SetAll()
     {
         healthText.text = card.card.health.ToString();
-        nameText.text = card.card.cardName;
+        nameText.text = card.card.info.cardName;
         attackText.text = card.card.attack.ToString();
-        cardArt.material = card.card.cardArt;
+        cardArt.material = card.card.info.cardArt;
 
         topArrow.SetActive(card.card.top);
         topRightArrow.SetActive(card.card.topRight);

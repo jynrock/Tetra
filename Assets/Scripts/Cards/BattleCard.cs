@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BattleCard : MonoBehaviour
 {
-    public Card card;
+    public CardInstance card;
     public Tile tile;
     public Player currentOwner;
     public Player originalOwner;

@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: card
       value: 
-      objectReference: {fileID: 11400000, guid: 017b2dc039fa2e4479d657690dd643af, type: 2}
+      objectReference: {fileID: 11400000, guid: ad81a66fa5319d043b0ed718aa84507a, type: 2}
     - target: {fileID: 7664338715614469364, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
