@@ -10,4 +10,6 @@ public class Card : ScriptableObject
     public string cardDesc;
     public int type;
     public Material cardArt;
+    public Sprite cardIcon;
+    public Sprite cardArtSprite;
 }

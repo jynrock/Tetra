@@ -12,22 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdbc46e32e65e741872e01a9b8b25ae, type: 3}
   m_Name: Weak Imp
   m_EditorClassIdentifier: 
+  cardNumber: 0
   cardName: Weak Imp
   cardDesc: Test Desc
-  health: 2
-  maxHealth: 2
   type: 0
-  attack: 2
   cardArt: {fileID: 2100000, guid: 3154c6d98778b1c43a55eadb838764ab, type: 2}
-  cardAbility: {fileID: 0}
-  topLeft: 0
-  top: 1
-  topRight: 0
-  left: 1
-  right: 1
-  bottomLeft: 1
-  bottom: 0
-  bottomRight: 0
-  level: 1
-  experience: 0
-  toNextLevel: 5
+  cardIcon: {fileID: 8145072197331091708, guid: c820e224f4cb6034e915c625af1e83c5, type: 3}
+  cardArtSprite: {fileID: 3385838890366693472, guid: c820e224f4cb6034e915c625af1e83c5, type: 3}

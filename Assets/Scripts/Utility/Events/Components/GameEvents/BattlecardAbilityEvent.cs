@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [Serializable]
-[CreateAssetMenu(menuName = "GameEvent/CardAbilityEvent")]
+[CreateAssetMenu(menuName = "GameEvent/BattleCardAbilityEvent")]
 public class BattlecardAbilityEvent : SubscribableAsset<BattlecardAbilityEventData>
 {
 }

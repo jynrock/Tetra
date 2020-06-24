@@ -12,22 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fdbc46e32e65e741872e01a9b8b25ae, type: 3}
   m_Name: Timrek
   m_EditorClassIdentifier: 
+  cardNumber: 0
   cardName: Timrek
   cardDesc: Test Desc
-  health: 2
-  maxHealth: 2
   type: 0
-  attack: 3
   cardArt: {fileID: 2100000, guid: 73eaf9eb545ed6d4aaed17d61af6be25, type: 2}
-  cardAbility: {fileID: 11400000, guid: fc4dacccbca859f4ba00fc6d46e569a3, type: 2}
-  topLeft: 0
-  top: 0
-  topRight: 1
-  left: 0
-  right: 0
-  bottomLeft: 1
-  bottom: 1
-  bottomRight: 1
-  level: 1
-  experience: 0
-  toNextLevel: 5
+  cardIcon: {fileID: 7370097138951164435, guid: c930b5533eb37fd40956cc51fd926b31, type: 3}
+  cardArtSprite: {fileID: -44093092556243482, guid: c930b5533eb37fd40956cc51fd926b31, type: 3}

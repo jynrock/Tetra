@@ -13,22 +13,9 @@ MonoBehaviour:
   m_Name: Elfin Sentinel
   m_EditorClassIdentifier: 
   cardNumber: 1
-  cardName: Elfin Sentinel
-  cardDesc: Test desc
-  health: 2
-  maxHealth: 2
+  cardName: Hot Elf Boi
+  cardDesc: Test desc for hot elf boi
   type: 0
-  attack: 2
   cardArt: {fileID: 2100000, guid: b2e3f90d50fbcb04faddeda5431fcff1, type: 2}
-  cardAbility: {fileID: 11400000, guid: cf84f85175e1cde438fbdaaed742df6a, type: 2}
-  topLeft: 1
-  top: 0
-  topRight: 1
-  left: 1
-  right: 1
-  bottomLeft: 0
-  bottom: 1
-  bottomRight: 0
-  level: 1
-  experience: 0
-  toNextLevel: 5
+  cardIcon: {fileID: 5671394949610869903, guid: 1b19ae23a18b1ac498f4f147c3d41fcc, type: 3}
+  cardArtSprite: {fileID: -6913057680470016438, guid: 1b19ae23a18b1ac498f4f147c3d41fcc, type: 3}

@@ -303,6 +303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameSceneLoadedEvent: {fileID: 11400000, guid: 296ecf6f7ffea0149a75d6b6e3f8e01a, type: 2}
   standardLevelObjects: {fileID: 7856104740785792610}
+  battleCardPrefab: {fileID: 7664338715614469322, guid: 8e711551002a6d14baf056d73ccc0bf2, type: 3}
   humanPlayer: {fileID: 7856104740785792612}
   aIPlayer: {fileID: 7856104740785792611}
   tryPlayCardEvent: {fileID: 11400000, guid: a3878b8ee8a2d87478106252435aa2a6, type: 2}
@@ -327,6 +328,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 59237507611920569, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
+    - target: {fileID: 3249729645612583124, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
+    - target: {fileID: 5129282376087784475, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
+    - target: {fileID: 7234536244909540951, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
     - target: {fileID: 7856104739227644944, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3433962
@@ -378,6 +395,18 @@ PrefabInstance:
     - target: {fileID: 7856104739227644945, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856104739406162771, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_Name
+      value: PlayerHand
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856104739566949842, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: hand.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856104740602610245, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_Name
+      value: EnemyHand
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4139126390721961657, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}

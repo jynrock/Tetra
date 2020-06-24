@@ -9,6 +9,8 @@ public class PlayerHandDisplay : MonoBehaviour
 
     [SerializeField]
     private TextMeshPro nameText;
+    [SerializeField]
+    private GameObject[] cardPositions;
 
     // Start is called before the first frame update
     void Start()
@@ -21,5 +23,14 @@ public class PlayerHandDisplay : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SetCardPositions(List<BattleCard> cards)
+    {
+        for(int i = 0; i < 5; i++)
+        {
+            cards[i].transform.SetParent(cardPositions[i].transform);
+            cards[i].transform.localPosition = Vector3.zero;
+        }
     }
 }

@@ -7,6 +7,6 @@ public class PlayerColorSetter : MonoBehaviour
 {
     public void SetPlayerColor()
     {
-        PlayerProfile.Instance.setPlayerColor(GetComponent<Image>().color);
+        PlayerProfile.Instance.SetPlayerColor(GetComponent<Image>().color);
     }
 }

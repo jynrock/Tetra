@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CardDatabase : MonoBehaviour
 {
+    public List<CardInstance> defaultDeck;
     [SerializeField]
     private List<Card> cards;
 

@@ -33,6 +33,11 @@ public class BattleCard : MonoBehaviour
     {
     }
 
+    public void SetCardInstance(CardInstance instance)
+    {
+        card = instance;
+    }
+
     public void SetOriginalOwner(Player player)
     {
         originalOwner = player;

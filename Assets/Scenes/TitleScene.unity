@@ -497,7 +497,6 @@ MonoBehaviour:
   playerName: 
   playerAvatar: {fileID: 0}
   playerColor: {r: 0, g: 0, b: 0, a: 0}
-  deck: []
 --- !u!4 &109497541
 Transform:
   m_ObjectHideFlags: 0
@@ -552,8 +551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f5c849a929e33a4c8f2b1589e6748fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theme: 0
-  difficulty: 0
   animator: {fileID: 68370560}
   cardAnimator: {fileID: 953687924}
   loadBar: {fileID: 650716767}
@@ -656,7 +653,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 233.35
+  m_fontSize: 246.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1058,7 +1055,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.05
+  m_fontSize: 17
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1319,7 +1316,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 80.4
+  m_fontSize: 85.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1421,6 +1418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1541,7 +1539,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 37.45
+  m_fontSize: 39.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1711,7 +1709,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.1
+  m_fontSize: 22.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1815,6 +1813,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2321,7 +2320,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.3
+  m_fontSize: 68.05
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2431,6 +2430,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971b8b0b73560c14f836a090262c0ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultDeck:
+  - {fileID: 11400000, guid: ad81a66fa5319d043b0ed718aa84507a, type: 2}
+  - {fileID: 11400000, guid: c8fa626417bff1d48bfb545da775c520, type: 2}
+  - {fileID: 11400000, guid: 4b267a83f64de4d4991c4e0b81ecb618, type: 2}
+  - {fileID: 11400000, guid: 085dcc4e7b378a44eafcbbc7010b2814, type: 2}
+  - {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
+  - {fileID: 11400000, guid: 249f1859709d5f646bc3d8a67d85b7f2, type: 2}
+  - {fileID: 11400000, guid: d08f22d86d0243c47b2e693e4bf0b8b5, type: 2}
   cards:
   - {fileID: 11400000, guid: 017b2dc039fa2e4479d657690dd643af, type: 2}
 --- !u!114 &1557831563

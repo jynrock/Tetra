@@ -22,11 +22,11 @@ public abstract class Player : MonoBehaviour
 
     private bool awaitingAnimations;
 
-    public void SetData(string name, Color color)
+    public void SetData(string name, Color color, List<BattleCard> hand)
     {
         this.playerName = name;
         this.playerColor = color;
-        //eventually hand
+        this.hand = hand;
     }
 
     public void StartCombatPhase()

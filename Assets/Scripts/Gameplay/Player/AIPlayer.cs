@@ -24,10 +24,8 @@ public class AIPlayer : Player
 
     public override void SetupHand()
     {
-        for(int i = 0; i < hand.Count; i++)
+        for(int i = 0; i < 5; i++)
         {
-            BattleCard c = hand[i];
-            hand[i] = Instantiate(c);
             hand[i].transform.position = superSecretBox.transform.position;
             hand[i].SetOriginalOwner(this);
         }

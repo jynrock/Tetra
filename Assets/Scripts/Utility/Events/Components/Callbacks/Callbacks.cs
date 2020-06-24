@@ -38,3 +38,11 @@ public class BattlecardListDirectionCallBack : UnityEvent<BattlecardListDirectio
 [Serializable]
 public class BattlecardAbilityEventCallBack : UnityEvent<BattlecardAbilityEventData>
 {}
+
+[Serializable]
+public class CardEventCallBack : UnityEvent<Card>
+{}
+
+[Serializable]
+public class CardInstanceEventCallBack  : UnityEvent<CardInstance>
+{}

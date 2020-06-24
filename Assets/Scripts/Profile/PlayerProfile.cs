@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerProfile : MonoBehaviour
@@ -10,7 +11,8 @@ public class PlayerProfile : MonoBehaviour
     public string playerName;
     public Sprite playerAvatar;
     public Color playerColor;
-    public Card[] deck;
+    private List<CardInstance> deck;
+    private List<CardInstance> hand;
 
     void Awake()
     {
@@ -25,44 +27,109 @@ public class PlayerProfile : MonoBehaviour
         }
     }
 
-    public string getPlayerName()
+    public string GetPlayerName()
     {
-        return this.playerName;
+        return playerName;
     }
 
-    public void setPlayerName(string playerName)
+    public void SetPlayerName(string _playerName)
     {
-        this.playerName = playerName;
+        playerName = _playerName;
     }
 
-    public Sprite getPlayerAvatar()
+    public Sprite GetPlayerAvatar()
     {
-        return this.playerAvatar;
+        return playerAvatar;
     }
 
-    public void setPlayerAvatar(Sprite playerAvatar)
+    public void SetPlayerAvatar(Sprite _playerAvatar)
     {
-        this.playerAvatar = playerAvatar;
+        playerAvatar = _playerAvatar;
     }
 
-    public Color getPlayerColor()
+    public Color GetPlayerColor()
     {
-        return this.playerColor;
+        return playerColor;
     }
 
-    public void setPlayerColor(Color playerColor)
+    public void SetPlayerColor(Color _playerColor)
     {
-        this.playerColor = playerColor;
+        playerColor = _playerColor;
     }
 
-    public Card[] getDeck()
+    public List<CardInstance> GetDeck()
     {
-        return this.deck;
+        if(this.deck == null || this.deck.Count == 0 )
+        {
+            SetDeck(Database.Instance.Card.defaultDeck);
+        }
+        return deck;
     }
 
-    public void setDeck(Card[] deck)
+    public void SetDeck(List<CardInstance> _deck)
     {
-        this.deck = deck;
+        deck = _deck;
     }
 
+    public void AddToDeck(CardInstance cardInstance)
+    {
+        deck.Add(cardInstance);
+    }
+
+    public void RemoveFromDeck(CardInstance cardInstance)
+    {
+        deck.Remove(cardInstance);
+    }
+
+    public List<CardInstance> GetHand()
+    {
+        if(hand == null)
+        {
+            SetHand(GetDeck().Take(5).ToList());
+        }
+        return hand;
+    }
+
+    public bool AddToHand(CardInstance card)
+    {
+        if(hand.Count >= 5 || hand.Contains(card))
+        {
+            return false;
+        }
+        hand.Add(card);
+        return true;
+    }
+
+    public bool RemoveFromHand(CardInstance card)
+    {
+        if(!hand.Contains(card))
+        {
+            return false;
+        }
+        hand.Remove(card);
+        return true;
+    }
+
+    public void SetHand(List<CardInstance> _hand)
+    {
+        hand = _hand;
+    }
+
+    public List<CardInstance> GetCardsFromDeck(int num)
+    {
+        List<CardInstance> results = new List<CardInstance>();
+
+        results = deck.Where(c => c.info.cardNumber == num).ToList();
+
+        return results;
+    }
+
+    public List<CardInstance> GetCardsFromDeck(string name)
+    {
+        List<CardInstance> results = new List<CardInstance>();
+
+        results = deck.Where(c => c.info.cardName == name).ToList();
+
+        return results;
+    }
 }

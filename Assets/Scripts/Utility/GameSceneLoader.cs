@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameSceneLoader : MonoBehaviour
@@ -10,11 +11,16 @@ public class GameSceneLoader : MonoBehaviour
     [SerializeField]
     private GameObject standardLevelObjects;
     [SerializeField]
+    private BattleCard battleCardPrefab;
+    [SerializeField]
     private HumanPlayer humanPlayer;
     [SerializeField]
     private AIPlayer aIPlayer;
     [SerializeField]
     private BattlecardTileEvent tryPlayCardEvent;
+
+    private List<BattleCard> playerBattleCards;
+    private List<BattleCard> aiBattleCards;
 
     void Start()
     {
@@ -27,7 +33,9 @@ public class GameSceneLoader : MonoBehaviour
         yield return null;
         // load logic goes here
         SetUpLevelTheme();
+        SetUpHumanPlayerBattleCards();
         SetUpHumanPlayerObject();
+        SetUpAIPlayerBattleCards();
         SetUpAIPlayerObject();
         standardLevelObjects.SetActive(true);
         yield return new WaitForSeconds(1.0f);
@@ -41,15 +49,39 @@ public class GameSceneLoader : MonoBehaviour
         Instantiate(themeDressing);
     }
 
+    private void SetUpHumanPlayerBattleCards()
+    {
+        playerBattleCards = new List<BattleCard>();
+        PlayerHandDisplay playerHand = standardLevelObjects.transform.Find("PlayerHand").GetComponent<PlayerHandDisplay>();
+        foreach(CardInstance cardInstance in PlayerProfile.Instance.GetHand())
+        {
+            BattleCard card = Instantiate(battleCardPrefab);
+            card.SetCardInstance(cardInstance);
+            playerBattleCards.Add(card);
+        }
+        playerHand.SetCardPositions(playerBattleCards);
+    }
+
     private void SetUpHumanPlayerObject()
     {
-        humanPlayer.SetData(PlayerProfile.Instance.playerName, PlayerProfile.Instance.playerColor);
+        humanPlayer.SetData(PlayerProfile.Instance.playerName, PlayerProfile.Instance.playerColor, playerBattleCards);
+    }
+
+    private void SetUpAIPlayerBattleCards()
+    {
+        aiBattleCards = new List<BattleCard>();
+        foreach(CardInstance cardInstance in Database.Instance.Card.defaultDeck.Take(5))
+        {
+            BattleCard card = Instantiate(battleCardPrefab);
+            card.SetCardInstance(cardInstance);
+            aiBattleCards.Add(card);
+        }
     }
 
     private void SetUpAIPlayerObject()
     {
         AIData aiData = LevelManager.Instance.GetOpponent();
-        aIPlayer.SetData(aiData.aIName, aiData.aIColor);
+        aIPlayer.SetData(aiData.aIName, aiData.aIColor, aiBattleCards);
         Type aiBaseType = aiData.aIBaseType;
         AIBase aiBase = (AIBase)aIPlayer.gameObject.AddComponent(aiBaseType);
         aIPlayer.SetAIBase(aiBase, tryPlayCardEvent);
