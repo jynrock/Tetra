@@ -69,8 +69,9 @@ public class GameSceneLoader : MonoBehaviour
 
     private void SetUpAIPlayerBattleCards()
     {
+        AIData aiData = LevelManager.Instance.GetOpponent();
         aiBattleCards = new List<BattleCard>();
-        foreach(CardInstance cardInstance in Database.Instance.Card.defaultDeck.Take(5))
+        foreach(CardInstance cardInstance in aiData.aIDeck)
         {
             BattleCard card = Instantiate(battleCardPrefab);
             card.SetCardInstance(cardInstance);

@@ -15,5 +15,9 @@ MonoBehaviour:
   aIDifficulty: 1
   aIName: Rocco Random
   aIDeck:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c8fa626417bff1d48bfb545da775c520, type: 2}
+  - {fileID: 11400000, guid: 4b267a83f64de4d4991c4e0b81ecb618, type: 2}
+  - {fileID: 11400000, guid: 085dcc4e7b378a44eafcbbc7010b2814, type: 2}
+  - {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
+  - {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
   aIColor: {r: 1, g: 0, b: 0, a: 1}
