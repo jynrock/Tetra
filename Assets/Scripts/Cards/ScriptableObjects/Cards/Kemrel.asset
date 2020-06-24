@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fdbc46e32e65e741872e01a9b8b25ae, type: 3}
-  m_Name: Elfin Sentinel
+  m_Name: Kemrel
   m_EditorClassIdentifier: 
   cardNumber: 1
-  cardName: Hot Elf Boi
-  cardDesc: Test desc for hot elf boi
+  cardName: Kem'rel
+  cardDesc: Test desc for Kem'rel he mi boi
   type: 0
   cardArt: {fileID: 2100000, guid: b2e3f90d50fbcb04faddeda5431fcff1, type: 2}
   cardIcon: {fileID: 5671394949610869903, guid: 1b19ae23a18b1ac498f4f147c3d41fcc, type: 3}

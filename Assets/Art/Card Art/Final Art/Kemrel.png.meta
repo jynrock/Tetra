@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -6913057680470016438
-    second: HotElf_0
+    second: Kemrel_Full
   - first:
       213: 5671394949610869903
-    second: HotElf_1
+    second: Kemrel_Profile
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -145,7 +145,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HotElf_0
+      name: Kemrel_Full
       rect:
         serializedVersion: 2
         x: 0
@@ -166,7 +166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HotElf_1
+      name: Kemrel_Profile
       rect:
         serializedVersion: 2
         x: 600

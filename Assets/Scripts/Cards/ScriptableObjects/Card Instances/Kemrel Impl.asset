@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be234f3cd5d04414a8b688099ad422cd, type: 3}
-  m_Name: Elfin Sentinel Impl
+  m_Name: Kemrel Impl
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: 017b2dc039fa2e4479d657690dd643af, type: 2}
-  health: 2
+  health: 1
   maxHealth: 2
   attack: 2
   cardAbility: {fileID: 11400000, guid: cf84f85175e1cde438fbdaaed742df6a, type: 2}

@@ -4,10 +4,10 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 5092107443007015514
-    second: Fullbody_Newresolution_0
+    second: Arietta_Full
   - first:
       213: 2921112828701344145
-    second: Fullbody_Newresolution_1
+    second: Arietta_Profile
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -133,7 +133,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fullbody_Newresolution_0
+      name: Arietta_Full
       rect:
         serializedVersion: 2
         x: 0
@@ -154,7 +154,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fullbody_Newresolution_1
+      name: Arietta_Profile
       rect:
         serializedVersion: 2
         x: 826
