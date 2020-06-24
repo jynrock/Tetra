@@ -494,9 +494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2aeac250dbb954b87edbb63d7aa6fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
-  playerAvatar: {fileID: 0}
-  playerColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &109497541
 Transform:
   m_ObjectHideFlags: 0
@@ -653,7 +650,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 246.9
+  m_fontSize: 244.95
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1055,7 +1052,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
+  m_fontSize: 16.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1316,7 +1313,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 85.1
+  m_fontSize: 84.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1539,7 +1536,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.65
+  m_fontSize: 39.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1709,7 +1706,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.35
+  m_fontSize: 22.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2320,7 +2317,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.05
+  m_fontSize: 67.55
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2438,8 +2435,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
   - {fileID: 11400000, guid: 249f1859709d5f646bc3d8a67d85b7f2, type: 2}
   - {fileID: 11400000, guid: d08f22d86d0243c47b2e693e4bf0b8b5, type: 2}
+  - {fileID: 11400000, guid: 31a5c65d812a780418bfd12fcae66874, type: 2}
   cards:
   - {fileID: 11400000, guid: 017b2dc039fa2e4479d657690dd643af, type: 2}
+  - {fileID: 11400000, guid: a36a2cee9e16abc49b92beb8eb8edf11, type: 2}
+  - {fileID: 11400000, guid: ef214e747c137d447aafe2b021078817, type: 2}
 --- !u!114 &1557831563
 MonoBehaviour:
   m_ObjectHideFlags: 0

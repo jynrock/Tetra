@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be234f3cd5d04414a8b688099ad422cd, type: 3}
-  m_Name: Sekeltal Warrior Impl
+  m_Name: Skeletal Warrior Impl
   m_EditorClassIdentifier: 
   info: {fileID: 11400000, guid: e13a4f0e80481544ab613ebe58b332e7, type: 2}
   health: 1
