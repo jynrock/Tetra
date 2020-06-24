@@ -15,15 +15,15 @@ public class ProfilePanel : MonoBehaviour
 
     public void SaveSettings()
     {
-        PlayerProfile.Instance.playerName = nameValue.text;
-        //PlayerProfile.Instance.playerAvatar = avatarHolder.sprite;
-        PlayerProfile.Instance.playerColor = colorHolder.color;
+        PlayerProfile.Instance.SetPlayerName(nameValue.text);
+        PlayerProfile.Instance.SetPlayerAvatar(avatarHolder.sprite);
+        PlayerProfile.Instance.SetPlayerColor(colorHolder.color);
     }
 
     public void UpdateSettings()
     {
-        nameValue.text = PlayerProfile.Instance.playerName;
-        //avatarHolder.sprite = PlayerProfile.Instance.playerAvatar;
-        colorHolder.color = PlayerProfile.Instance.playerColor != null ? PlayerProfile.Instance.playerColor : Color.white;
+        nameValue.text = PlayerProfile.Instance.GetPlayerName();
+        avatarHolder.sprite = PlayerProfile.Instance.GetPlayerAvatar();
+        colorHolder.color = PlayerProfile.Instance.GetPlayerColor();
     }
 }

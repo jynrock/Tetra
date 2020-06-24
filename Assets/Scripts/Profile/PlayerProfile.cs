@@ -8,9 +8,9 @@ public class PlayerProfile : MonoBehaviour
 {
     private static PlayerProfile _instance;
     public static PlayerProfile Instance { get {return _instance;} }
-    public string playerName;
-    public Sprite playerAvatar;
-    public Color playerColor;
+    private string playerName;
+    private Sprite playerAvatar;
+    private Color playerColor;
     private List<CardInstance> deck;
     private List<CardInstance> hand;
 
@@ -20,15 +20,14 @@ public class PlayerProfile : MonoBehaviour
         {
             _instance = this;
         }
-        if (playerName == null || playerName == "")
-        {
-            playerName = "New Player";
-            playerColor = Color.blue;
-        }
     }
 
     public string GetPlayerName()
     {
+        if(playerName == null || playerName == "")
+        {
+            playerName = "New Player";
+        }
         return playerName;
     }
 
@@ -39,6 +38,10 @@ public class PlayerProfile : MonoBehaviour
 
     public Sprite GetPlayerAvatar()
     {
+        if(playerAvatar == null)
+        {
+            playerAvatar = GetDeck()[1].info.cardIcon;
+        }
         return playerAvatar;
     }
 
@@ -49,6 +52,10 @@ public class PlayerProfile : MonoBehaviour
 
     public Color GetPlayerColor()
     {
+        if(playerColor == null || playerColor.a < 1)
+        {
+            playerColor = new Color(0, 0, 1, 1);
+        }
         return playerColor;
     }
 
@@ -131,5 +138,12 @@ public class PlayerProfile : MonoBehaviour
         results = deck.Where(c => c.info.cardName == name).ToList();
 
         return results;
+    }
+
+    public List<Sprite> GetAvailableAvatars()
+    {
+        List<Card> cardsInDeck = deck.Select(c => c.info).Distinct().ToList();
+        List<Sprite> avatarsAvailable = cardsInDeck.Select(c => c.cardIcon).ToList();
+        return avatarsAvailable;
     }
 }

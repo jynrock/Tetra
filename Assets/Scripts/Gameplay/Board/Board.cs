@@ -20,18 +20,14 @@ public class Board : MonoBehaviour
     [SerializeField]
     private PlayerEvent endAwaitAnimationsEvent;
 
-    // Start is called before the first frame update
-    void Start()
+    public void OnGameLoaded(bool loaded)
     {
-        SetUpTiles();
-        cardsInPlay = new List<BattleCard>();
-        calloutBoard.Raise(this);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if(loaded)
+        {
+            SetUpTiles();
+            cardsInPlay = new List<BattleCard>();
+            calloutBoard.Raise(this);
+        }
     }
 
     public Tile GetTile(int i)

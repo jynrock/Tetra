@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8954920155672430031}
   - component: {fileID: 9124504406790133102}
   - component: {fileID: 8793385781008301308}
+  - component: {fileID: 7952759490907910140}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -169,6 +170,34 @@ MonoBehaviour:
       - m_Target: {fileID: 8954920155672430031}
         m_TargetAssemblyTypeName: Board, Assembly-CSharp
         m_MethodName: OnPlayCardSucceeded
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7952759490907910140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3196496844530049433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46836fc849b0f469e83f1ad5611a5b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 296ecf6f7ffea0149a75d6b6e3f8e01a, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8954920155672430031}
+        m_TargetAssemblyTypeName: Board, Assembly-CSharp
+        m_MethodName: OnGameLoaded
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

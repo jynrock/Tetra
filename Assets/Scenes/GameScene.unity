@@ -332,18 +332,50 @@ PrefabInstance:
       propertyPath: card
       value: 
       objectReference: {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
+    - target: {fileID: 1508044361992536302, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921508488988687161, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3249729645612583124, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
       propertyPath: card
       value: 
       objectReference: {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
+    - target: {fileID: 4211465162232572820, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5129282376087784475, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
       propertyPath: card
       value: 
       objectReference: {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
+    - target: {fileID: 5569418714134996464, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 5569418714134996464, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6227689741821570561, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6227689741821570561, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7234536244909540951, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
       propertyPath: card
       value: 
       objectReference: {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
+    - target: {fileID: 7856104739052025162, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7856104739227644944, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3433962
@@ -394,7 +426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7856104739227644945, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856104739364212027, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7856104739406162771, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
       propertyPath: m_Name
@@ -404,12 +440,45 @@ PrefabInstance:
       propertyPath: hand.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7856104740048347697, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7856104740448800531, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7856104740602610245, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
       propertyPath: m_Name
       value: EnemyHand
       objectReference: {fileID: 0}
+    - target: {fileID: 7856104741110349785, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616052425094167078, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8616052425094167078, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8909079840413360205, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8920906649436683675, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9216106779998936562, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4139126390721961657, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+    - {fileID: 324993182023015497, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
 --- !u!1 &7856104740785792610 stripped
 GameObject:
@@ -438,3 +507,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e643fa4f279be84db329d7c8957eaee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7856104740785792613 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7856104739406162771, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+  m_PrefabInstance: {fileID: 7856104740785792609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7856104740785792614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8774902458040010657, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+  m_PrefabInstance: {fileID: 7856104740785792609}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7856104740785792613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602d6b87a287bed48b3b2e72ef442b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7856104740785792615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7856104740785792613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46836fc849b0f469e83f1ad5611a5b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 296ecf6f7ffea0149a75d6b6e3f8e01a, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7856104740785792614}
+        m_TargetAssemblyTypeName: PlayerHandDisplay, Assembly-CSharp
+        m_MethodName: OnGameLoaded
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &7856104740785792616 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7856104740602610245, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+  m_PrefabInstance: {fileID: 7856104740785792609}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7856104740785792617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4041671107430761559, guid: 2cbbff8fa88fda749beb2ea435b047fc, type: 3}
+  m_PrefabInstance: {fileID: 7856104740785792609}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7856104740785792616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f6939858e1d0841a31d8af9f2b87da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7856104740785792618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7856104740785792616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46836fc849b0f469e83f1ad5611a5b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: 296ecf6f7ffea0149a75d6b6e3f8e01a, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7856104740785792617}
+        m_TargetAssemblyTypeName: HandDisplay, Assembly-CSharp
+        m_MethodName: OnGameLoaded
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

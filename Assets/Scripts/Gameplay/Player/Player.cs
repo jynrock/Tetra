@@ -8,6 +8,7 @@ public abstract class Player : MonoBehaviour
     public List<BattleCard> hand;
     public List<BattleCard> playedCards;
     public Color playerColor;
+    public Sprite playerIcon;
     public bool hasPlayedCard;
     public bool hasUsedAbility;
 
@@ -22,10 +23,11 @@ public abstract class Player : MonoBehaviour
 
     private bool awaitingAnimations;
 
-    public void SetData(string name, Color color, List<BattleCard> hand)
+    public void SetData(string name, Color color, Sprite icon, List<BattleCard> hand)
     {
         this.playerName = name;
         this.playerColor = color;
+        this.playerIcon = icon;
         this.hand = hand;
     }
 

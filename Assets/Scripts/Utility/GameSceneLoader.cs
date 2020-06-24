@@ -64,7 +64,7 @@ public class GameSceneLoader : MonoBehaviour
 
     private void SetUpHumanPlayerObject()
     {
-        humanPlayer.SetData(PlayerProfile.Instance.playerName, PlayerProfile.Instance.playerColor, playerBattleCards);
+        humanPlayer.SetData(PlayerProfile.Instance.GetPlayerName(), PlayerProfile.Instance.GetPlayerColor(), PlayerProfile.Instance.GetPlayerAvatar(), playerBattleCards);
     }
 
     private void SetUpAIPlayerBattleCards()
@@ -82,7 +82,7 @@ public class GameSceneLoader : MonoBehaviour
     private void SetUpAIPlayerObject()
     {
         AIData aiData = LevelManager.Instance.GetOpponent();
-        aIPlayer.SetData(aiData.aIName, aiData.aIColor, aiBattleCards);
+        aIPlayer.SetData(aiData.aIName, aiData.aIColor, aiData.aIIcon, aiBattleCards);
         Type aiBaseType = aiData.aIBaseType;
         AIBase aiBase = (AIBase)aIPlayer.gameObject.AddComponent(aiBaseType);
         aIPlayer.SetAIBase(aiBase, tryPlayCardEvent);

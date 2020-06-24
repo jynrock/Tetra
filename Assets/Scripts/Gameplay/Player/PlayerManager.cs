@@ -22,13 +22,16 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     BattlecardAbilityEvent onTryUseAbilityFailedEvent;
 
-    void Start()
+    public void OnGameLoaded(bool loaded)
     {
-        foreach(Player p in players)
+        if(loaded)
         {
-            p.SetupHand();
+            foreach(Player p in players)
+            {
+                p.SetupHand();
+            }
+            OnStartGame();
         }
-        OnStartGame();
     }
 
     public void OnEndPlayerTurn(Player player)

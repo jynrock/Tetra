@@ -21,3 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
   - {fileID: 11400000, guid: 696fe060ca9208641b9ee371ff398f97, type: 2}
   aIColor: {r: 1, g: 0, b: 0, a: 1}
+  aIIcon: {fileID: 2921112828701344145, guid: 4bf4d9758ebf291418c023f6ca132a0a, type: 3}

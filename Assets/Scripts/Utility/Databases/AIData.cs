@@ -11,4 +11,5 @@ public class AIData : ScriptableObject
     public string aIName;
     public CardInstance[] aIDeck;
     public Color aIColor;
+    public Sprite aIIcon;
 }

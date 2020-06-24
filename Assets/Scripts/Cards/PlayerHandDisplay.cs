@@ -10,19 +10,16 @@ public class PlayerHandDisplay : MonoBehaviour
     [SerializeField]
     private TextMeshPro nameText;
     [SerializeField]
+    private SpriteRenderer playerIcon;
+    [SerializeField]
     private GameObject[] cardPositions;
 
-    // Start is called before the first frame update
-    void Start()
+    public void OnGameLoaded(bool loaded)
     {
-        nameText.text = owner.playerName;
-        nameText.color = owner.playerColor;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (loaded)
+        {
+            UpdateDisplay();
+        }
     }
 
     public void SetCardPositions(List<BattleCard> cards)
@@ -32,5 +29,14 @@ public class PlayerHandDisplay : MonoBehaviour
             cards[i].transform.SetParent(cardPositions[i].transform);
             cards[i].transform.localPosition = Vector3.zero;
         }
+    }
+
+    private void UpdateDisplay()
+    {
+        nameText.text = owner.playerName;
+        nameText.color = owner.playerColor;
+        float ratio = playerIcon.sprite.bounds.size.x / owner.playerIcon.bounds.size.x;
+        playerIcon.sprite = owner.playerIcon;
+        playerIcon.transform.localScale = new Vector3(ratio * 0.66f, ratio * 0.66f, 1);
     }
 }
