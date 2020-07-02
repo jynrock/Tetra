@@ -15,6 +15,18 @@ MonoBehaviour:
   abilityName: Boost Health
   abilityDescription: Boost another card's maximum and current health by this card's
     attack power.
+  localizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:90183cc1b82c6234ab97f3d2fe68e277
+    m_TableEntryReference:
+      m_KeyId: 5
+      m_Key: 
+  localizedDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:90183cc1b82c6234ab97f3d2fe68e277
+    m_TableEntryReference:
+      m_KeyId: 6
+      m_Key: 
   type: 0
   targetListeningEvent: {fileID: 11400000, guid: 1b602e4b1c253e747b4c93a50470d86c, type: 2}
   tryUseAbilityEvent: {fileID: 11400000, guid: 98efb08aec1f7604390a21dc08fb0314, type: 2}

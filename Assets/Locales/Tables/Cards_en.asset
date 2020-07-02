@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Cards_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: d2f4ff9c9be160a4390538b93175bb12, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2
+    m_Localized: Arietta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: Test desc for arietta damn she cool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: Kem'rel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Test desc for Kem'rel he mi boi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: Lyria, The Drowned Witch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7
+    m_Localized: test desc for drowned witch local
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8
+    m_Localized: Boblin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10
+    m_Localized: Skeletal Warrior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12
+    m_Localized: Timrek
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14
+    m_Localized: Weak Imp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 9
+    m_Localized: test local desc boblin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11
+    m_Localized: test local desc skele
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13
+    m_Localized: test local desc kermit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15
+    m_Localized: test local desc imp
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 1

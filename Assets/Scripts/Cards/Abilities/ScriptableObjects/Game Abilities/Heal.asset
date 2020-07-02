@@ -14,6 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Heal
   abilityDescription: Increase the armor of another card by the user's maximum armor.
+  localizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:90183cc1b82c6234ab97f3d2fe68e277
+    m_TableEntryReference:
+      m_KeyId: 7
+      m_Key: 
+  localizedDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:90183cc1b82c6234ab97f3d2fe68e277
+    m_TableEntryReference:
+      m_KeyId: 8
+      m_Key: 
   type: 0
   targetListeningEvent: {fileID: 11400000, guid: 1b602e4b1c253e747b4c93a50470d86c, type: 2}
   tryUseAbilityEvent: {fileID: 11400000, guid: 98efb08aec1f7604390a21dc08fb0314, type: 2}

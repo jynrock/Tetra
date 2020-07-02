@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Localization;
 
 public abstract class CardAbility : ScriptableObject
 {
-    public string abilityName = "New Ability";
-    public string abilityDescription = "New Ability Description";
+    [SerializeField]
+    private LocalizedString localizedName;
+    [SerializeField]
+    private LocalizedString localizedDescription;
     public AbilityType type;
 
     [SerializeField]
@@ -17,6 +20,26 @@ public abstract class CardAbility : ScriptableObject
 
     protected BattleCard firstTarget;
     protected BattleCard secondTarget;
+
+    public string LocalizedName()
+    {
+        var resolvedName = localizedName.GetLocalizedString();
+        if(resolvedName.IsDone)
+        {
+            return resolvedName.Result;
+        }
+        throw new System.Exception($"Unable to localize card name for Ability");
+    }
+
+    public string LocalizedDescription()
+    {
+        var resolvedDesc = localizedDescription.GetLocalizedString();
+        if(resolvedDesc.IsDone)
+        {
+            return resolvedDesc.Result;
+        }
+        throw new System.Exception($"Unable to localize card description for Ability");
+    }
 
     public void Activate(BattleCard _sourceCard)
     {

@@ -68,7 +68,7 @@ public class CardDisplay : MonoBehaviour
     public void SetAll()
     {
         healthText.text = card.card.health.ToString();
-        nameText.text = card.card.info.cardName;
+        nameText.text = card.card.info.LocalizedName();
         attackText.text = card.card.attack.ToString();
         cardArt.material = card.card.info.cardArt;
 
@@ -86,8 +86,8 @@ public class CardDisplay : MonoBehaviour
             if(card.card.cardAbility != null)
             {
                 abilityPreviewPanel.SetActive(true);
-                specialAbilityTitleText.text = card.card.cardAbility.abilityName;
-                specialAbilityDescriptionText.text = card.card.cardAbility.abilityDescription;
+                specialAbilityTitleText.text = card.card.cardAbility.LocalizedName();
+                specialAbilityDescriptionText.text = card.card.cardAbility.LocalizedDescription();
             }
             else
             {

@@ -115,10 +115,10 @@ public class CardInfoHolder : MonoBehaviour
         cardPreview.SetInfo(currentSelected);
 
         numberText.text = "#" + currentSelected.info.cardNumber.ToString("000");
-        nameText.text = currentSelected.info.cardName;
+        nameText.text = currentSelected.info.LocalizedName();
         typeText.text = "";
-        abilityNameText.text = currentSelected.cardAbility.abilityName + ":";
-        abilityDescText.text = currentSelected.cardAbility.abilityDescription;
-        descText.text = currentSelected.info.cardDesc;
+        abilityNameText.text = currentSelected.cardAbility.LocalizedName() + ":";
+        abilityDescText.text = currentSelected.cardAbility.LocalizedDescription();
+        descText.text = currentSelected.info.LocalizedDescription();
     }
 }

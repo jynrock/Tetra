@@ -13,9 +13,19 @@ MonoBehaviour:
   m_Name: Boblin
   m_EditorClassIdentifier: 
   cardNumber: 0
-  cardName: Boblin
-  cardDesc: Test Desc
   type: 0
   cardArt: {fileID: 2100000, guid: 51f831db3cb1da545a9dbfef1bcd4e4d, type: 2}
   cardIcon: {fileID: -4084864650874435686, guid: c2c039e09f60afd459d8b39b152606d4, type: 3}
   cardArtSprite: {fileID: 5771692390796799615, guid: c2c039e09f60afd459d8b39b152606d4, type: 3}
+  localizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 8
+      m_Key: 
+  localizedDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 9
+      m_Key: 

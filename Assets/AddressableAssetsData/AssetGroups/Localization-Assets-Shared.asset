@@ -21,9 +21,25 @@ MonoBehaviour:
     m_Address: UI Text Shared Data
     m_ReadOnly: 0
     m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Localization.Tables.SharedTableData, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 90183cc1b82c6234ab97f3d2fe68e277
+    m_Address: Abilities Shared Data
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     m_mainAssetType: 
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: d2f4ff9c9be160a4390538b93175bb12
+    m_Address: Cards Shared Data
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Localization.Tables.SharedTableData, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 11400000, guid: d2f4ff9c9be160a4390538b93175bb12, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: d2f4ff9c9be160a4390538b93175bb12, type: 2}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 2dad8914a14967b48968dfbd46ee88dc, type: 2}
   m_SchemaSet:

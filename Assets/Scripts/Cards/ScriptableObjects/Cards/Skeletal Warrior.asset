@@ -13,9 +13,19 @@ MonoBehaviour:
   m_Name: Skeletal Warrior
   m_EditorClassIdentifier: 
   cardNumber: 0
-  cardName: Skeletal Warrior
-  cardDesc: Test Desc
   type: 0
   cardArt: {fileID: 2100000, guid: 391ae9b93482c63489e5188156f23f98, type: 2}
   cardIcon: {fileID: -5358094051874307804, guid: bdf9f5a3b961765448144a339b289fc2, type: 3}
   cardArtSprite: {fileID: 7066243597226400606, guid: bdf9f5a3b961765448144a339b289fc2, type: 3}
+  localizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 10
+      m_Key: 
+  localizedDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 11
+      m_Key: 

@@ -54,7 +54,7 @@ public class CardPreview : MonoBehaviour
     {
         instance = cardInstance;
 
-        nameText.text = cardInstance.info.cardName;
+        nameText.text = cardInstance.info.LocalizedName();
         attackText.text = cardInstance.attack.ToString();
         healthText.text = cardInstance.maxHealth.ToString();
         cardArt.sprite = cardInstance.info.cardArtSprite;

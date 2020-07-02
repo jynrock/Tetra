@@ -86,5 +86,25 @@ MonoBehaviour:
     m_Localized: Hand
     m_Metadata:
       m_Items: []
+  - m_Id: 20
+    m_Localized: Loading...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Localized: Number
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22
+    m_Localized: Name
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23
+    m_Localized: Type
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24
+    m_Localized: Ability
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

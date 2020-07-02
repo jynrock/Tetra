@@ -135,7 +135,8 @@ public class PlayerProfile : MonoBehaviour
     {
         List<CardInstance> results = new List<CardInstance>();
 
-        results = deck.Where(c => c.info.cardName == name).ToList();
+        //TODO support localized string getting
+        //results = deck.Where(c => c.info.cardName == name).ToList();
 
         return results;
     }

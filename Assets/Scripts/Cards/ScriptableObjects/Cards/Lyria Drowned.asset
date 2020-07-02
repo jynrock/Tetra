@@ -10,12 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fdbc46e32e65e741872e01a9b8b25ae, type: 3}
-  m_Name: Drowned Witch
+  m_Name: Lyria Drowned
   m_EditorClassIdentifier: 
   cardNumber: 3
-  cardName: Drowned Witch
-  cardDesc: test desc for drowned witch
   type: 0
   cardArt: {fileID: 2100000, guid: c4558108d45a07e4b8cab0121d8cfa95, type: 2}
   cardIcon: {fileID: 3334855639349514990, guid: 1aeef29a27e8f4d479817d6880da9e8d, type: 3}
   cardArtSprite: {fileID: 4369089089618724214, guid: 1aeef29a27e8f4d479817d6880da9e8d, type: 3}
+  localizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 6
+      m_Key: 
+  localizedDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 7
+      m_Key: 

@@ -31,6 +31,14 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void OnTitleSceneLoaded(bool loaded)
+    {
+        if(loaded)
+        {
+            StartCoroutine(FadeLoader());
+        }
+    }
+
     public void LoadLevel(string levelName)
     {
         StartCoroutine(LoadLevelAsync(levelName));
@@ -110,5 +118,11 @@ public class LevelManager : MonoBehaviour
         animator.SetTrigger("FadeIn");
         yield return new WaitForSeconds(1.0f);
         cardAnimator.StartPlayback();
+    }
+
+    private IEnumerator FadeLoader()
+    {
+        yield return null;
+        animator.SetTrigger("FadeIn");
     }
 }

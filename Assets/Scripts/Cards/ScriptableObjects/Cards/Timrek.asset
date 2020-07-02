@@ -13,9 +13,19 @@ MonoBehaviour:
   m_Name: Timrek
   m_EditorClassIdentifier: 
   cardNumber: 0
-  cardName: Timrek
-  cardDesc: Test Desc
   type: 0
   cardArt: {fileID: 2100000, guid: 73eaf9eb545ed6d4aaed17d61af6be25, type: 2}
   cardIcon: {fileID: 7370097138951164435, guid: c930b5533eb37fd40956cc51fd926b31, type: 3}
   cardArtSprite: {fileID: -44093092556243482, guid: c930b5533eb37fd40956cc51fd926b31, type: 3}
+  localizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 12
+      m_Key: 
+  localizedDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 13
+      m_Key: 

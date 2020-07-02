@@ -19,3 +19,15 @@ MonoBehaviour:
   cardArt: {fileID: 2100000, guid: 3953198bd1a0c224e94ea0b1ca2b5ffa, type: 2}
   cardIcon: {fileID: 2921112828701344145, guid: 4bf4d9758ebf291418c023f6ca132a0a, type: 3}
   cardArtSprite: {fileID: 5092107443007015514, guid: 4bf4d9758ebf291418c023f6ca132a0a, type: 3}
+  localizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 2
+      m_Key: 
+  localizedDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 3
+      m_Key: 
