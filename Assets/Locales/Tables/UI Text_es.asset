@@ -106,5 +106,13 @@ MonoBehaviour:
     m_Localized: Capacidad
     m_Metadata:
       m_Items: []
+  - m_Id: 25
+    m_Localized: Solojugador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 26
+    m_Localized: Multijugador
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
