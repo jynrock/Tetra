@@ -17,7 +17,6 @@ public class RandoAI : AIBase
             }
         }
         int oneInEight = Random.Range(0, 8);
-        Debug.Log(oneInEight);
         if(player.hand.Count < 4 && oneInEight == 7)
         {
             UseRandomAbilityOnRandomFriendlyCards();
