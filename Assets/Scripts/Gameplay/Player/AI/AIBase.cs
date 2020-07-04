@@ -73,5 +73,24 @@ public abstract class AIBase : MonoBehaviour
         return null;
     }
 
+    protected void UseRandomAbilityOnRandomFriendlyCards()
+    {
+        BattleCard abilityC = GetRandomPlayerOwnedCardOnBoard();
+        abilityC.BeginUseAbility();
+        
+        BattleCard abilityTarget = GetRandomPlayerOwnedCardOnBoard();
+        abilityC.OnTargetSelected(abilityTarget);
+
+        if(abilityC.card.cardAbility.type == AbilityType.TWO_TARGET)
+        {
+            BattleCard abilityTargetTwo = null;
+            do
+            {
+                abilityTargetTwo = GetRandomPlayerOwnedCardOnBoard();
+            } while (abilityTargetTwo != null && abilityTargetTwo != abilityTarget);
+            abilityC.OnTargetSelected(abilityTargetTwo);
+        }
+    }
+
     public abstract void TakeTurn();
 }

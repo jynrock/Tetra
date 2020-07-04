@@ -10,11 +10,17 @@ public class RandoAI : AIBase
         if(player.hand.Count >= 5 || oneInTen != 9)
         {
             Tile t = GetRandomTile();
-            BattleCard c = GetRandomCardFromHand();
-            if(t != null && c != null)
+            BattleCard playC = GetRandomCardFromHand();
+            if(t != null && playC != null)
             {
-                tryPlayCardEvent.Raise(new BattlecardTileEventData(c, t));
+                tryPlayCardEvent.Raise(new BattlecardTileEventData(playC, t));
             }
+        }
+        int oneInEight = Random.Range(0, 8);
+        Debug.Log(oneInEight);
+        if(player.hand.Count < 4 && oneInEight == 7)
+        {
+            UseRandomAbilityOnRandomFriendlyCards();
         }
         EndTurn();
     }
