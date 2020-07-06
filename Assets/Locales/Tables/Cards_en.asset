@@ -83,5 +83,21 @@ MonoBehaviour:
       lovboi
     m_Metadata:
       m_Items: []
+  - m_Id: 19
+    m_Localized: mermaid localized desc lol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 18
+    m_Localized: Mermaid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 20
+    m_Localized: The Narcissist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21
+    m_Localized: narc localized desc
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

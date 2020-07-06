@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be234f3cd5d04414a8b688099ad422cd, type: 3}
+  m_Name: Mermaid Impl
+  m_EditorClassIdentifier: 
+  info: {fileID: 11400000, guid: 09048dcc67e7dd64698724294e1a5081, type: 2}
+  health: 3
+  maxHealth: 3
+  attack: 1
+  cardAbility: {fileID: 11400000, guid: fc4dacccbca859f4ba00fc6d46e569a3, type: 2}
+  topLeft: 0
+  top: 1
+  topRight: 0
+  left: 1
+  right: 1
+  bottomLeft: 0
+  bottom: 1
+  bottomRight: 0
+  level: 1
+  experience: 0
+  toNextLevel: 0
