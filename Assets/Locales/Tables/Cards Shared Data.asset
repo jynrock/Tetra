@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: Cards Shared Data
   m_EditorClassIdentifier: 
-  m_NextAvailableId: 16
+  m_NextAvailableId: 18
   m_TableCollectionName: Cards
   m_TableCollectionNameGuidString: d2f4ff9c9be160a4390538b93175bb12
   m_Entries:
@@ -70,6 +70,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 15
     m_Key: WEAK_IMP_DESCRIPTION
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16
+    m_Key: JACOB_NAME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Key: JACOB_DESCRIPTION
     m_Metadata:
       m_Items: []
   m_Metadata:

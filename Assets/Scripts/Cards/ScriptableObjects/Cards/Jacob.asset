@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fdbc46e32e65e741872e01a9b8b25ae, type: 3}
+  m_Name: Jacob
+  m_EditorClassIdentifier: 
+  cardNumber: 4
+  localizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 16
+      m_Key: 
+  localizedDescription:
+    m_TableReference:
+      m_TableCollectionName: GUID:d2f4ff9c9be160a4390538b93175bb12
+    m_TableEntryReference:
+      m_KeyId: 17
+      m_Key: 
+  type: 0
+  cardArt: {fileID: 2100000, guid: def7191aa85925043821b25f53bf4964, type: 2}
+  cardIcon: {fileID: 3088999852873035562, guid: 3eeefcb3694b7fe448322c600e1d538e, type: 3}
+  cardArtSprite: {fileID: 6153192283278091619, guid: 3eeefcb3694b7fe448322c600e1d538e, type: 3}

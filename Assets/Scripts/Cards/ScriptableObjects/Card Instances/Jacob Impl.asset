@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be234f3cd5d04414a8b688099ad422cd, type: 3}
+  m_Name: Jacob Impl
+  m_EditorClassIdentifier: 
+  info: {fileID: 11400000, guid: b4433dc9d4c8c804da851ff1847cca4a, type: 2}
+  health: 2
+  maxHealth: 2
+  attack: 2
+  cardAbility: {fileID: 11400000, guid: 076f5a979a6b6c04385f621476a61b26, type: 2}
+  topLeft: 0
+  top: 0
+  topRight: 0
+  left: 1
+  right: 1
+  bottomLeft: 1
+  bottom: 0
+  bottomRight: 1
+  level: 1
+  experience: 0
+  toNextLevel: 0

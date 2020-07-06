@@ -2794,6 +2794,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 249f1859709d5f646bc3d8a67d85b7f2, type: 2}
   - {fileID: 11400000, guid: d08f22d86d0243c47b2e693e4bf0b8b5, type: 2}
   - {fileID: 11400000, guid: 31a5c65d812a780418bfd12fcae66874, type: 2}
+  - {fileID: 11400000, guid: 5ea79e5679ea16441a409b215611ceca, type: 2}
   cards:
   - {fileID: 11400000, guid: 017b2dc039fa2e4479d657690dd643af, type: 2}
   - {fileID: 11400000, guid: a36a2cee9e16abc49b92beb8eb8edf11, type: 2}

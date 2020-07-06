@@ -74,5 +74,14 @@ MonoBehaviour:
     m_Localized: test local desc imp
     m_Metadata:
       m_Items: []
+  - m_Id: 16
+    m_Localized: Jacob
+    m_Metadata:
+      m_Items: []
+  - m_Id: 17
+    m_Localized: test description son of preacher, now vigilante, but very sweet
+      lovboi
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
