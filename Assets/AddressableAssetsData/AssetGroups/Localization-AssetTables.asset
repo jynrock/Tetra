@@ -16,7 +16,47 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 152da3053c3b7534a91e0fd8390252b9
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 32e7cf1cda19c2e428b04f4124c0b948
+    m_Address: DialogueAudio_es
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es
+    - Preload
+    m_mainAssetType: UnityEngine.Localization.Tables.AssetTable, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: 6e21539e3a824cb4883a1f34ac04c0b0
+    m_Address: DialogueAudio_fr
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr
+    - Preload
+    m_mainAssetType: UnityEngine.Localization.Tables.AssetTable, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: ad77dd259b1656b4e92106b837a4ed33
+    m_Address: DialogueAudio_en
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Preload
+    m_mainAssetType: UnityEngine.Localization.Tables.AssetTable, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b6f02c96438bea0468c4a330f99a7a7d
+    m_Address: DialogueAudio_ja
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
+    - Preload
+    m_mainAssetType: UnityEngine.Localization.Tables.AssetTable, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 2dad8914a14967b48968dfbd46ee88dc, type: 2}
   m_SchemaSet:

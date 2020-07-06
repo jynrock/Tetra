@@ -14,23 +14,23 @@ public class SettingsPanel : MonoBehaviour
     
     public void PopulatePanel()
     {
-        musicVolumeSlider.value = SettingsManager.Instance.GetMusicVolume();
-        effectVolumeSlider.value = SettingsManager.Instance.GetEffectVolume();
-        dialogueVolumeSlider.value = SettingsManager.Instance.GetDialogueVolume();
+        musicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
+        effectVolumeSlider.value = AudioManager.Instance.GetEffectVolume();
+        dialogueVolumeSlider.value = AudioManager.Instance.GetDialogueVolume();
     }
 
     public void SetMusicVolume()
     {
-        SettingsManager.Instance.SetMusicVolume(musicVolumeSlider.value);
+        AudioManager.Instance.SetMusicVolume(musicVolumeSlider.value);
     }
 
     public void SetEffectVolume()
     {
-        SettingsManager.Instance.SetEffectVolume(effectVolumeSlider.value);
+        AudioManager.Instance.SetEffectVolume(effectVolumeSlider.value);
     }
 
     public void SetDialogueVolume()
     {
-        SettingsManager.Instance.SetDialogueVolume(dialogueVolumeSlider.value);
+        AudioManager.Instance.SetDialogueVolume(dialogueVolumeSlider.value);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 public class TitleScreenLoader : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class TitleScreenLoader : MonoBehaviour
     private BoolGameEvent sceneLoadedEvent;
 
     [SerializeField]
-    private GameObject[] preloaderObjects;
+    private GameObject preloaderObject;
 
     void Start()
     {
@@ -18,11 +19,12 @@ public class TitleScreenLoader : MonoBehaviour
     private IEnumerator LoadTitle()
     {
         yield return null;
-        foreach(GameObject go in preloaderObjects)
+        var test = LocalizationSettings.Instance.GetInitializationOperation();
+        while(!test.IsDone)
         {
-            Destroy(go);
+            yield return null;
         }
-        yield return new WaitForSeconds(1.0f);
+        Destroy(preloaderObject);
         sceneLoadedEvent.Raise(true);
     }
 }

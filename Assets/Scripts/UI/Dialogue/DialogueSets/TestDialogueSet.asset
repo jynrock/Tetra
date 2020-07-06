@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 080181492eb2cdb4cb8e2e8e64f14f72, type: 3}
+  m_Name: TestDialogueSet
+  m_EditorClassIdentifier: 
+  dialogueNodes:
+  - localizedName:
+      m_TableReference:
+        m_TableCollectionName: GUID:cd7640768bc44de44bd82ac724dd1def
+      m_TableEntryReference:
+        m_KeyId: 1
+        m_Key: 
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b112af24e7649ca488b7803dbddb7a35
+      m_TableEntryReference:
+        m_KeyId: 1
+        m_Key: 
+    icon: {fileID: 5671394949610869903, guid: 1b19ae23a18b1ac498f4f147c3d41fcc, type: 3}
+    localizedAudioClip:
+      m_TableReference:
+        m_TableCollectionName: GUID:0bd5be2df42254244a412d5c19ff329c
+      m_TableEntryReference:
+        m_KeyId: 3
+        m_Key: 
+    isNarration: 0
+  - localizedName:
+      m_TableReference:
+        m_TableCollectionName: GUID:cd7640768bc44de44bd82ac724dd1def
+      m_TableEntryReference:
+        m_KeyId: 2
+        m_Key: 
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b112af24e7649ca488b7803dbddb7a35
+      m_TableEntryReference:
+        m_KeyId: 2
+        m_Key: 
+    icon: {fileID: 2921112828701344145, guid: 4bf4d9758ebf291418c023f6ca132a0a, type: 3}
+    localizedAudioClip:
+      m_TableReference:
+        m_TableCollectionName: GUID:0bd5be2df42254244a412d5c19ff329c
+      m_TableEntryReference:
+        m_KeyId: 4
+        m_Key: 
+    isNarration: 0
+  - localizedName:
+      m_TableReference:
+        m_TableCollectionName: GUID:cd7640768bc44de44bd82ac724dd1def
+      m_TableEntryReference:
+        m_KeyId: 1
+        m_Key: 
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b112af24e7649ca488b7803dbddb7a35
+      m_TableEntryReference:
+        m_KeyId: 3
+        m_Key: 
+    icon: {fileID: 5671394949610869903, guid: 1b19ae23a18b1ac498f4f147c3d41fcc, type: 3}
+    localizedAudioClip:
+      m_TableReference:
+        m_TableCollectionName: GUID:0bd5be2df42254244a412d5c19ff329c
+      m_TableEntryReference:
+        m_KeyId: 5
+        m_Key: 
+    isNarration: 0
+  - localizedName:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+    localizedText:
+      m_TableReference:
+        m_TableCollectionName: GUID:b112af24e7649ca488b7803dbddb7a35
+      m_TableEntryReference:
+        m_KeyId: 4
+        m_Key: 
+    icon: {fileID: 0}
+    localizedAudioClip:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+    isNarration: 1

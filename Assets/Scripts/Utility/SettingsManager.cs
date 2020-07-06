@@ -24,34 +24,4 @@ public class SettingsManager : MonoBehaviour
             _instance = this;
         }
     }
-
-    public float GetMusicVolume()
-    {
-        return musicSource.volume;
-    }
-
-    public float GetEffectVolume()
-    {
-        return effectSource.volume;
-    }
-
-    public float GetDialogueVolume()
-    {
-        return dialogueSource.volume;
-    }
-
-    public void SetMusicVolume(float newVol)
-    {
-        musicSource.volume = newVol;
-    }
-
-    public void SetEffectVolume(float newVol)
-    {
-        effectSource.volume = newVol;
-    }
-
-    public void SetDialogueVolume(float newVol)
-    {
-        dialogueSource.volume = newVol;
-    }
 }

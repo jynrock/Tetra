@@ -17,6 +17,14 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: ae0094b9658645f43bfd69a5e8f789d1
   m_SerializeEntries:
+  - m_GUID: 0bd5be2df42254244a412d5c19ff329c
+    m_Address: DialogueAudio Shared Data
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Localization.Tables.SharedTableData, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 23111f175e8b3e64ebc3297c41714d96
     m_Address: UI Text Shared Data
     m_ReadOnly: 0
@@ -25,11 +33,40 @@ MonoBehaviour:
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
+  - m_GUID: 27244e6e8c963524ba528cef50a624a2
+    m_Address: empty
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en
+    - Locale-fr
+    - Locale-ja
+    - Locale-es
+    m_mainAssetType: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 90183cc1b82c6234ab97f3d2fe68e277
     m_Address: Abilities Shared Data
     m_ReadOnly: 0
     m_SerializedLabels: []
-    m_mainAssetType: 
+    m_mainAssetType: UnityEngine.Localization.Tables.SharedTableData, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: b112af24e7649ca488b7803dbddb7a35
+    m_Address: Dialogue Shared Data
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Localization.Tables.SharedTableData, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
+  - m_GUID: cd7640768bc44de44bd82ac724dd1def
+    m_Address: Names Shared Data
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_mainAssetType: UnityEngine.Localization.Tables.SharedTableData, Unity.Localization,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
     m_MainAsset: {fileID: 0}
     m_TargetAsset: {fileID: 0}
   - m_GUID: d2f4ff9c9be160a4390538b93175bb12
