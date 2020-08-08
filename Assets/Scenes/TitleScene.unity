@@ -275,6 +275,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &68370558
 Canvas:
   m_ObjectHideFlags: 0
@@ -2579,6 +2580,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1280093573
 Canvas:
   m_ObjectHideFlags: 0
@@ -2691,6 +2693,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1429819832
 Canvas:
   m_ObjectHideFlags: 0
@@ -2772,7 +2775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   themePrefabs:
-  - {fileID: 6210301067760569687, guid: 07cf3ef818f7ced43bb564e527aa4692, type: 3}
+  - {fileID: 4608199527018112203, guid: 3c80f92e5ff0e48439411a0be895f148, type: 3}
 --- !u!114 &1557831562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2887,6 +2890,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1627632473
 Canvas:
   m_ObjectHideFlags: 0

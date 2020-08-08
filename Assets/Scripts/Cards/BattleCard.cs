@@ -29,6 +29,8 @@ public class BattleCard : MonoBehaviour
     [SerializeField]
     private BattlecardEvent selectCardEvent;
 
+    private bool dragging;
+
     void Start()
     {
     }
@@ -57,8 +59,6 @@ public class BattleCard : MonoBehaviour
         if(!controlsDisabled && tile == null)
         {
             originPoint = transform.position;
-            screenPoint = Camera.main.WorldToScreenPoint(transform.position);
-            offset =  transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,screenPoint.z));
         }
         else if(!controlsDisabled) 
         {
@@ -75,10 +75,18 @@ public class BattleCard : MonoBehaviour
     {
         if (!controlsDisabled && !currentOwner.hasPlayedCard && tile == null)
         {
-            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
-            Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
-            transform.position = new Vector3(curPosition.x, 5.2f, curPosition.z);
-            if ((curPosition - originPoint).sqrMagnitude >= 0.1f)
+            dragging = true;
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
+            Ray ray = Camera.main.ScreenPointToRay(curScreenPoint);
+            RaycastHit[] hits = Physics.RaycastAll(ray, 5.0f);
+            foreach(RaycastHit hit in hits)
+            {
+                if(hit.transform.tag == "CardDragPlane") {
+                    Vector3 hitPos = hit.point;
+                    transform.position = new Vector3(hitPos.x, hitPos.y + 0.2f, hitPos.z);
+                }
+            }
+            if ((transform.position - originPoint).sqrMagnitude >= 0.1f)
             {
                 hidePreviewEvent.Raise(this);
             }
@@ -114,17 +122,19 @@ public class BattleCard : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if(tile == null)
+        if(tile == null && !dragging)
         {
             Vector3 newPos = transform.position;
-            newPos.y += 0.15f;
+            newPos.y += 0.1f;
             transform.position = newPos;
         }
     }
 
     void OnMouseExit()
     {
-        ResetPosition();
+        if(!dragging){
+            ResetPosition();
+        }
     }
 
     // PLAYING CARD FUNCTIONS
@@ -138,6 +148,7 @@ public class BattleCard : MonoBehaviour
             }
             waitingForTryPlayResult = false;
             tile = data.tile;
+            dragging = false;
         }
     }
 
@@ -252,5 +263,6 @@ public class BattleCard : MonoBehaviour
     private void ResetPosition()
     {
         transform.localPosition = new Vector3(0, 0, 0);
+        dragging = false;
     }
 }

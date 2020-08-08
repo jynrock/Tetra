@@ -24,7 +24,8 @@ public class Card : ScriptableObject
         {
             return resolvedName.Result;
         }
-        throw new System.Exception($"Unable to localize card name for ID {cardNumber}");
+        Debug.Log($"Unable to localize card name for ID {cardNumber}");
+        return resolvedName.Result;
     }
 
     public string LocalizedDescription()
@@ -34,6 +35,7 @@ public class Card : ScriptableObject
         {
             return resolvedDesc.Result;
         }
-        throw new System.Exception($"Unable to localize card description for ID {cardNumber}");
+        Debug.Log($"Unable to localize card description for ID {cardNumber}");
+        return resolvedDesc.Result;
     }
 }

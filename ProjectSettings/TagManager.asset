@@ -7,6 +7,7 @@ TagManager:
   - MusicSource
   - EffectSource
   - DialogueSource
+  - CardDragPlane
   layers:
   - Default
   - TransparentFX
