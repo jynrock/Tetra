@@ -1935,29 +1935,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.03
       objectReference: {fileID: 0}
-    - target: {fileID: 1658199288916686897, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288916686897, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.553
-      objectReference: {fileID: 0}
     - target: {fileID: 1658199288916686899, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
       propertyPath: orthographic
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1658199288916686899, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: orthographic size
-      value: 0.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288916686899, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
       propertyPath: m_ClearFlags
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1658199288916686899, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
-      propertyPath: m_NormalizedViewPortRect.height
-      value: 0.37
       objectReference: {fileID: 0}
     - target: {fileID: 1658199288931142344, guid: b1a6bbe69b8e12a44b8b13273f135cdf, type: 3}
       propertyPath: m_LocalPosition.x

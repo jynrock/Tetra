@@ -8,6 +8,7 @@ TagManager:
   - EffectSource
   - DialogueSource
   - CardDragPlane
+  - PreviewCamera
   layers:
   - Default
   - TransparentFX
