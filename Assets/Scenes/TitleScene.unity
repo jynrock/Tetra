@@ -2672,7 +2672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   themePrefabs:
-  - {fileID: 4608199527018112203, guid: 3c80f92e5ff0e48439411a0be895f148, type: 3}
+  - {fileID: 6246993890427625893, guid: 66074e1b731dd1a49996819c493e340c, type: 3}
 --- !u!114 &1557831562
 MonoBehaviour:
   m_ObjectHideFlags: 0

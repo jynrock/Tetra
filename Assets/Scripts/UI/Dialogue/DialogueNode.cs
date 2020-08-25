@@ -14,6 +14,8 @@ public class DialogueNode
     public Sprite icon;
     [SerializeField]
     private LocalizedAudioClip localizedAudioClip;
+
+    private AudioClip loadedLocalizedAudioClip;
     public bool isNarration;
 
     public string LocalizedName()
@@ -44,14 +46,18 @@ public class DialogueNode
 
     public AudioClip LocalizedAudioClip()
     {
+        if(loadedLocalizedAudioClip != null)
+        {
+            return loadedLocalizedAudioClip;
+        }
         if(!localizedAudioClip.IsEmpty)
         {
             var result = localizedAudioClip.LoadAssetAsync();
             if (result.IsDone)
             {
-                return result.Result;
+                loadedLocalizedAudioClip = result.Result;
             }
         }
-        return null;
+        return loadedLocalizedAudioClip;
     }
 }

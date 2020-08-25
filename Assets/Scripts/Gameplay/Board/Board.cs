@@ -138,11 +138,15 @@ public class Board : MonoBehaviour
             BattleCard defendingCard = pair.Key;
             CardDirection attackDirection = pair.Value;
 
-            int attack = attackingCard.card.attack;
+            int attack = Mathf.RoundToInt(attackingCard.card.attack / data.cardList.Count);
 
             if(CardUtility.HasOpposingArrow(defendingCard, attackDirection))
             {
                 attack = Mathf.RoundToInt((attack * 0.75f) + 0.5f);
+            }
+            
+            if (attack < 1) {
+                attack = 1;
             }
 
             Vector3 origin = attackingCard.transform.position;
