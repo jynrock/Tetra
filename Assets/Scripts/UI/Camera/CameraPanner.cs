@@ -9,13 +9,15 @@ public class CameraPanner : MonoBehaviour
 
     private Quaternion targetQuat;
 
-    private Quaternion neutral = Quaternion.Euler(new Vector3(60, 0, 0));
+    private Quaternion neutral = Quaternion.Euler(new Vector3(62.333f, 0, 0));
     private Quaternion upQuat = Quaternion.Euler(new Vector3(0, 0, 0));
     private Quaternion downQuat = Quaternion.Euler(new Vector3(75, 0, 0));
     private Quaternion rightQuat = Quaternion.Euler(new Vector3(0, 50, 0));
     private Quaternion leftQuat = Quaternion.Euler(new Vector3(0, -50, 0));
 
     private Coroutine activeCoroutine;
+
+    private bool dragging;
 
     private float time = 0.0f;
     // Start is called before the first frame update
@@ -27,6 +29,24 @@ public class CameraPanner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetMouseButtonDown(1))
+        {
+            dragging = true;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        if(Input.GetMouseButtonUp(1))
+        {
+            dragging = false;
+            Cursor.lockState = CursorLockMode.None;
+            targetQuat = transform.rotation;
+            MoveCamera(neutral);
+        }
+        if(dragging)
+        {
+            transform.Rotate(-Input.GetAxis("Mouse Y") * 10, Input.GetAxis("Mouse X") * 10, 0);
+            float z = transform.eulerAngles.z;
+            transform.Rotate(0, 0, -z);
+        }
         if(Input.GetAxis("Vertical") > 0)
         {
             MoveCamera(upQuat);
@@ -47,7 +67,7 @@ public class CameraPanner : MonoBehaviour
         {
             MoveCamera(neutral);
         }
-    }
+    } 
 
     public void MoveCamera(Quaternion destinationQuat) {
         if(targetQuat != destinationQuat) {
