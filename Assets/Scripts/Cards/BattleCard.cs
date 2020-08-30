@@ -122,7 +122,7 @@ public class BattleCard : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if(tile == null && !dragging)
+        if(tile == null && !dragging && !controlsDisabled)
         {
             Vector3 newPos = transform.position;
             newPos.y += 0.1f;
@@ -175,6 +175,11 @@ public class BattleCard : MonoBehaviour
         {
             controlsDisabled = false;
         }
+    }
+
+    public void OnDisableControls(bool disable)
+    {
+        controlsDisabled = disable;
     }
 
     //TODO: We may want to make this event driven

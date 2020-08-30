@@ -2050,6 +2050,7 @@ GameObject:
   - component: {fileID: -7497658913581537857}
   - component: {fileID: 2280062291944104987}
   - component: {fileID: 7875975744394603731}
+  - component: {fileID: 8217982371112560489}
   m_Layer: 0
   m_Name: Battlecard
   m_TagString: Untagged
@@ -2323,6 +2324,34 @@ MonoBehaviour:
       - m_Target: {fileID: 7664338715614469322}
         m_TargetAssemblyTypeName: Card, Assembly-CSharp
         m_MethodName: OnTargetSelected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8217982371112560489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7664338715614469367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46836fc849b0f469e83f1ad5611a5b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 11400000, guid: edd3cd6ca7edd164ca3a0ae3ff8a09fa, type: 2}
+  callback:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7664338715614469322}
+        m_TargetAssemblyTypeName: BattleCard, Assembly-CSharp
+        m_MethodName: OnDisableControls
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

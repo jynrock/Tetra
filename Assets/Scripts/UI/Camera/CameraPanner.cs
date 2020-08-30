@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class CameraPanner : MonoBehaviour
 {
-    [SerializeField]
-    private Camera camera;
-
     private Quaternion targetQuat;
 
     private Quaternion neutral = Quaternion.Euler(new Vector3(62.333f, 0, 0));
@@ -18,6 +15,9 @@ public class CameraPanner : MonoBehaviour
     private Coroutine activeCoroutine;
 
     private bool dragging;
+
+    [SerializeField]
+    public BoolGameEvent disableControlsEvent;
 
     private float time = 0.0f;
     // Start is called before the first frame update
@@ -32,11 +32,13 @@ public class CameraPanner : MonoBehaviour
         if(Input.GetMouseButtonDown(1))
         {
             dragging = true;
+            disableControlsEvent.Raise(true);
             Cursor.lockState = CursorLockMode.Locked;
         }
         if(Input.GetMouseButtonUp(1))
         {
             dragging = false;
+            disableControlsEvent.Raise(false);
             Cursor.lockState = CursorLockMode.None;
             targetQuat = transform.rotation;
             MoveCamera(neutral);
