@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efed291e7a8a82e4c820f9b1bc3dd77d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1274114797}
+  disableControlsEvent: {fileID: 11400000, guid: edd3cd6ca7edd164ca3a0ae3ff8a09fa, type: 2}
 --- !u!114 &1274114800
 MonoBehaviour:
   m_ObjectHideFlags: 0
