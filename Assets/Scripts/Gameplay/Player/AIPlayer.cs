@@ -24,8 +24,9 @@ public class AIPlayer : Player
 
     public override void SetupHand()
     {
-        for(int i = 0; i < 5; i++)
+        for(int i = 0; i < hand.Count; i++)
         {
+            hand[i].transform.parent = superSecretBox.transform;
             hand[i].transform.position = superSecretBox.transform.position;
             hand[i].SetOriginalOwner(this);
         }

@@ -122,7 +122,7 @@ public class BattleCard : MonoBehaviour
 
     void OnMouseEnter()
     {
-        if(tile == null && !dragging && !controlsDisabled)
+        if(tile == null && !dragging && !controlsDisabled && PlayerManager.Instance.currentPlayerTurn == currentOwner)
         {
             Vector3 newPos = transform.position;
             newPos.y += 0.1f;

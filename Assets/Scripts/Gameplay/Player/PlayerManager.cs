@@ -22,6 +22,19 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]
     BattlecardAbilityEvent onTryUseAbilityFailedEvent;
 
+    #region Singleton
+    private static PlayerManager _instance;
+    public static PlayerManager Instance { get {return _instance;} }
+    void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+    }
+    #endregion
+
+
     public void OnGameLoaded(bool loaded)
     {
         if(loaded)
@@ -73,7 +86,8 @@ public class PlayerManager : MonoBehaviour
     {
         return data.tile.card == null
                 && data.tile.blocker == null
-                && data.card.tile == null;
+                && data.card.tile == null
+                && PlayerManager.Instance.currentPlayerTurn == data.card.currentOwner;
     }
 
     public void OnTryUseCardAbility(BattlecardAbilityEventData data)
