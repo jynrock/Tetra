@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: UI Text Shared Data
   m_EditorClassIdentifier: 
-  m_NextAvailableId: 30
   m_TableCollectionName: UI Text
   m_TableCollectionNameGuidString: 23111f175e8b3e64ebc3297c41714d96
   m_Entries:
@@ -124,12 +123,26 @@ MonoBehaviour:
     m_Key: BACK
     m_Metadata:
       m_Items: []
+  - m_Id: 647276634112
+    m_Key: NEXT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 651466743808
+    m_Key: PREVIOUS
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
+  m_KeyGenerator:
+    id: 1
   references:
     version: 1
     00000000:
       type: {class: PreloadAssetTableMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
         m_PreloadBehaviour: 1
+    00000001:
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1599268944221

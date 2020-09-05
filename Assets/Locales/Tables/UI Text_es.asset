@@ -114,5 +114,13 @@ MonoBehaviour:
     m_Localized: Multijugador
     m_Metadata:
       m_Items: []
+  - m_Id: 647276634112
+    m_Localized: "Pr\xF3ximo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 651466743808
+    m_Localized: Previo
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

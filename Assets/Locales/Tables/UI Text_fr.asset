@@ -114,5 +114,13 @@ MonoBehaviour:
     m_Localized: Multijoueur
     m_Metadata:
       m_Items: []
+  - m_Id: 647276634112
+    m_Localized: Prochain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 651466743808
+    m_Localized: "Pr\xE9c\xE9dent"
+    m_Metadata:
+      m_Items: []
   references:
     version: 1
