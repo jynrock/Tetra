@@ -35,11 +35,7 @@ public class AIPlayer : Player
     protected override IEnumerator TakeTurn()
     {
         yield return null;
-        aI.TakeTurn();
-        while(!hasPlayedCard && !hasUsedAbility)
-        {
-            yield return new WaitForSeconds(2.0f);
-        }
+        StartCoroutine(aI.TakeTurn());
     }
 
     public override void OnPlayCard(BattlecardTilePlayerEventData data)

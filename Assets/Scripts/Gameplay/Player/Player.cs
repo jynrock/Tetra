@@ -49,7 +49,6 @@ public abstract class Player : MonoBehaviour
                 if(cardsToAttack.Count > 0)
                 {
                     cardAttackEvent.Raise(new BattlecardListDirectionEventData(card, cardsToAttack));
-                    yield return new WaitForSeconds(0.25f * cardsToAttack.Count);
                     attacked = true;
                 }
             }

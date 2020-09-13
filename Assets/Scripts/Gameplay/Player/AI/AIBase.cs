@@ -92,5 +92,5 @@ public abstract class AIBase : MonoBehaviour
         }
     }
 
-    public abstract void TakeTurn();
+    public abstract IEnumerator TakeTurn();
 }

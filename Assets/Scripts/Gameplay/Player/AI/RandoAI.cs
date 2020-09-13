@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RandoAI : AIBase
 {
-    public override void TakeTurn()
+    public override IEnumerator TakeTurn()
     {
         int oneInTen = Random.Range(0, 10);
         if(player.hand.Count >= 5 || oneInTen != 9)
@@ -14,6 +14,7 @@ public class RandoAI : AIBase
             if(t != null && playC != null)
             {
                 tryPlayCardEvent.Raise(new BattlecardTileEventData(playC, t));
+                yield return new WaitForSeconds(0.25f);
             }
         }
         int oneInEight = Random.Range(0, 8);
