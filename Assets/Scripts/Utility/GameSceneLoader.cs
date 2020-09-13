@@ -15,6 +15,8 @@ public class GameSceneLoader : MonoBehaviour
     [SerializeField]
     private HumanPlayer humanPlayer;
     [SerializeField]
+    private PlayerEvent announcePlayerEvent;
+    [SerializeField]
     private AIPlayer aIPlayer;
     [SerializeField]
     private BattlecardTileEvent tryPlayCardEvent;
@@ -65,6 +67,7 @@ public class GameSceneLoader : MonoBehaviour
     private void SetUpHumanPlayerObject()
     {
         humanPlayer.SetData(PlayerProfile.Instance.GetPlayerName(), PlayerProfile.Instance.GetPlayerColor(), PlayerProfile.Instance.GetPlayerAvatar(), playerBattleCards);
+        announcePlayerEvent.Raise(humanPlayer);
     }
 
     private void SetUpAIPlayerBattleCards()

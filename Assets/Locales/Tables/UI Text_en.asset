@@ -134,5 +134,9 @@ MonoBehaviour:
     m_Localized: Previous
     m_Metadata:
       m_Items: []
+  - m_Id: 3223676326510592
+    m_Localized: End Turn
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

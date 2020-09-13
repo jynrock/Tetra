@@ -131,6 +131,10 @@ MonoBehaviour:
     m_Key: PREVIOUS
     m_Metadata:
       m_Items: []
+  - m_Id: 3223676326510592
+    m_Key: END_TURN
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
