@@ -12,8 +12,11 @@ public class ThemeDatabase : MonoBehaviour
         GameObject themePrefab = null;
 
         switch(theme){
-            case Theme.Tavern:
+            case Theme.Debug:
                 themePrefab = themePrefabs[0];
+                break;
+            case Theme.Tavern:
+                themePrefab = themePrefabs[1];
                 break;
             default:
                 break;

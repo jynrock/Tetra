@@ -62,5 +62,5 @@ public enum Difficulty{
 
 public enum Theme
 {
-    Select, Tavern
+    Select, Debug, Tavern
 }
