@@ -18,6 +18,8 @@ public class ViewManager : MonoBehaviour
     private GameObject previewPane;
     [SerializeField]
     private CardDisplay cardPreview;
+    [SerializeField]
+    private GameObject cardPreviewCloser;
 
     void OnMouseDown()
     {
@@ -71,11 +73,13 @@ public class ViewManager : MonoBehaviour
     public void OnShowPreviewPane(BattleCard card)
     {
         cardPreview.SetCard(card);
+        cardPreviewCloser.SetActive(true);
         previewPane.SetActive(true);
     }
 
     public void OnHidePreviewPane(BattleCard card)
     {
         previewPane.SetActive(false);
+        cardPreviewCloser.SetActive(false);
     }
 }

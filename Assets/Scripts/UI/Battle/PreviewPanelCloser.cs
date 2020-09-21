@@ -5,10 +5,10 @@ using UnityEngine;
 public class PreviewPanelCloser : MonoBehaviour
 {
     [SerializeField]
-    private GameObject previewPanel;
+    private BattlecardEvent hidePanelEvent;
 
-    void OnMouseDown()
+    public void ClosePreviewPanel()
     {
-        previewPanel.SetActive(false);
+        hidePanelEvent.Raise(null);
     }
 }

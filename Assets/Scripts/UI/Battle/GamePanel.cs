@@ -9,7 +9,7 @@ public class GamePanel : MonoBehaviour
     [SerializeField]
     public TMP_Dropdown opponentSelector;
     [SerializeField]
-    public TMP_Dropdown themeSelector;
+    public TMP_Dropdown levelSelector;
 
     private bool optionsSet;
 
@@ -23,9 +23,10 @@ public class GamePanel : MonoBehaviour
                 opponentSelector.options.Add(new TMP_Dropdown.OptionData(aiData.aIName));
             }
 
-            foreach(Theme theme in Enum.GetValues(typeof(Theme)))
+            foreach(string level in Database.Instance.Level.GetLevelNames())
             {
-                themeSelector.options.Add(new TMP_Dropdown.OptionData(theme.ToString()));
+                levelSelector.options.Add(new TMP_Dropdown.OptionData("Select"));
+                levelSelector.options.Add(new TMP_Dropdown.OptionData(level));
             }
             optionsSet = true;
         }
@@ -45,22 +46,17 @@ public class GamePanel : MonoBehaviour
 
     public void SetTheme()
     {
-        LevelManager.Instance.SetTheme((Theme)themeSelector.value);
+        LevelManager.Instance.SetTheme(levelSelector.options[levelSelector.value].text);
     }
 
     public void ResetOptions()
     {
-        themeSelector.value = 0;
+        levelSelector.value = 0;
         opponentSelector.value = 0;
         LevelManager.Instance.SetOpponent(null);
-        LevelManager.Instance.SetTheme(Theme.Select);
+        LevelManager.Instance.SetTheme(null);
     }
 }
 public enum Difficulty{
     Select, Chaotic
-}
-
-public enum Theme
-{
-    Select, Debug, Tavern
 }
