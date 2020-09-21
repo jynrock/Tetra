@@ -22,6 +22,11 @@ public class PlayerHandDisplay : MonoBehaviour
         }
     }
 
+    public void SetOwner(Player newOwner)
+    {
+        owner = newOwner;
+    }
+
     public void SetCardPositions(List<BattleCard> cards)
     {
         for(int i = 0; i < 5; i++)

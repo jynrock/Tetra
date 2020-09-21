@@ -13,6 +13,7 @@ public class PlayerProfile : MonoBehaviour
     private Color playerColor;
     private List<CardInstance> deck;
     private List<CardInstance> hand;
+    private bool leftyMode;
 
     void Awake()
     {
@@ -146,5 +147,15 @@ public class PlayerProfile : MonoBehaviour
         List<Card> cardsInDeck = deck.Select(c => c.info).Distinct().ToList();
         List<Sprite> avatarsAvailable = cardsInDeck.Select(c => c.cardIcon).ToList();
         return avatarsAvailable;
+    }
+
+    public bool GetLeftyMode()
+    {
+        return leftyMode;
+    }
+
+    public void SetLeftyMode(bool newLeftyMode)
+    {
+        leftyMode = newLeftyMode;
     }
 }
