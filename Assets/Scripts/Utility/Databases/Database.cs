@@ -18,6 +18,6 @@ public class Database : MonoBehaviour
     }
 
     public CardDatabase Card;
-    public ThemeDatabase Theme;
+    public LevelDatabase Level;
     public AIDatabase AI;
 }

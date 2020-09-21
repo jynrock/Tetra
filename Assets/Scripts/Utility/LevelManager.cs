@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
         get { return _instance; }
     }
 
-    private Theme theme;
+    private string level;
     private AIData opponent;
 
     [SerializeField]
@@ -46,7 +46,7 @@ public class LevelManager : MonoBehaviour
 
     public void LoadBattleLevel()
     {
-        if(theme == Theme.Select || opponent == null) {return;}
+        if(level == null || opponent == null) {return;}
         StartCoroutine(LoadBattleLevelAsync());
     }
 
@@ -55,19 +55,19 @@ public class LevelManager : MonoBehaviour
         if (loaded)
         {
             battleSceneLoaded = true;
-            theme = Theme.Select;
+            level = null;
             opponent = null;
         }
     }
 
-    public void SetTheme(Theme _theme)
+    public void SetTheme(string _level)
     {
-        theme = _theme;
+        level = _level;
     }
 
-    public Theme GetCurrentTheme()
+    public string GetCurrentTheme()
     {
-        return theme;
+        return level;
     }
 
     public void SetOpponent(AIData _aiData)
@@ -104,7 +104,7 @@ public class LevelManager : MonoBehaviour
         cardAnimator.StopPlayback();
         animator.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.0f);
-        AsyncOperation op = SceneManager.LoadSceneAsync("GameScene");
+        AsyncOperation op = SceneManager.LoadSceneAsync(level);
         while (!op.isDone)
         {
             loadBar.value = Mathf.Clamp(op.progress / 0.9f, 0f, 0.97f);

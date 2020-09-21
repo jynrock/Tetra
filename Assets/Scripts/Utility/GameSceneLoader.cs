@@ -9,7 +9,9 @@ public class GameSceneLoader : MonoBehaviour
     [SerializeField]
     private BoolGameEvent gameSceneLoadedEvent;
     [SerializeField]
-    private GameObject standardLevelObjects;
+    private GameObject leftHand;
+    [SerializeField]
+    private GameObject rightHand;
     [SerializeField]
     private BattleCard battleCardPrefab;
     [SerializeField]
@@ -34,27 +36,20 @@ public class GameSceneLoader : MonoBehaviour
     {
         yield return null;
         // load logic goes here
-        SetUpLevelTheme();
         SetUpHumanPlayerBattleCards();
         SetUpHumanPlayerObject();
         SetUpAIPlayerBattleCards();
         SetUpAIPlayerObject();
-        standardLevelObjects.SetActive(true);
         yield return new WaitForSeconds(1.0f);
         gameSceneLoadedEvent.Raise(true);
         Destroy(gameObject);
     }
 
-    private void SetUpLevelTheme()
-    {
-        GameObject themeDressing = Database.Instance.Theme.GetThemePrefab(LevelManager.Instance.GetCurrentTheme());
-        Instantiate(themeDressing);
-    }
-
     private void SetUpHumanPlayerBattleCards()
     {
         playerBattleCards = new List<BattleCard>();
-        PlayerHandDisplay playerHand = standardLevelObjects.transform.Find("PlayerHand").GetComponent<PlayerHandDisplay>();
+        PlayerHandDisplay playerHand = PlayerProfile.Instance.GetLeftyMode() ? 
+            leftHand.GetComponent<PlayerHandDisplay>() : rightHand.GetComponent<PlayerHandDisplay>();
         foreach(CardInstance cardInstance in PlayerProfile.Instance.GetHand())
         {
             BattleCard card = Instantiate(battleCardPrefab);
@@ -62,6 +57,7 @@ public class GameSceneLoader : MonoBehaviour
             playerBattleCards.Add(card);
         }
         playerHand.SetCardPositions(playerBattleCards);
+        playerHand.SetOwner(humanPlayer);
     }
 
     private void SetUpHumanPlayerObject()
