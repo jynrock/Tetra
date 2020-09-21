@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 5c4fda1aef640c644b7180adb2271a7b
+  - enabled: 1
+    path: Assets/Scenes/Levels/Debug Level.unity
+    guid: c34c869e2046d2a43a616b167549c54e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 971bb1ea45fb1ca4b89e1a55b2e51dd9, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 36bd8922911285a4aa3134a71e9f79a8, type: 2}
