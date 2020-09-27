@@ -23,9 +23,9 @@ public class GamePanel : MonoBehaviour
                 opponentSelector.options.Add(new TMP_Dropdown.OptionData(aiData.aIName));
             }
 
+            levelSelector.options.Add(new TMP_Dropdown.OptionData("Select"));
             foreach(string level in Database.Instance.Level.GetLevelNames())
             {
-                levelSelector.options.Add(new TMP_Dropdown.OptionData("Select"));
                 levelSelector.options.Add(new TMP_Dropdown.OptionData(level));
             }
             optionsSet = true;

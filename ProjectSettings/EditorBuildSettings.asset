@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Debug Level.unity
     guid: c34c869e2046d2a43a616b167549c54e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Inn (Daytime).unity
+    guid: 408286c54a93eec4cba2730ae1c5cad8
+  - enabled: 1
+    path: Assets/Scenes/Levels/Inn (Evening).unity
+    guid: 3cc685dced6e8f64fbd2b165cda84eeb
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 971bb1ea45fb1ca4b89e1a55b2e51dd9, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 36bd8922911285a4aa3134a71e9f79a8, type: 2}
