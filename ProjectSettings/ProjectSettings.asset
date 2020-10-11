@@ -161,6 +161,7 @@ PlayerSettings:
     Standalone: 0
     iPhone: 0
     tvOS: 0
+  overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 0
@@ -653,7 +654,7 @@ PlayerSettings:
   cloudServicesEnabled:
     Analytics: 0
     Build: 0
-    Collab: 0
+    Collab: 1
     Game Performance: 0
     Purchasing: 0
     UNet: 1
@@ -673,7 +674,7 @@ PlayerSettings:
   cloudProjectId: 8733016a-932d-4f1c-935b-9a2f0445fa67
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Keturi
+  projectName: Project Tetra
   organizationId: glass-lion-games
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

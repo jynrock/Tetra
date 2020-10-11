@@ -83,7 +83,7 @@ public class BattleCard : MonoBehaviour
             {
                 if(hit.transform.tag == "CardDragPlane") {
                     Vector3 hitPos = hit.point;
-                    transform.position = new Vector3(hitPos.x, hitPos.y + 0.2f, hitPos.z);
+                    transform.position = new Vector3(hitPos.x, hitPos.y + 0.05f, hitPos.z);
                 }
             }
             if ((transform.position - originPoint).sqrMagnitude >= 0.1f)
@@ -125,7 +125,7 @@ public class BattleCard : MonoBehaviour
         if(tile == null && !dragging && !controlsDisabled && PlayerManager.Instance.currentPlayerTurn == currentOwner)
         {
             Vector3 newPos = transform.position;
-            newPos.y += 0.1f;
+            newPos.y += 0.05f;
             transform.position = newPos;
         }
     }
