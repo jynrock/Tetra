@@ -73,7 +73,7 @@ Material:
     - _ClearCoat: 0
     - _ClearCoatMask: 0
     - _Cull: 0
-    - _Cutoff: 0.591
+    - _Cutoff: 0.54
     - _DstBlend: 0
     - _EnvironmentReflections: 0
     - _GlossMapScale: 0
