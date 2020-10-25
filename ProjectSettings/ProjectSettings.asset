@@ -654,7 +654,7 @@ PlayerSettings:
   cloudServicesEnabled:
     Analytics: 0
     Build: 0
-    Collab: 1
+    Collab: 0
     Game Performance: 0
     Purchasing: 0
     UNet: 1
@@ -671,13 +671,12 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
+  activeInputHandler: 0
   cloudProjectId: 8733016a-932d-4f1c-935b-9a2f0445fa67
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Project Tetra
   organizationId: glass-lion-games
   cloudEnabled: 0
-  enableNativePlatformBackendsForNewInputSystem: 0
-  disableOldInputManagerSupport: 0
   legacyClampBlendShapeWeights: 0
   virtualTexturingSupportEnabled: 0

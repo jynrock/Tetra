@@ -68,15 +68,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Key: MUSIC_VOLUME
+    m_Key: MUSIC
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Key: SOUND_EFFECT_VOLUME
+    m_Key: FX
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Key: DIALOGUE_VOLUME
+    m_Key: DIALOGUE
     m_Metadata:
       m_Items: []
   - m_Id: 19

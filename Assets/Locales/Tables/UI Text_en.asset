@@ -71,15 +71,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16
-    m_Localized: Music Volume
+    m_Localized: Music
     m_Metadata:
       m_Items: []
   - m_Id: 17
-    m_Localized: Sound Effect Volume
+    m_Localized: FX
     m_Metadata:
       m_Items: []
   - m_Id: 18
-    m_Localized: Dialogue Volume
+    m_Localized: Dialogue
     m_Metadata:
       m_Items: []
   - m_Id: 19
